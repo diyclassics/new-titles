@@ -85,9 +85,12 @@ export function App() {
 
   const selectFromSidebar = useCallback(
     (id: string) => {
-      setSelectedId(id);
-      const place = month.placesById[id];
-      if (place) mapRef.current?.flyTo(place);
+      setSelectedId((prev) => {
+        if (prev === id) return null; // click-again collapses
+        const place = month.placesById[id];
+        if (place) mapRef.current?.flyTo(place);
+        return id;
+      });
     },
     [month.placesById],
   );
