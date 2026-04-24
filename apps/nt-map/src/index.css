@@ -259,6 +259,14 @@ body {
 .map {
   flex: 1;
 }
+.map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  background: #f5f5f5;
+}
 
 .popup {
   font-family: system-ui, -apple-system, sans-serif;

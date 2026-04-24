@@ -1,7 +1,7 @@
 import type { Acquisition } from '@nt/data/schema';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
-import { MapView } from './Map.tsx';
+import type { MapHandle } from './Map.tsx';
 import { Sidebar } from './Sidebar.tsx';
 import {
   CATEGORIES,
@@ -13,6 +13,11 @@ import {
   loadMonth,
 } from './data.ts';
 
+// Lazy-load MapView so the Leaflet + clustering bundle doesn't block first
+// paint. Header and sidebar render immediately; the map chunk downloads in
+// parallel and fills in once ready.
+const MapView = lazy(() => import('./Map.tsx'));
+
 type Filter = Set<Category>;
 
 const EMPTY_MONTH: MonthData = {
@@ -23,6 +28,16 @@ const EMPTY_MONTH: MonthData = {
   classificationsById: {},
 };
 
+// requestIdleCallback isn't in Safari yet; polyfill to a short timeout.
+const ric: (cb: () => void) => number =
+  typeof window !== 'undefined' && 'requestIdleCallback' in window
+    ? (cb) => window.requestIdleCallback(cb, { timeout: 2000 })
+    : (cb) => window.setTimeout(cb, 500);
+const cic: (id: number) => void =
+  typeof window !== 'undefined' && 'cancelIdleCallback' in window
+    ? (id) => window.cancelIdleCallback(id)
+    : (id) => window.clearTimeout(id);
+
 export function App() {
   const [monthKey, setMonthKey] = useState<MonthKey>('2026-03');
   const [month, setMonth] = useState<MonthData>(EMPTY_MONTH);
@@ -30,13 +45,9 @@ export function App() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
   const [searchQuery, setSearchQuery] = useState('');
-  // Incremented when a sidebar click wants the map to fly; marker clicks
-  // update selection via Leaflet's popupopen without bumping this, so the
-  // popup opens without being interrupted by an automatic fly.
-  const [flySignal, setFlySignal] = useState(0);
-  const [resetSignal, setResetSignal] = useState(0);
-  const lastSelectionSource = useRef<'sidebar' | 'marker' | null>(null);
+  const mapRef = useRef<MapHandle>(null);
 
+  // Load the selected month's data (cached in loadMonth after first fetch).
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
@@ -51,20 +62,37 @@ export function App() {
     };
   }, [monthKey]);
 
-  function resetView() {
-    setResetSignal((v) => v + 1);
-  }
+  // When idle, preload adjacent months so prev/next nav is instant.
+  useEffect(() => {
+    if (loading) return;
+    const idx = MONTH_KEYS.indexOf(monthKey);
+    const neighbors = [MONTH_KEYS[idx - 1], MONTH_KEYS[idx + 1]].filter(
+      (k): k is MonthKey => k !== undefined,
+    );
+    const id = ric(() => {
+      for (const k of neighbors) {
+        // loadMonth returns immediately from cache on second call; first call
+        // triggers the background download+parse.
+        void loadMonth(k);
+      }
+    });
+    return () => cic(id);
+  }, [monthKey, loading]);
 
-  // Stable references — the map's marker layer hashes these in its effect
-  // deps, so any reference change clears and rebuilds all markers (which
-  // also closes a just-opened popup). Keep them with empty deps.
-  const selectFromSidebar = useCallback((id: string) => {
-    lastSelectionSource.current = 'sidebar';
-    setSelectedId(id);
-    setFlySignal((v) => v + 1);
+  const resetView = useCallback(() => {
+    mapRef.current?.reset();
   }, []);
+
+  const selectFromSidebar = useCallback(
+    (id: string) => {
+      setSelectedId(id);
+      const place = month.placesById[id];
+      if (place) mapRef.current?.flyTo(place);
+    },
+    [month.placesById],
+  );
+  // Stable reference — the marker layer's useEffect depends on this.
   const selectFromMarker = useCallback((id: string) => {
-    lastSelectionSource.current = 'marker';
     setSelectedId(id);
   }, []);
 
@@ -102,27 +130,16 @@ export function App() {
     };
   }, [sidebarBase, searchQuery]);
 
-  const selectedRecord = selectedId
-    ? (month.records.find((r) => r.id === selectedId) ?? null)
-    : null;
-  const selectedPlace = selectedId ? (month.placesById[selectedId] ?? null) : null;
-
   function toggleCategory(cat: Category) {
     setFilter((prev) => {
-      // Click from "all active" → collapse to just the clicked category.
-      // (Clicking one from the default state should isolate it, not remove it.)
-      if (prev.size === CATEGORIES.length) {
-        return new Set([cat]);
-      }
+      if (prev.size === CATEGORIES.length) return new Set([cat]);
       const next = new Set(prev);
       if (next.has(cat)) next.delete(cat);
       else next.add(cat);
-      // Never go empty — use the Reset button to restore all.
       if (next.size === 0) return prev;
       return next;
     });
   }
-
   function resetFilter() {
     setFilter(new Set(CATEGORIES));
   }
@@ -184,17 +201,16 @@ export function App() {
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
         />
-        <MapView
-          key={monthKey}
-          records={mappable}
-          placesById={month.placesById}
-          classificationsById={month.classificationsById}
-          selectedRecord={selectedRecord}
-          selectedPlace={selectedPlace}
-          flySignal={flySignal}
-          resetSignal={resetSignal}
-          onSelect={selectFromMarker}
-        />
+        <Suspense fallback={<div className="map map-loading">Loading map…</div>}>
+          <MapView
+            key={monthKey}
+            ref={mapRef}
+            records={mappable}
+            placesById={month.placesById}
+            classificationsById={month.classificationsById}
+            onSelect={selectFromMarker}
+          />
+        </Suspense>
       </div>
     </div>
   );

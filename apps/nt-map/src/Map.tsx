@@ -1,6 +1,6 @@
 import type { Acquisition } from '@nt/data/schema';
 import L from 'leaflet';
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -12,14 +12,14 @@ type Props = {
   records: readonly Acquisition[];
   placesById: Record<string, ResolvedPlace>;
   classificationsById: Record<string, Category>;
-  selectedRecord: Acquisition | null;
-  selectedPlace: ResolvedPlace | null;
-  /** Monotonically-increasing counter from the sidebar that requests a fly. */
-  flySignal: number;
-  /** Monotonically-increasing counter that requests a map reset to default view. */
-  resetSignal: number;
   onSelect: (id: string) => void;
 };
+
+/** Imperative handle exposed from MapView — App calls these directly. */
+export interface MapHandle {
+  flyTo: (place: { lat: number; lon: number }) => void;
+  reset: () => void;
+}
 
 const DEFAULT_CENTER: [number, number] = [36, 40];
 const DEFAULT_ZOOM = 4;
@@ -32,16 +32,10 @@ const TILE_ATTRIBUTION =
   import.meta.env.VITE_TILE_ATTRIBUTION ??
   'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://cawm.lib.uiowa.edu/" target="_blank" rel="noreferrer">CAWM / Iowa</a>';
 
-export function MapView({
-  records,
-  placesById,
-  classificationsById,
-  selectedRecord,
-  selectedPlace,
-  flySignal,
-  resetSignal,
-  onSelect,
-}: Props) {
+export const MapView = forwardRef<MapHandle, Props>(function MapView(
+  { records, placesById, classificationsById, onSelect },
+  ref,
+) {
   return (
     <MapContainer center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} className="map">
       <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} />
@@ -51,11 +45,27 @@ export function MapView({
         classificationsById={classificationsById}
         onSelect={onSelect}
       />
-      <FlyToSelected place={selectedPlace} record={selectedRecord} signal={flySignal} />
-      <ResetOnSignal signal={resetSignal} />
+      <HandleBridge handleRef={ref} />
       <HomeControl />
     </MapContainer>
   );
+});
+
+export default MapView;
+
+/** Wires up the imperative handle once the map is available via useMap(). */
+function HandleBridge({ handleRef }: { handleRef: React.ForwardedRef<MapHandle> }) {
+  const map = useMap();
+  useImperativeHandle(
+    handleRef,
+    () => ({
+      flyTo: (place) =>
+        map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 }),
+      reset: () => map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true }),
+    }),
+    [map],
+  );
+  return null;
 }
 
 function ClusterLayer({
@@ -72,10 +82,6 @@ function ClusterLayer({
       showCoverageOnHover: false,
       spiderfyOnMaxZoom: true,
       maxClusterRadius: 40,
-      // Category-aware cluster color: solid category color if all children
-      // share one region, neutral dark gray if mixed. Replaces markercluster's
-      // default count-based green/yellow/red palette, which collides with
-      // our per-category marker colors.
       iconCreateFunction: (cluster) => {
         // Per-category counts within this cluster.
         const counts = new Map<Category, number>();
@@ -148,23 +154,12 @@ function ClusterLayer({
         </div>`,
       );
       // Use popupopen (not click) so syncing the sidebar doesn't race with
-      // Leaflet's own popup-opening. When a cluster spiderfies and the user
-      // clicks a spiderfied marker, `click` + a state-driven map.flyTo would
-      // sometimes close the popup before it settled.
+      // Leaflet's own popup-opening.
       marker.on('popupopen', () => onSelect(r.id));
       group.addLayer(marker);
     }
   }, [records, placesById, classificationsById, onSelect]);
 
-  return null;
-}
-
-function ResetOnSignal({ signal }: { signal: number }) {
-  const map = useMap();
-  // biome-ignore lint/correctness/useExhaustiveDependencies: only react to signal bumps.
-  useEffect(() => {
-    if (signal > 0) map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
-  }, [signal]);
   return null;
 }
 
@@ -194,26 +189,6 @@ function HomeControl() {
       ctrl.remove();
     };
   }, [map]);
-  return null;
-}
-
-function FlyToSelected({
-  place,
-  record,
-  signal,
-}: {
-  place: ResolvedPlace | null;
-  record: Acquisition | null;
-  /** Only flies when signal increments — so sidebar clicks fly,
-   *  marker clicks (which don't bump signal) don't interrupt the popup. */
-  signal: number;
-}) {
-  const map = useMap();
-  // biome-ignore lint/correctness/useExhaustiveDependencies: only fly when `signal` changes.
-  useEffect(() => {
-    if (!place || !record) return;
-    map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 });
-  }, [signal]);
   return null;
 }
 
