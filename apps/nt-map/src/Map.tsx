@@ -6,6 +6,7 @@ import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { CATEGORY_COLOR, type Category } from './data.ts';
+import { bobcatUrl, cleanAuthor, cleanTitle } from './format.ts';
 import type { ResolvedPlace } from './types.ts';
 
 type Props = {
@@ -195,44 +196,10 @@ function HomeControl() {
   return null;
 }
 
-function bobcatUrl(mmsId: string): string {
-  const params = new URLSearchParams({
-    docid: `alma${mmsId}`,
-    context: 'L',
-    vid: '01NYU_INST:NYU',
-    lang: 'en',
-    search_scope: 'CI_NYU_CONSORTIA',
-    adaptor: 'Local Search Engine',
-    tab: 'Unified_Slot',
-    offset: '0',
-  });
-  return `https://search.library.nyu.edu/discovery/fulldisplay?${params.toString()}`;
-}
-
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-}
-
-// Strip trailing whitespace + MARC punctuation: slash, period, comma,
-// semicolon, colon. "A title about Pompeii /" → "A title about Pompeii",
-// "Volume one :" → "Volume one", etc.
-function cleanTitle(s: string): string {
-  return s.replace(/[\s./,;:]+$/, '').trim();
-}
-
-// First-pass author cleanup: drop MARC relator-term suffixes
-// ("Doe, Jane, author." → "Doe, Jane"). This is WIP — MARC author strings
-// have a lot of variety (dates, qualifiers, multiple relators). Expect to
-// revisit with a real cross-section of examples.
-const RELATOR_RE =
-  /,?\s*(author|editor|translator|creator|compiler|contributor|illustrator|narrator|photographer|director|producer)s?\.?\s*$/i;
-function cleanAuthor(s: string): string {
-  return s
-    .replace(RELATOR_RE, '')
-    .replace(/[\s.,]+$/, '')
-    .trim();
 }

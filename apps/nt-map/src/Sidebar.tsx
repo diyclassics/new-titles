@@ -1,5 +1,6 @@
 import type { Acquisition } from '@nt/data/schema';
 import { CATEGORY_COLOR, type Category } from './data.ts';
+import { bobcatUrl, cleanAuthor, cleanTitle } from './format.ts';
 import type { ResolvedPlace } from './types.ts';
 
 type Props = {
@@ -59,17 +60,18 @@ export function Sidebar({
             const color = category ? CATEGORY_COLOR[category] : '#999';
             const mapped = Boolean(place);
             const showDivider = idx === firstUnmappedIndex && unmappedCount > 0;
+            const expanded = selectedId === r.id;
             return (
               <li
                 key={r.id}
-                className={`record-row ${selectedId === r.id ? 'selected' : ''} ${mapped ? '' : 'unmapped'}`}
+                className={`record-row ${expanded ? 'selected' : ''} ${mapped ? '' : 'unmapped'}`}
                 style={{ borderLeftColor: mapped ? color : '#ddd' }}
               >
                 {showDivider ? (
                   <div className="record-divider">{unmappedCount} without resolved location</div>
                 ) : null}
                 <button type="button" className="record-row-button" onClick={() => onSelect(r.id)}>
-                  <div className="record-title">{r.title}</div>
+                  <div className="record-title">{cleanTitle(r.title)}</div>
                   <div className="record-meta">
                     <span className="callno">{r.call_number}</span>
                     {place ? (
@@ -79,11 +81,56 @@ export function Sidebar({
                     )}
                   </div>
                 </button>
+                {expanded ? (
+                  <ExpandedDetails record={r} place={place} category={category} color={color} />
+                ) : null}
               </li>
             );
           })}
         </ol>
       )}
     </aside>
+  );
+}
+
+function ExpandedDetails({
+  record,
+  place,
+  category,
+  color,
+}: {
+  record: Acquisition;
+  place: ResolvedPlace | undefined;
+  category: Category | undefined;
+  color: string;
+}) {
+  const authors = record.authors.map(cleanAuthor).filter(Boolean);
+  const pubBits = [record.publisher, record.pub_date].filter(Boolean);
+  return (
+    <div className="record-details">
+      {authors.length > 0 ? <div>{authors.join(', ')}</div> : null}
+      {pubBits.length > 0 ? <div className="muted">{pubBits.join(', ')}</div> : null}
+      {place ? (
+        <div className="muted">
+          📍{' '}
+          <a href={place.uri} target="_blank" rel="noreferrer">
+            {place.name}
+          </a>{' '}
+          <span className="source-tag">{place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span>
+        </div>
+      ) : null}
+      {category ? (
+        <div className="muted" style={{ color }}>
+          <strong>{category}</strong>
+        </div>
+      ) : null}
+      {record.mms_id ? (
+        <div>
+          <a href={bobcatUrl(record.mms_id)} target="_blank" rel="noreferrer">
+            View in Bobcat →
+          </a>
+        </div>
+      ) : null}
+    </div>
   );
 }
