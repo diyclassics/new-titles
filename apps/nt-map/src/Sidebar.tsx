@@ -37,15 +37,9 @@ export function Sidebar({
               style={{ borderLeftColor: mapped ? color : '#ddd' }}
             >
               {showDivider ? (
-                <div className="record-divider">
-                  {unmappedCount} without resolved location
-                </div>
+                <div className="record-divider">{unmappedCount} without resolved location</div>
               ) : null}
-              <button
-                type="button"
-                className="record-row-button"
-                onClick={() => onSelect(r.id)}
-              >
+              <button type="button" className="record-row-button" onClick={() => onSelect(r.id)}>
                 <div className="record-title">{r.title}</div>
                 <div className="record-meta">
                   <span className="callno">{r.call_number}</span>

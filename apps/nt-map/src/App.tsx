@@ -3,7 +3,14 @@ import { useMemo, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import { MapView } from './Map.tsx';
 import { Sidebar } from './Sidebar.tsx';
-import { CATEGORIES, type Category, MONTH_KEYS, type MonthKey, loadMonth } from './data.ts';
+import {
+  CATEGORIES,
+  type Category,
+  MONTH_KEYS,
+  MONTH_LABEL,
+  type MonthKey,
+  loadMonth,
+} from './data.ts';
 
 type Filter = Set<Category>;
 
@@ -29,9 +36,7 @@ export function App() {
 
   // For the sidebar: mappable first (by call number), then unmapped (also by call number).
   const sidebarRecords = useMemo(() => {
-    const unmapped = visibleByCategory
-      .filter((r) => !month.placesById[r.id])
-      .sort(byCallNumber);
+    const unmapped = visibleByCategory.filter((r) => !month.placesById[r.id]).sort(byCallNumber);
     return [...mappable, ...unmapped];
   }, [visibleByCategory, mappable, month.placesById]);
 
@@ -69,25 +74,17 @@ export function App() {
         <div className="header-main">
           <h1>ISAW Library New Titles</h1>
           <p className="subtle">
-            {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar
-            {' '}· {month.records.length} total
+            {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar ·{' '}
+            {month.records.length} total
           </p>
         </div>
-        <div className="month-picker">
-          {MONTH_KEYS.map((k) => (
-            <button
-              key={k}
-              type="button"
-              className={`month-btn ${k === monthKey ? 'active' : ''}`}
-              onClick={() => {
-                setMonthKey(k);
-                setSelectedId(null);
-              }}
-            >
-              {k}
-            </button>
-          ))}
-        </div>
+        <MonthNav
+          monthKey={monthKey}
+          onChange={(k) => {
+            setMonthKey(k);
+            setSelectedId(null);
+          }}
+        />
       </header>
 
       <Legend
@@ -135,4 +132,53 @@ function categoryCounts(
     if (cat && cat in counts) counts[cat] += 1;
   }
   return counts;
+}
+
+function MonthNav({
+  monthKey,
+  onChange,
+}: {
+  monthKey: MonthKey;
+  onChange: (k: MonthKey) => void;
+}) {
+  const idx = MONTH_KEYS.indexOf(monthKey);
+  const atFirst = idx <= 0;
+  const atLast = idx >= MONTH_KEYS.length - 1;
+  function go(delta: number) {
+    const next = MONTH_KEYS[idx + delta];
+    if (next) onChange(next);
+  }
+  return (
+    <div className="month-nav">
+      <button
+        type="button"
+        className="month-nav-arrow"
+        onClick={() => go(-1)}
+        disabled={atFirst}
+        aria-label="Previous month"
+        title={
+          atFirst
+            ? 'No earlier month available'
+            : `Go to ${MONTH_LABEL[MONTH_KEYS[idx - 1] as MonthKey]}`
+        }
+      >
+        ‹
+      </button>
+      <span className="month-nav-label">{MONTH_LABEL[monthKey]}</span>
+      <button
+        type="button"
+        className="month-nav-arrow"
+        onClick={() => go(1)}
+        disabled={atLast}
+        aria-label="Next month"
+        title={
+          atLast
+            ? 'No later month available'
+            : `Go to ${MONTH_LABEL[MONTH_KEYS[idx + 1] as MonthKey]}`
+        }
+      >
+        ›
+      </button>
+    </div>
+  );
 }
