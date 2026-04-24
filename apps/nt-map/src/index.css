@@ -238,6 +238,11 @@ body {
 }
 .record-row.selected {
   background: #e3f2fd;
+  border: 1px solid #0066cc;
+  border-left-width: 4px;
+  border-radius: 4px;
+  margin: 4px 6px;
+  box-shadow: 0 2px 6px rgba(0, 102, 204, 0.12);
 }
 .record-row-button {
   display: block;
@@ -287,13 +292,14 @@ body {
   color: #c62828;
 }
 
-/* Expanded details panel when a record is selected in the sidebar. */
+/* Expanded details panel — sits inside the selected row's bordered card, so
+   no background or top border of its own; a subtle dashed rule separates it
+   from the title/meta button above. */
 .record-details {
   padding: 8px 14px 12px 16px;
   font-size: 0.82rem;
   line-height: 1.45;
-  background: rgba(0, 102, 204, 0.04);
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px dashed rgba(0, 102, 204, 0.3);
 }
 .record-details > div {
   margin-top: 3px;
