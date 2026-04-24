@@ -217,15 +217,22 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;');
 }
 
-// Strip MARC 245 $c trailing slash: "A title about Pompeii /" → "A title about Pompeii".
+// Strip trailing whitespace + MARC punctuation: slash, period, comma,
+// semicolon, colon. "A title about Pompeii /" → "A title about Pompeii",
+// "Volume one :" → "Volume one", etc.
 function cleanTitle(s: string): string {
-  return s.replace(/\s*\/\s*$/, '').trim();
+  return s.replace(/[\s./,;:]+$/, '').trim();
 }
 
-// Strip MARC relator-term suffixes: "Doe, Jane, author." → "Doe, Jane".
-// Handles "author", "editor", "translator", "creator", etc., with optional
-// trailing period and preceding comma.
-const RELATOR_RE = /,?\s*(author|editor|translator|creator|compiler|contributor|illustrator|narrator|photographer|director|producer)s?\.?\s*$/i;
+// First-pass author cleanup: drop MARC relator-term suffixes
+// ("Doe, Jane, author." → "Doe, Jane"). This is WIP — MARC author strings
+// have a lot of variety (dates, qualifiers, multiple relators). Expect to
+// revisit with a real cross-section of examples.
+const RELATOR_RE =
+  /,?\s*(author|editor|translator|creator|compiler|contributor|illustrator|narrator|photographer|director|producer)s?\.?\s*$/i;
 function cleanAuthor(s: string): string {
-  return s.replace(RELATOR_RE, '').replace(/[.,\s]+$/, '').trim();
+  return s
+    .replace(RELATOR_RE, '')
+    .replace(/[\s.,]+$/, '')
+    .trim();
 }
