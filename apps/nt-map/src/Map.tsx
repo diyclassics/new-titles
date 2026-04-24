@@ -20,6 +20,15 @@ type Props = {
 const DEFAULT_CENTER: [number, number] = [36, 40];
 const DEFAULT_ZOOM = 4;
 
+// Tile layer — swappable via .env.local. Default is the DARE/AWMC Roman-empire
+// basemap, which is the same AWMC cartography Pleiades uses.
+const TILE_URL =
+  import.meta.env.VITE_TILE_URL ??
+  'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png';
+const TILE_ATTRIBUTION =
+  import.meta.env.VITE_TILE_ATTRIBUTION ??
+  'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://dh.gu.se/dare/" target="_blank" rel="noreferrer">DARE</a>';
+
 export function MapView({
   records,
   placesById,
@@ -30,10 +39,7 @@ export function MapView({
 }: Props) {
   return (
     <MapContainer center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} className="map">
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      />
+      <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} />
       <ClusterLayer
         records={records}
         placesById={placesById}
