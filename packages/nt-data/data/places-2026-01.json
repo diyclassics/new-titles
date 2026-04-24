@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "month": "2026-01",
+  "generated_at": "2026-04-24T18:29:38.562Z",
+  "total_records": 83,
+  "records_with_refs": 78,
+  "records_resolved": 70,
+  "records_with_refs_unresolved": 8,
+  "places": {
+    "31154068978087": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154068978095": {
+      "id": "pleiades:863766",
+      "name": "Caucasus (mountain range)",
+      "lat": 42.38980356096515,
+      "lon": 44.79413803961139,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863766"
+    },
+    "31154068978103": {
+      "id": "pleiades:863766",
+      "name": "Caucasus (mountain range)",
+      "lat": 42.38980356096515,
+      "lon": 44.79413803961139,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863766"
+    },
+    "31154068978111": {
+      "id": "pleiades:678334",
+      "name": "Phoenice (region)",
+      "lat": 33.25,
+      "lon": 35.25,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/678334"
+    },
+    "31154068978129": {
+      "id": "pleiades:678334",
+      "name": "Phoenice (region)",
+      "lat": 33.25,
+      "lon": 35.25,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/678334"
+    },
+    "31154069007464": {
+      "id": "tgn:1122679",
+      "name": "Yangtze River",
+      "lat": 31.786667,
+      "lon": 121.141389,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1122679"
+    },
+    "31154069007498": {
+      "id": "pleiades:777218560",
+      "name": "Temple of the Winged Lions",
+      "lat": 30.3292494,
+      "lon": 35.4424763,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/777218560"
+    },
+    "31154069007506": {
+      "id": "pleiades:108765",
+      "name": "Atuatuca",
+      "lat": 50.7806267,
+      "lon": 5.4639172,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/108765"
+    },
+    "31154069007522": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069007530": {
+      "id": "pleiades:44626252",
+      "name": "Umma",
+      "lat": 31.66795525840427,
+      "lon": 45.886785911813035,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/44626252"
+    },
+    "31154069007548": {
+      "id": "tgn:1001613",
+      "name": "TGN 1001613",
+      "lat": 36.5,
+      "lon": 48.333333,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001613"
+    },
+    "31154069007555": {
+      "id": "pleiades:569131178",
+      "name": "(As)Syria (region) ",
+      "lat": 36.1051141008,
+      "lon": 43.2451891492,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/569131178"
+    },
+    "31154069007571": {
+      "id": "pleiades:609502",
+      "name": "Phrygia",
+      "lat": 38.783040100503996,
+      "lon": 30.473011418973215,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/609502"
+    },
+    "31154069007589": {
+      "id": "pleiades:837",
+      "name": "Asia Minor",
+      "lat": 37.910339750000006,
+      "lon": 27.278502749999998,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/837"
+    },
+    "31154069007597": {
+      "id": "pleiades:207361",
+      "name": "Porolissum",
+      "lat": 47.179235620228425,
+      "lon": 23.156979754749138,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207361"
+    },
+    "31154069007605": {
+      "id": "pleiades:207065",
+      "name": "Dacia",
+      "lat": 47.258956111593236,
+      "lon": 23.27518305149592,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207065"
+    },
+    "31154069007613": {
+      "id": "tgn:7016833",
+      "name": "Egypt",
+      "lat": 27,
+      "lon": 30,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7016833"
+    },
+    "31154069007621": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069007639": {
+      "id": "pleiades:550434",
+      "name": "Antigoneia/(Col. Augusta) Alexandria Troas",
+      "lat": 39.751699149014044,
+      "lon": 26.1575573012968,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/550434"
+    },
+    "31154069007647": {
+      "id": "pleiades:550793",
+      "name": "Allianoi",
+      "lat": 39.23235202187888,
+      "lon": 27.304613191834783,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/550793"
+    },
+    "31154069007654": {
+      "id": "pleiades:541602250",
+      "name": "Palace of Nebuchadnezzar II",
+      "lat": 32.54221837909117,
+      "lon": 44.421321896047196,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/541602250"
+    },
+    "31154069007662": {
+      "id": "pleiades:541602250",
+      "name": "Palace of Nebuchadnezzar II",
+      "lat": 32.54221837909117,
+      "lon": 44.421321896047196,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/541602250"
+    },
+    "31154069007670": {
+      "id": "pleiades:869702586",
+      "name": "Ebla",
+      "lat": 35.79902233935611,
+      "lon": 36.79833290135371,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/869702586"
+    },
+    "31154069007688": {
+      "id": "pleiades:658465",
+      "name": "Carchemish",
+      "lat": 36.829422953272655,
+      "lon": 38.014920519720285,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/658465"
+    },
+    "31154069007696": {
+      "id": "tgn:7000231",
+      "name": "Iran",
+      "lat": 32,
+      "lon": 53,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7000231"
+    },
+    "31154069007704": {
+      "id": "pleiades:207564",
+      "name": "Vratsa",
+      "lat": 43.203751,
+      "lon": 23.54868,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207564"
+    },
+    "31154069007712": {
+      "id": "pleiades:583980739",
+      "name": "Western gate of Serdica",
+      "lat": 42.69886682805834,
+      "lon": 23.320210934959125,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/583980739"
+    },
+    "31154069007720": {
+      "id": "pleiades:775",
+      "name": "Africa (region)",
+      "lat": 32.5,
+      "lon": 7.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/775"
+    },
+    "31154069007738": {
+      "id": "pleiades:696690497",
+      "name": "Temple of Hercules at Amman/Philadelpheia",
+      "lat": 31.9537465187171,
+      "lon": 35.93486379005065,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/696690497"
+    },
+    "31154069007746": {
+      "id": "pleiades:991396",
+      "name": "Palaestina (province)",
+      "lat": 32.5,
+      "lon": 32.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/991396"
+    },
+    "31154069007753": {
+      "id": "pleiades:991396",
+      "name": "Palaestina (province)",
+      "lat": 32.5,
+      "lon": 32.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/991396"
+    },
+    "31154069007779": {
+      "id": "pleiades:687934",
+      "name": "Iudaea (region)",
+      "lat": 31.73416715,
+      "lon": 35.001720299999995,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/687934"
+    },
+    "31154069007787": {
+      "id": "pleiades:991396",
+      "name": "Palaestina (province)",
+      "lat": 32.5,
+      "lon": 32.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/991396"
+    },
+    "31154069007795": {
+      "id": "pleiades:991396",
+      "name": "Palaestina (province)",
+      "lat": 32.5,
+      "lon": 32.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/991396"
+    },
+    "31154069007803": {
+      "id": "pleiades:930907033",
+      "name": "Levant (region)",
+      "lat": 34.31153876501962,
+      "lon": 35.65166262500035,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/930907033"
+    },
+    "31154069007811": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069007829": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069007837": {
+      "id": "pleiades:197210",
+      "name": "Cissa",
+      "lat": 44.550965,
+      "lon": 14.918037,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/197210"
+    },
+    "31154069007845": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069007852": {
+      "id": "tgn:7030347",
+      "name": "Roman Empire",
+      "lat": 41.8925,
+      "lon": 12.48499,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7030347"
+    },
+    "31154069007860": {
+      "id": "pleiades:472032",
+      "name": "Tharros",
+      "lat": 39.87486450588456,
+      "lon": 8.441009486413876,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/472032"
+    },
+    "31154069007878": {
+      "id": "pleiades:930907033",
+      "name": "Levant (region)",
+      "lat": 34.31153876501962,
+      "lon": 35.65166262500035,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/930907033"
+    },
+    "31154069007886": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069007894": {
+      "id": "pleiades:857024",
+      "name": "Amisus/Peiraieus",
+      "lat": 41.292721,
+      "lon": 36.3313,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/857024"
+    },
+    "31154069007902": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069007910": {
+      "id": "pleiades:875303419",
+      "name": "Tell al-Mashhad",
+      "lat": 31.77672,
+      "lon": 35.73796,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/875303419"
+    },
+    "31154069007928": {
+      "id": "tgn:1000121",
+      "name": "Jordan",
+      "lat": 31,
+      "lon": 36,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000121"
+    },
+    "31154069007936": {
+      "id": "pleiades:726944834",
+      "name": "Kisuatni",
+      "lat": 36.98053,
+      "lon": 36.046606,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/726944834"
+    },
+    "31154069007944": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069007951": {
+      "id": "pleiades:560221",
+      "name": "Aegaeum Mare",
+      "lat": 38.91395706742166,
+      "lon": 24.91724075272824,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/560221"
+    },
+    "31154069007993": {
+      "id": "pleiades:1043",
+      "name": "Internum Mare",
+      "lat": 34.655205690792464,
+      "lon": 14.449366695083585,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1043"
+    },
+    "31154069008009": {
+      "id": "pleiades:697662",
+      "name": "Esbous",
+      "lat": 31.800741182087545,
+      "lon": 35.80901429162764,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/697662"
+    },
+    "31154069008017": {
+      "id": "tgn:7030347",
+      "name": "Roman Empire",
+      "lat": 41.8925,
+      "lon": 12.48499,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7030347"
+    },
+    "31154069008025": {
+      "id": "pleiades:893951",
+      "name": "Babylon",
+      "lat": 32.53729695,
+      "lon": 44.42497815,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893951"
+    },
+    "31154069008033": {
+      "id": "pleiades:1306",
+      "name": "Syria",
+      "lat": 37.5,
+      "lon": 37.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1306"
+    },
+    "31154069037495": {
+      "id": "pleiades:1306",
+      "name": "Syria",
+      "lat": 37.5,
+      "lon": 37.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1306"
+    },
+    "31154069037503": {
+      "id": "pleiades:1043",
+      "name": "Internum Mare",
+      "lat": 34.655205690792464,
+      "lon": 14.449366695083585,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1043"
+    },
+    "31154069078440": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069078457": {
+      "id": "pleiades:912950",
+      "name": "Tell Abu Salabikh",
+      "lat": 32.252627117287986,
+      "lon": 45.0544472140175,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912950"
+    },
+    "31154069078465": {
+      "id": "pleiades:912950",
+      "name": "Tell Abu Salabikh",
+      "lat": 32.252627117287986,
+      "lon": 45.0544472140175,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912950"
+    },
+    "31154069078473": {
+      "id": "pleiades:197304",
+      "name": "Histria",
+      "lat": 45.30463777165673,
+      "lon": 14.079180410655974,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/197304"
+    },
+    "31154069078481": {
+      "id": "pleiades:570491",
+      "name": "Mycenae",
+      "lat": 37.7275368027941,
+      "lon": 22.753833876518886,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/570491"
+    },
+    "31154069078499": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069078507": {
+      "id": "pleiades:992770797",
+      "name": "Phaleron cemetery (Attica)",
+      "lat": 37.93987062145432,
+      "lon": 23.69402266702624,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/992770797"
+    },
+    "31154069078523": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069078531": {
+      "id": "pleiades:874602",
+      "name": "Mesopotamia (region)",
+      "lat": 37.69893640060892,
+      "lon": 40.65169471254212,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874602"
+    },
+    "31154069078549": {
+      "id": "pleiades:894028",
+      "name": "Kish",
+      "lat": 32.5460878,
+      "lon": 44.59316393333333,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/894028"
+    },
+    "31154069078556": {
+      "id": "pleiades:875303419",
+      "name": "Tell al-Mashhad",
+      "lat": 31.77672,
+      "lon": 35.73796,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/875303419"
+    },
+    "31154069078564": {
+      "id": "pleiades:265849",
+      "name": "Carthago Nova/Col. Urbs Iulia",
+      "lat": 37.602787,
+      "lon": -0.9879534999999999,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/265849"
+    },
+    "31154069078572": {
+      "id": "tgn:7030347",
+      "name": "Roman Empire",
+      "lat": 41.8925,
+      "lon": 12.48499,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7030347"
+    }
+  }
+}

@@ -1,0 +1,2123 @@
+{
+  "schema_version": 1,
+  "month": "2026-03",
+  "generated_at": "2026-04-24T18:15:06.740Z",
+  "total_records": 357,
+  "records_with_refs": 311,
+  "records_resolved": 264,
+  "records_with_refs_unresolved": 47,
+  "places": {
+    "31154068978202": {
+      "id": "tgn:1065380",
+      "name": "Bamiyan",
+      "lat": 34.821,
+      "lon": 67.827,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1065380"
+    },
+    "31154068978384": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154068978392": {
+      "id": "tgn:8199076",
+      "name": "TGN 8199076",
+      "lat": 39.724451,
+      "lon": 115.845751,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8199076"
+    },
+    "31154068978400": {
+      "id": "tgn:8199076",
+      "name": "TGN 8199076",
+      "lat": 39.724451,
+      "lon": 115.845751,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8199076"
+    },
+    "31154068978418": {
+      "id": "tgn:8199076",
+      "name": "TGN 8199076",
+      "lat": 39.724451,
+      "lon": 115.845751,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8199076"
+    },
+    "31154068978442": {
+      "id": "pleiades:559227570",
+      "name": "Babunja",
+      "lat": 40.88093752822058,
+      "lon": 19.551720495625307,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/559227570"
+    },
+    "31154068978459": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154068978467": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154068978475": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154068978491": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154068978509": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154068978517": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154068978525": {
+      "id": "tgn:1000003",
+      "name": "Europe",
+      "lat": 56.2,
+      "lon": 15.016,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000003"
+    },
+    "31154068978533": {
+      "id": "pleiades:60058",
+      "name": "Sogdiana",
+      "lat": 38.957105573714095,
+      "lon": 66.80773721321128,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/60058"
+    },
+    "31154068978541": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154068978558": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069008736": {
+      "id": "tgn:8618788",
+      "name": "TGN 8618788",
+      "lat": 34.774722,
+      "lon": 111.181389,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8618788"
+    },
+    "31154069008785": {
+      "id": "tgn:1001261",
+      "name": "TGN 1001261",
+      "lat": 37.75,
+      "lon": 102.75,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001261"
+    },
+    "31154069008801": {
+      "id": "tgn:7001787",
+      "name": "TGN 7001787",
+      "lat": 29.562778,
+      "lon": 106.552778,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001787"
+    },
+    "31154069008819": {
+      "id": "tgn:7001787",
+      "name": "TGN 7001787",
+      "lat": 29.562778,
+      "lon": 106.552778,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001787"
+    },
+    "31154069008850": {
+      "id": "tgn:8209961",
+      "name": "TGN 8209961",
+      "lat": 34.369445,
+      "lon": 107.136345,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8209961"
+    },
+    "31154069008868": {
+      "id": "tgn:8212548",
+      "name": "TGN 8212548",
+      "lat": 36.136389,
+      "lon": 114.336667,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8212548"
+    },
+    "31154069008942": {
+      "id": "tgn:8627225",
+      "name": "TGN 8627225",
+      "lat": 34.358056,
+      "lon": 112.0625,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8627225"
+    },
+    "31154069008959": {
+      "id": "tgn:7001745",
+      "name": "TGN 7001745",
+      "lat": 41.5,
+      "lon": 85.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001745"
+    },
+    "31154069009007": {
+      "id": "tgn:7029798",
+      "name": "Mogao Caves",
+      "lat": 40.033542,
+      "lon": 94.919228,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029798"
+    },
+    "31154069009148": {
+      "id": "tgn:8630755",
+      "name": "TGN 8630755",
+      "lat": 27.509895,
+      "lon": 116.695984,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8630755"
+    },
+    "31154069009155": {
+      "id": "tgn:8677045",
+      "name": "TGN 8677045",
+      "lat": 29.7723,
+      "lon": 121.35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8677045"
+    },
+    "31154069009411": {
+      "id": "tgn:7001480",
+      "name": "TGN 7001480",
+      "lat": 34.757778,
+      "lon": 113.648611,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001480"
+    },
+    "31154069009429": {
+      "id": "tgn:7029798",
+      "name": "Mogao Caves",
+      "lat": 40.033542,
+      "lon": 94.919228,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029798"
+    },
+    "31154069009452": {
+      "id": "pleiades:912816",
+      "name": "Babylonia",
+      "lat": 31.62834430831229,
+      "lon": 45.49540677142205,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912816"
+    },
+    "31154069009460": {
+      "id": "pleiades:912816",
+      "name": "Babylonia",
+      "lat": 31.62834430831229,
+      "lon": 45.49540677142205,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912816"
+    },
+    "31154069009478": {
+      "id": "pleiades:874602",
+      "name": "Mesopotamia (region)",
+      "lat": 37.69893640060892,
+      "lon": 40.65169471254212,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874602"
+    },
+    "31154069009486": {
+      "id": "pleiades:869702586",
+      "name": "Ebla",
+      "lat": 35.79902233935611,
+      "lon": 36.79833290135371,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/869702586"
+    },
+    "31154069009494": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "31154069009502": {
+      "id": "pleiades:874602",
+      "name": "Mesopotamia (region)",
+      "lat": 37.69893640060892,
+      "lon": 40.65169471254212,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874602"
+    },
+    "31154069009510": {
+      "id": "pleiades:668331",
+      "name": "Palmyra",
+      "lat": 34.552809393769074,
+      "lon": 38.264867215601384,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/668331"
+    },
+    "31154069009528": {
+      "id": "pleiades:581020757",
+      "name": "Bozköy-Hanaytepe",
+      "lat": 39.90868390172034,
+      "lon": 26.293195219251732,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/581020757"
+    },
+    "31154069009536": {
+      "id": "pleiades:818747000",
+      "name": "Ballicaoluk",
+      "lat": 38.3366714,
+      "lon": 27.3754484,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/818747000"
+    },
+    "31154069009544": {
+      "id": "tgn:1000144",
+      "name": "Turkey",
+      "lat": 39,
+      "lon": 35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000144"
+    },
+    "31154069009551": {
+      "id": "pleiades:133411593",
+      "name": "Maşat Höyük",
+      "lat": 40.148146549611745,
+      "lon": 35.762468785954674,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/133411593"
+    },
+    "31154069009569": {
+      "id": "pleiades:714353568",
+      "name": "Pottenbrunn burial ground",
+      "lat": 48.23056356591113,
+      "lon": 15.696532448502658,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/714353568"
+    },
+    "31154069009577": {
+      "id": "tgn:7006413",
+      "name": "Bulgaria",
+      "lat": 42.666,
+      "lon": 25.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006413"
+    },
+    "31154069009593": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069009601": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069009619": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069009627": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069009726": {
+      "id": "pleiades:324723",
+      "name": "Henchir-el-Guellal",
+      "lat": 34.704969,
+      "lon": 9.366159,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/324723"
+    },
+    "31154069009734": {
+      "id": "pleiades:29492",
+      "name": "Assyria (kingdom)",
+      "lat": 36.20599290715759,
+      "lon": 43.27050157283143,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/29492"
+    },
+    "31154069009791": {
+      "id": "tgn:7001745",
+      "name": "TGN 7001745",
+      "lat": 41.5,
+      "lon": 85.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001745"
+    },
+    "31154069009809": {
+      "id": "tgn:7001810",
+      "name": "Xi'an",
+      "lat": 34.258333,
+      "lon": 108.928611,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001810"
+    },
+    "31154069009817": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069009833": {
+      "id": "pleiades:43240983",
+      "name": "Stena 1",
+      "lat": 44.67501878349738,
+      "lon": 33.724231689860424,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/43240983"
+    },
+    "31154069009841": {
+      "id": "pleiades:285923206",
+      "name": "Sanahin Monastery",
+      "lat": 41.08714460177966,
+      "lon": 44.66625582663448,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/285923206"
+    },
+    "31154069009858": {
+      "id": "pleiades:379400932",
+      "name": "Kabnak",
+      "lat": 32.08053743586022,
+      "lon": 48.328283158073475,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/379400932"
+    },
+    "31154069009874": {
+      "id": "pleiades:327730568",
+      "name": "Etchmiadzin Cathedral",
+      "lat": 40.16183815976076,
+      "lon": 44.29110114363116,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/327730568"
+    },
+    "31154069009882": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069009890": {
+      "id": "pleiades:884213",
+      "name": "Siwnik",
+      "lat": 39.5,
+      "lon": 46.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/884213"
+    },
+    "31154069009908": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069009916": {
+      "id": "pleiades:912816",
+      "name": "Babylonia",
+      "lat": 31.62834430831229,
+      "lon": 45.49540677142205,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912816"
+    },
+    "31154069009932": {
+      "id": "tgn:1000003",
+      "name": "Europe",
+      "lat": 56.2,
+      "lon": 15.016,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000003"
+    },
+    "31154069009940": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069009957": {
+      "id": "pleiades:1043",
+      "name": "Internum Mare",
+      "lat": 34.655205690792464,
+      "lon": 14.449366695083585,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1043"
+    },
+    "31154069009965": {
+      "id": "pleiades:869702586",
+      "name": "Ebla",
+      "lat": 35.79902233935611,
+      "lon": 36.79833290135371,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/869702586"
+    },
+    "31154069009973": {
+      "id": "tgn:1000144",
+      "name": "Turkey",
+      "lat": 39,
+      "lon": 35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000144"
+    },
+    "31154069009981": {
+      "id": "pleiades:202833934",
+      "name": "Sumer",
+      "lat": 31.435273,
+      "lon": 45.973967,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/202833934"
+    },
+    "31154069009999": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010005": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010013": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010021": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010039": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010047": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010054": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010062": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010070": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010088": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010096": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010179": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010187": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010195": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010203": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010211": {
+      "id": "pleiades:863922",
+      "name": "Yerevan",
+      "lat": 40.185208,
+      "lon": 44.51676,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863922"
+    },
+    "31154069010229": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010237": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010245": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010252": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010260": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010278": {
+      "id": "pleiades:863914",
+      "name": "Urbnisi",
+      "lat": 42.0125,
+      "lon": 43.980833,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863914"
+    },
+    "31154069010286": {
+      "id": "pleiades:863770",
+      "name": "Colchis/Lazike (region)",
+      "lat": 42.20175520293256,
+      "lon": 42.45406542571021,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863770"
+    },
+    "31154069010294": {
+      "id": "tgn:1060430",
+      "name": "TGN 1060430",
+      "lat": 41.542,
+      "lon": 44.108,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1060430"
+    },
+    "31154069010302": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010310": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010328": {
+      "id": "pleiades:893945",
+      "name": "Ashur/‘Lamban’?/‘Liba(nai)’?",
+      "lat": 35.45557316179846,
+      "lon": 43.261301287562404,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893945"
+    },
+    "31154069010336": {
+      "id": "pleiades:857287",
+      "name": "Pontus",
+      "lat": 40.221356696658404,
+      "lon": 37.92341619989857,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/857287"
+    },
+    "31154069010369": {
+      "id": "pleiades:837",
+      "name": "Asia Minor",
+      "lat": 37.910339750000006,
+      "lon": 27.278502749999998,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/837"
+    },
+    "31154069010377": {
+      "id": "tgn:7001390",
+      "name": "Gaza Strip",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001390"
+    },
+    "31154069010385": {
+      "id": "tgn:7006653",
+      "name": "Georgia",
+      "lat": 42,
+      "lon": 43.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006653"
+    },
+    "31154069010393": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010401": {
+      "id": "pleiades:874602",
+      "name": "Mesopotamia (region)",
+      "lat": 37.69893640060892,
+      "lon": 40.65169471254212,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874602"
+    },
+    "31154069010419": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010427": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010435": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010443": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069010450": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010476": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010484": {
+      "id": "pleiades:863903",
+      "name": "Tbilisi",
+      "lat": 41.717722,
+      "lon": 44.78057,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863903"
+    },
+    "31154069010492": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010500": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010518": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010526": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010542": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010559": {
+      "id": "tgn:7006653",
+      "name": "Georgia",
+      "lat": 42,
+      "lon": 43.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006653"
+    },
+    "31154069010567": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010583": {
+      "id": "pleiades:639048",
+      "name": "Perge",
+      "lat": 36.964465605287096,
+      "lon": 30.853258601264926,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/639048"
+    },
+    "31154069010591": {
+      "id": "tgn:7030347",
+      "name": "Roman Empire",
+      "lat": 41.8925,
+      "lon": 12.48499,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7030347"
+    },
+    "31154069010609": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069010617": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069010740": {
+      "id": "pleiades:668295",
+      "name": "Leukos Limen",
+      "lat": 35.6078548,
+      "lon": 35.7764238,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/668295"
+    },
+    "31154069010765": {
+      "id": "tgn:4003756",
+      "name": "Eastern Europe",
+      "lat": 55.083,
+      "lon": 37.85,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/4003756"
+    },
+    "31154069010773": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010781": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010799": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010807": {
+      "id": "pleiades:727070",
+      "name": "Alexandria",
+      "lat": 31.201435,
+      "lon": 29.909773,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/727070"
+    },
+    "31154069010815": {
+      "id": "pleiades:658440",
+      "name": "Cilicia (region)",
+      "lat": 36.58645514246619,
+      "lon": 33.910580483222674,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/658440"
+    },
+    "31154069010823": {
+      "id": "pleiades:648789",
+      "name": "Tarsus/Antiochia ad Cydnum",
+      "lat": 36.91232970122376,
+      "lon": 34.89579498841108,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/648789"
+    },
+    "31154069010831": {
+      "id": "tgn:7006653",
+      "name": "Georgia",
+      "lat": 42,
+      "lon": 43.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006653"
+    },
+    "31154069010849": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010856": {
+      "id": "pleiades:863770",
+      "name": "Colchis/Lazike (region)",
+      "lat": 42.20175520293256,
+      "lon": 42.45406542571021,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863770"
+    },
+    "31154069010864": {
+      "id": "tgn:7006653",
+      "name": "Georgia",
+      "lat": 42,
+      "lon": 43.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006653"
+    },
+    "31154069010898": {
+      "id": "pleiades:863766",
+      "name": "Caucasus (mountain range)",
+      "lat": 42.38980356096515,
+      "lon": 44.79413803961139,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863766"
+    },
+    "31154069010906": {
+      "id": "pleiades:776156",
+      "name": "Bagawat",
+      "lat": 25.48230330412831,
+      "lon": 30.553873530924612,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/776156"
+    },
+    "31154069010914": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069010922": {
+      "id": "pleiades:463803480",
+      "name": "Ptolemaic Kingdom",
+      "lat": 33.697679091853935,
+      "lon": 26.69407651412198,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/463803480"
+    },
+    "31154069010930": {
+      "id": "pleiades:893951",
+      "name": "Babylon",
+      "lat": 32.53729695,
+      "lon": 44.42497815,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893951"
+    },
+    "31154069010948": {
+      "id": "pleiades:893951",
+      "name": "Babylon",
+      "lat": 32.53729695,
+      "lon": 44.42497815,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893951"
+    },
+    "31154069010955": {
+      "id": "tgn:6005268",
+      "name": "TGN 6005268",
+      "lat": 35.861733,
+      "lon": 56.839977,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/6005268"
+    },
+    "31154069010971": {
+      "id": "pleiades:589748",
+      "name": "Creta (island)",
+      "lat": 35.2148470630119,
+      "lon": 25.074079692118698,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/589748"
+    },
+    "31154069010989": {
+      "id": "pleiades:560221",
+      "name": "Aegaeum Mare",
+      "lat": 38.91395706742166,
+      "lon": 24.91724075272824,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/560221"
+    },
+    "31154069010997": {
+      "id": "pleiades:981538",
+      "name": "Noricum (province)",
+      "lat": 47.5,
+      "lon": 12.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981538"
+    },
+    "31154069011003": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069011011": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011029": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011037": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011045": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011052": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011060": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011078": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011086": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011094": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011102": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011110": {
+      "id": "pleiades:863918",
+      "name": "Vani",
+      "lat": 42.083776,
+      "lon": 42.5014885,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863918"
+    },
+    "31154069011128": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011136": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011144": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011151": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011169": {
+      "id": "pleiades:863780",
+      "name": "Doubios",
+      "lat": 40.01185995,
+      "lon": 44.58079045,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863780"
+    },
+    "31154069011177": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011185": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011193": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011201": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011219": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011227": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011235": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011243": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069011250": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069011268": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069011276": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011284": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011292": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011300": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011318": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011326": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011334": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011342": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011359": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011375": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011383": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011391": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011409": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011417": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011425": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011433": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011441": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011458": {
+      "id": "pleiades:863780",
+      "name": "Doubios",
+      "lat": 40.01185995,
+      "lon": 44.58079045,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863780"
+    },
+    "31154069011466": {
+      "id": "pleiades:863795",
+      "name": "Gorneae",
+      "lat": 40.11285737382658,
+      "lon": 44.72964935789964,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863795"
+    },
+    "31154069011474": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011482": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011490": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011508": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011516": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011524": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011532": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011540": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011557": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011565": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011573": {
+      "id": "pleiades:863780",
+      "name": "Doubios",
+      "lat": 40.01185995,
+      "lon": 44.58079045,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863780"
+    },
+    "31154069011581": {
+      "id": "pleiades:891702684",
+      "name": "Ateni Sioni",
+      "lat": 41.9039179,
+      "lon": 44.0959441,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/891702684"
+    },
+    "31154069011599": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011607": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011615": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011623": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011631": {
+      "id": "pleiades:929634889",
+      "name": "Zvartnots Cathedral",
+      "lat": 40.159792524547264,
+      "lon": 44.33656563850031,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/929634889"
+    },
+    "31154069011649": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011656": {
+      "id": "pleiades:477179882",
+      "name": "Gelati Monastery",
+      "lat": 42.29456112196091,
+      "lon": 42.7680822958053,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/477179882"
+    },
+    "31154069011664": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011672": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011680": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069011698": {
+      "id": "tgn:7594771",
+      "name": "TGN 7594771",
+      "lat": 41.516667,
+      "lon": 44.516667,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7594771"
+    },
+    "31154069011706": {
+      "id": "pleiades:403031321",
+      "name": "Odzun",
+      "lat": 41.05089619227757,
+      "lon": 44.6165051803184,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/403031321"
+    },
+    "31154069011714": {
+      "id": "tgn:1109316",
+      "name": "Lesser Caucasus",
+      "lat": 41,
+      "lon": 44,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1109316"
+    },
+    "31154069037545": {
+      "id": "tgn:7002085",
+      "name": "TGN 7002085",
+      "lat": 36.333333,
+      "lon": 118.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002085"
+    },
+    "31154069037552": {
+      "id": "tgn:7002078",
+      "name": "TGN 7002078",
+      "lat": 31,
+      "lon": 112.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002078"
+    },
+    "31154069037586": {
+      "id": "pleiades:678334",
+      "name": "Phoenice (region)",
+      "lat": 33.25,
+      "lon": 35.25,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/678334"
+    },
+    "31154069037594": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037602": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037610": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037628": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037636": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037644": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037651": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037669": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037677": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069037685": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069078671": {
+      "id": "tgn:8712371",
+      "name": "TGN 8712371",
+      "lat": 31.000008,
+      "lon": 104.223773,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8712371"
+    },
+    "31154069078689": {
+      "id": "tgn:7029798",
+      "name": "Mogao Caves",
+      "lat": 40.033542,
+      "lon": 94.919228,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029798"
+    },
+    "31154069078697": {
+      "id": "tgn:7029798",
+      "name": "Mogao Caves",
+      "lat": 40.033542,
+      "lon": 94.919228,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029798"
+    },
+    "31154069078754": {
+      "id": "pleiades:586301784",
+      "name": "Palace G at Ebla",
+      "lat": 35.79794376865197,
+      "lon": 36.79801081064363,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/586301784"
+    },
+    "31154069078762": {
+      "id": "tgn:1000144",
+      "name": "Turkey",
+      "lat": 39,
+      "lon": 35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000144"
+    },
+    "31154069078788": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "31154069078796": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069078838": {
+      "id": "tgn:7002435",
+      "name": "Russia",
+      "lat": 60,
+      "lon": 47,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002435"
+    },
+    "31154069078846": {
+      "id": "pleiades:248570175",
+      "name": "Hovhannavank",
+      "lat": 40.33953641707415,
+      "lon": 44.38866611348489,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/248570175"
+    },
+    "31154069078853": {
+      "id": "pleiades:1043",
+      "name": "Internum Mare",
+      "lat": 34.655205690792464,
+      "lon": 14.449366695083585,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1043"
+    },
+    "31154069078861": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069078879": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069078887": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078895": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078903": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078911": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078929": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078937": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078945": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078952": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078960": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069078978": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "31154069079000": {
+      "id": "pleiades:884213",
+      "name": "Siwnik",
+      "lat": 39.5,
+      "lon": 46.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/884213"
+    },
+    "31154069079018": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069079026": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069079034": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "31154069079059": {
+      "id": "tgn:4003756",
+      "name": "Eastern Europe",
+      "lat": 55.083,
+      "lon": 37.85,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/4003756"
+    },
+    "31154069079067": {
+      "id": "pleiades:477179882",
+      "name": "Gelati Monastery",
+      "lat": 42.29456112196091,
+      "lon": 42.7680822958053,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/477179882"
+    },
+    "31154069079075": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "31154069079083": {
+      "id": "pleiades:863739",
+      "name": "Ani",
+      "lat": 40.506295,
+      "lon": 43.570558,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863739"
+    },
+    "31154069079091": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079109": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079117": {
+      "id": "pleiades:863795",
+      "name": "Gorneae",
+      "lat": 40.11285737382658,
+      "lon": 44.72964935789964,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863795"
+    },
+    "31154069079125": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079133": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079141": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079158": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "31154069079166": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "alma220497": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "alma228851": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "alma228852": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "alma228853": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "new-titles",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Library new-acquisitions discovery for a scholarly community: ingest, classify, map, deliver.",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "validate": "pnpm --filter @nt/data validate",
+    "test": "pnpm -r test",
+    "dev:map": "pnpm --filter nt-map dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.6.0"
+  }
+}

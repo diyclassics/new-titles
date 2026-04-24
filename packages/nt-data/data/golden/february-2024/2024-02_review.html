@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISAW Library Review — February 2024</title>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; margin: 0; color: #000; background: #fafafa;
+}
+.page { max-width: 900px; margin: 0 auto; padding: 20px; padding-bottom: 140px; }
+h1 { font-size: 1.5em; margin-bottom: 20px; }
+h2 {
+  font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; color: #333;
+  padding-top: 10px; border-top: 2px solid #0066cc;
+}
+p.record { margin-bottom: 10px; line-height: 1.6; padding: 10px 12px; border-radius: 4px;
+            border-left: 4px solid transparent; background: white; border: 1px solid #e0e0e0; }
+p.record.unchanged { border-left-color: #e0e0e0; }
+p.record.changed   { border-left-color: #f57f17; background: #fffbeb; }
+p.record.focused    { outline: 2px solid #0066cc; outline-offset: -1px; }
+p.record strong em { font-weight: bold; font-style: italic; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.back-to-top { font-size: 0.9em; margin-top: 20px; margin-bottom: 10px; }
+
+.toc {
+  margin: 20px 0; padding: 15px; background-color: #f5f5f5;
+  border-left: 4px solid #0066cc;
+}
+.toc ul { list-style-type: none; padding-left: 0; margin: 0; }
+.toc li { margin: 5px 0; font-size: 0.95em; }
+.toc .count { color: #666; font-size: 0.9em; }
+
+.toolbar {
+  position: sticky; top: 0; z-index: 50; background: white; border: 1px solid #d0d0d0;
+  border-radius: 6px; padding: 12px 16px; margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  font-size: 0.9em;
+}
+.toolbar .stats { flex: 1; min-width: 180px; }
+.toolbar .stats strong { color: #0066cc; font-size: 1.15em; }
+.toolbar .bar { height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;
+                 min-width: 180px; max-width: 250px; margin: 4px 0; }
+.toolbar .bar .fill { height: 100%; background: #2e7d32; transition: width 0.2s; }
+.btn {
+  padding: 6px 12px; border: 1px solid #d0d0d0; background: white; border-radius: 4px;
+  font-size: 0.85em; cursor: pointer; font-family: inherit; color: #333;
+}
+.btn:hover { background: #f5f5f5; }
+.btn.primary { background: #0066cc; color: white; border-color: #0066cc; }
+.btn.primary:hover { background: #0050a0; }
+.btn.success { background: #2e7d32; color: white; border-color: #2e7d32; }
+.btn.success:hover { background: #1b5e20; }
+.btn.danger { color: #c62828; }
+.filters { display: inline-flex; gap: 10px; align-items: center; font-size: 0.9em; }
+.filters label { cursor: pointer; }
+
+.share-note {
+  background: #fffde7; border: 1px solid #fbc02d; padding: 12px 16px; border-radius: 4px;
+  margin-bottom: 16px; font-size: 0.9em; line-height: 1.5;
+}
+.share-note strong { color: #e65100; }
+
+.rec-actions {
+  display: inline-flex; gap: 6px; align-items: center; margin-left: 12px;
+  font-size: 0.85em; vertical-align: middle;
+}
+.rec-actions .conf {
+  font-weight: 600; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;
+}
+.conf.high { background: #c8e6c9; color: #2e7d32; }
+.conf.mid  { background: #fff9c4; color: #f57f17; }
+.conf.low  { background: #ffccbc; color: #c62828; }
+.rec-actions select {
+  padding: 3px 6px; font-size: 0.82em; border: 1px solid #ccc; border-radius: 3px;
+  font-family: inherit; max-width: 240px;
+}
+.status-tag {
+  display: inline-block; font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 6px; border-radius: 2px; margin-left: 6px; vertical-align: middle;
+  color: #f57f17; border: 1px solid #f57f17;
+}
+.undo-link {
+  font-size: 0.8em; margin-left: 6px; cursor: pointer; color: #666; text-decoration: underline;
+  background: none; border: none; padding: 0; font-family: inherit;
+}
+.undo-link:hover { color: #c62828; }
+.meta-line { color: #666; font-size: 0.85em; margin-left: 4px; }
+
+.help {
+  font-size: 0.85em; color: #555; background: #e3f2fd; padding: 10px 14px;
+  border-radius: 4px; margin-bottom: 16px;
+}
+.help kbd {
+  background: white; border: 1px solid #bbb; border-bottom-width: 2px; border-radius: 3px;
+  padding: 0 5px; font-family: monospace; font-size: 0.9em;
+}
+
+.download-footer {
+  position: fixed; bottom: 0; left: 0; right: 0; background: white;
+  border-top: 2px solid #0066cc; padding: 10px 20px; z-index: 100;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+  display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap;
+  font-size: 0.9em;
+}
+.download-footer .unsaved-warning {
+  color: #c62828; font-weight: 600;
+}
+footer.sig { text-align: center; color: #666; font-size: 0.8em; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page" x-data="reviewApp()" x-init="init()">
+
+  <h1>ISAW Library New Titles — February 2024 (Review)</h1>
+
+  <div class="share-note">
+    <strong>How to use:</strong> Everything is <em>assumed correct</em> unless you change it. Scan the list and
+    change the category dropdown <em>only</em> for records that are misclassified. When you're done (or at
+    intervals), click <strong>Download corrections</strong> at the bottom to produce a
+    <code>isaw-corrections-2024-02.json</code> file and send it back to Patrick.
+    Changes save to this browser as you work, but only in <em>this</em> browser — don't clear browser data
+    before you've downloaded.
+  </div>
+
+  <div class="toolbar">
+    <div class="stats">
+      <div><strong x-text="changedCount()"></strong> correction<span x-show="changedCount() !== 1">s</span>
+        out of <span x-text="records.length"></span> records</div>
+      <div class="bar" x-show="changedCount() > 0"><div class="fill" :style="`width: ${changedPct()}%`"></div></div>
+    </div>
+    <div class="filters">
+      <label><input type="radio" value="all" x-model="filter"> All</label>
+      <label><input type="radio" value="changed" x-model="filter"> Corrections only</label>
+      <label><input type="radio" value="lowconf" x-model="filter"> Low confidence (&lt;60%)</label>
+    </div>
+    <button class="btn danger" @click="reset()" title="Undo all corrections for this month">Clear all corrections</button>
+  </div>
+
+  <div class="help">
+    <strong>Keyboard:</strong>
+    <kbd>j</kbd>/<kbd>k</kbd> next/prev record ·
+    <kbd>1</kbd>–<kbd>7</kbd> correct focused record to category N ·
+    <kbd>u</kbd> undo correction on focused record
+  </div>
+
+  <div class="toc">
+    <strong>Table of Contents:</strong>
+    <ul>
+      <template x-for="cat in allCategoriesWithRecords()" :key="cat">
+        <li>
+          <a :href="'#' + anchor(cat)" x-text="cat"></a>
+          <span class="count">
+            (<span x-text="totalInCategory(cat)"></span>
+            <template x-if="changedInCategory(cat) > 0">
+              <span> · <span x-text="changedInCategory(cat)"></span> corrected</span>
+            </template>)
+          </span>
+        </li>
+      </template>
+    </ul>
+  </div>
+
+  <template x-for="cat in visibleCategories()" :key="cat">
+    <section>
+      <h2 :id="anchor(cat)">
+        <span x-text="cat"></span>
+        <span style="font-weight: normal; font-size: 0.75em; color: #666;">
+          (<span x-text="visibleInCategory(cat).length"></span> shown /
+          <span x-text="totalInCategory(cat)"></span> total)
+        </span>
+      </h2>
+      <template x-for="r in visibleInCategory(cat)" :key="r.id">
+        <p class="record" :class="statusClass(r) + (isFocused(r) ? ' focused' : '')"
+           @click="focusRec(r)" :data-id="r.id">
+          <strong><em x-text="r.title"></em></strong>
+          <span class="meta-line" x-show="r.author"><br>By <span x-text="r.author"></span></span>
+          <span class="meta-line" x-show="r.publisher_line"><br><span x-text="r.publisher_line"></span></span>
+          <br><span style="font-family: monospace; color: #c62828;" x-text="r.call_number"></span>
+          <span class="meta-line"> · acquired <span x-text="r.date_acquired"></span></span>
+          <br><template x-if="r.bobcat_url"><a :href="r.bobcat_url" target="_blank">View item in Bobcat</a></template>
+          <span class="rec-actions">
+            <span class="conf" :class="confClass(r)" x-text="(r.confidence * 100).toFixed(0) + '%'"
+                  :title="'Model confidence in its prediction'"></span>
+            <select @click.stop @change="changeCat(r, $event.target.value)"
+                    :title="r.status === 'changed' ? 'Corrected to ' + r.final_category : 'Change category if wrong'">
+              <template x-for="cat in categories" :key="cat">
+                <option :value="cat" x-text="cat" :selected="r.final_category === cat"></option>
+              </template>
+            </select>
+            <template x-if="r.status === 'changed'">
+              <span>
+                <span class="status-tag">moved from <span x-text="r.predicted_category"></span></span>
+                <button class="undo-link" @click.stop="unset(r)" title="Revert to original prediction">undo</button>
+              </span>
+            </template>
+          </span>
+        </p>
+      </template>
+      <p class="back-to-top"><em><a href="#">Back to top</a></em></p>
+    </section>
+  </template>
+
+  <footer class="sig">
+    ISAW Library Review · Generated 2026-04-24 19:07 UTC · Changes save to this browser only — download corrections to share.
+  </footer>
+
+  <div class="download-footer">
+    <span>
+      <strong x-text="changedCount()"></strong> correction<span x-show="changedCount() !== 1">s</span>
+      out of <span x-text="records.length"></span> records
+    </span>
+    <button class="btn primary" @click="downloadCorrections()">⬇ Download corrections</button>
+    <span x-show="unsaved() > 0" class="unsaved-warning">
+      ⚠ <span x-text="unsaved()"></span> new change<span x-show="unsaved() !== 1">s</span> since last download — download again to persist.
+    </span>
+  </div>
+</div>
+
+<script id="records-data" type="application/json">[{"id": "31154068974458", "barcode": "31154068974458", "mms_id": "9998647312807876", "title": "Vine and wine in the ancient Greek world /", "author": "Kourakou-Drag\u014dna, Stauroula, 1928- author.", "publisher_line": "Foinikas Publications, 2015.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974458&vid=NYU", "call_number": "TP559.G8 K6713 2015", "date_acquired": "2024-02-27", "predicted_category": "Ancient Western Asia", "confidence": 0.6882407502834176}, {"id": "31154068974474", "barcode": "31154068974474", "mms_id": "9998647329107876", "title": "Fanshan /", "author": null, "publisher_line": "Cultural relics press, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974474&vid=NYU", "call_number": "DS797.88.H364 F3613 2022", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8932135756528858}, {"id": "31154068974482", "barcode": "31154068974482", "mms_id": "9998647329107876", "title": "Fanshan /", "author": null, "publisher_line": "Cultural relics press, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974482&vid=NYU", "call_number": "DS797.88.H364 F3613 2022", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8932135756528858}, {"id": "31154068974490", "barcode": "31154068974490", "mms_id": "9998647312507876", "title": "A history of fake things on the Internet /", "author": "Scheirer, Walter J., author.", "publisher_line": "Stanford University Press, [2024]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974490&vid=NYU", "call_number": "HM851 .S2485 2024", "date_acquired": "2024-02-27", "predicted_category": "European and Classical Antiquity", "confidence": 0.7402511566424322}, {"id": "31154068974508", "barcode": "31154068974508", "mms_id": "9998647311307876", "title": "\"The work of magic art\" : historia, chr\u0113seis & s\u0113masies tou mn\u0113meiou t\u014dn Incantadas t\u0113s Thessalonik\u0113s : praktika epist\u0113monik\u0113s di\u0113meridas 9-10 Iouniou 2018 /", "author": null, "publisher_line": "Archaiologiko Mouseio Thessalonik\u0113s, 2021", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974508&vid=NYU", "call_number": "NB118.G74 W67 2021", "date_acquired": "2024-02-27", "predicted_category": "European and Classical Antiquity", "confidence": 0.8104333404401551}, {"id": "31154068974516", "barcode": "31154068974516", "mms_id": "9998647309707876", "title": "Min\u014dik\u0113 Kr\u0113t\u0113 : Hell\u0113nistik\u0113 kai R\u014dmaik\u0113 = Minoan Crete : Hellenistic & Roman /", "author": null, "publisher_line": "Militos Editions, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974516&vid=NYU", "call_number": "DF221.C8 M555 2021", "date_acquired": "2024-02-27", "predicted_category": "European and Classical Antiquity", "confidence": 0.9615243679003298}, {"id": "31154068974524", "barcode": "31154068974524", "mms_id": "990087068990107876", "title": "Evidence combined : Western and Eastern sources in dialogue /", "author": null, "publisher_line": "Austrian Academy of Sciences Press, [2022]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974524&vid=NYU", "call_number": "DE94 .E853 2022", "date_acquired": "2024-02-27", "predicted_category": "Cross-Cultural Studies & Other", "confidence": 0.5256673511293635}, {"id": "31154068974532", "barcode": "31154068974532", "mms_id": "9998647308607876", "title": "Idia h\u0113 mn\u0113m\u0113 ginamen\u0113 paron-- : To archaiologiko ergo t\u014dn Ephorei\u014dn Archaiot\u0113t\u014dn kata t\u0113 chronik\u0113 periodo 2011-2019 : epist\u0113monik\u0113 synant\u0113s\u0113 Megaro Mousik\u0113s Ath\u0113n\u014dn, 25-28 Noemvriou 2019 : praktika /", "author": "Idia h\u0113 mn\u0113m\u0113 ginamen\u0113 paron : To archaiologiko ergo t\u014dn Ephorei\u014dn Archaiot\u0113t\u014dn kata t\u0113 chronik\u0113 periodo 2011-2019 Athens, Greece) (2019 :", "publisher_line": "Ekdos\u0113 tou Organismos Diacheiris\u0113s kai Anaptyx\u0113s Politistik\u014dn Por\u014dn, 2022", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974532&vid=NYU", "call_number": "DF77 .I35 2019", "date_acquired": "2024-02-28", "predicted_category": "European and Classical Antiquity", "confidence": 0.9348210799957679}, {"id": "31154068974540", "barcode": "31154068974540", "mms_id": "9998647308607876", "title": "Idia h\u0113 mn\u0113m\u0113 ginamen\u0113 paron-- : To archaiologiko ergo t\u014dn Ephorei\u014dn Archaiot\u0113t\u014dn kata t\u0113 chronik\u0113 periodo 2011-2019 : epist\u0113monik\u0113 synant\u0113s\u0113 Megaro Mousik\u0113s Ath\u0113n\u014dn, 25-28 Noemvriou 2019 : praktika /", "author": "Idia h\u0113 mn\u0113m\u0113 ginamen\u0113 paron : To archaiologiko ergo t\u014dn Ephorei\u014dn Archaiot\u0113t\u014dn kata t\u0113 chronik\u0113 periodo 2011-2019 Athens, Greece) (2019 :", "publisher_line": "Ekdos\u0113 tou Organismos Diacheiris\u0113s kai Anaptyx\u0113s Politistik\u014dn Por\u014dn, 2022", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974540&vid=NYU", "call_number": "DF77 .I35 2019", "date_acquired": "2024-02-28", "predicted_category": "European and Classical Antiquity", "confidence": 0.9348210799957679}, {"id": "31154068974557", "barcode": "31154068974557", "mms_id": "9998647307907876", "title": "Museum of Cycladic Art : highlights /", "author": null, "publisher_line": "Museum of Cycladic Art; Nicholas & Dolly Goulandris Foundation, 2023", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974557&vid=NYU", "call_number": "N5899.C9 M87 2023", "date_acquired": "2024-02-28", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.6149538720180497}, {"id": "31154068974565", "barcode": "31154068974565", "mms_id": "9998647303107876", "title": "\"And in length of days understanding\" (Job 12:12) : essays on archaeology in the Eastern Mediterranean and beyond in honor of Thomas E. Levy /", "author": null, "publisher_line": "Springer, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974565&vid=NYU", "call_number": "DS56 .A54 2023", "date_acquired": "2024-02-29", "predicted_category": "Ancient Western Asia", "confidence": 0.805187709207949}, {"id": "31154068974573", "barcode": "31154068974573", "mms_id": "9998647303107876", "title": "\"And in length of days understanding\" (Job 12:12) : essays on archaeology in the Eastern Mediterranean and beyond in honor of Thomas E. Levy /", "author": null, "publisher_line": "Springer, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068974573&vid=NYU", "call_number": "DS56 .A54 2023", "date_acquired": "2024-02-29", "predicted_category": "Ancient Western Asia", "confidence": 0.805187709207949}, {"id": "31154069000766", "barcode": "31154069000766", "mms_id": "9998645727107876", "title": "Patere baccellate in bronzo : Oriente, Grecia, Italia in et\u00e0 orientalizzante /", "author": "Sciacca, Ferdinando.", "publisher_line": "L'Erma di Bretschneider, 2005.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000766&vid=NYU", "call_number": "NK7907 .S35 2005", "date_acquired": "2024-02-12", "predicted_category": "European and Classical Antiquity", "confidence": 0.29935939151760427}, {"id": "31154069000774", "barcode": "31154069000774", "mms_id": "9998645727007876", "title": "From hydrology to hydroarchaeology in the ancient Mediterranean /", "author": null, "publisher_line": "Archaeopress Publishing Ltd, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000774&vid=NYU", "call_number": "DE61.W38 F76 2022", "date_acquired": "2024-02-12", "predicted_category": "Cross-Cultural Studies & Other", "confidence": 0.5453137103020913}, {"id": "31154069000782", "barcode": "31154069000782", "mms_id": "990080898010107876", "title": "Shanxi zhen gui wen wu dang an /", "author": null, "publisher_line": "Ke xue chu ban she, 2017-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000782&vid=NYU", "call_number": "N7346.S53 S64 2017", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9423653397476179}, {"id": "31154069000790", "barcode": "31154069000790", "mms_id": "990080898010107876", "title": "Shanxi zhen gui wen wu dang an /", "author": null, "publisher_line": "Ke xue chu ban she, 2017-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000790&vid=NYU", "call_number": "N7346.S53 S64 2017", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9423653397476179}, {"id": "31154069000808", "barcode": "31154069000808", "mms_id": "990080898010107876", "title": "Shanxi zhen gui wen wu dang an /", "author": null, "publisher_line": "Ke xue chu ban she, 2017-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000808&vid=NYU", "call_number": "N7346.S53 S64 2017", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9423653397476179}, {"id": "31154069000816", "barcode": "31154069000816", "mms_id": "990080898010107876", "title": "Shanxi zhen gui wen wu dang an /", "author": null, "publisher_line": "Ke xue chu ban she, 2017-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000816&vid=NYU", "call_number": "N7346.S53 S64 2017", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9423653397476179}, {"id": "31154069000824", "barcode": "31154069000824", "mms_id": "9998646314307876", "title": "Annual documents of the metal expenditures (\u00e8) from minister Ibrium's Period : (Archive L. 2769) /", "author": "Archi, Alfonso, compiler, writer of added commentary.", "publisher_line": "Harrassowitz Verlag, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000824&vid=NYU", "call_number": "PJ4147.Z77 A72 v.21 2023", "date_acquired": "2024-02-20", "predicted_category": "Ancient Western Asia", "confidence": 0.924248112154248}, {"id": "31154069000832", "barcode": "31154069000832", "mms_id": "9998646314307876", "title": "Annual documents of the metal expenditures (\u00e8) from minister Ibrium's Period : (Archive L. 2769) /", "author": "Archi, Alfonso, compiler, writer of added commentary.", "publisher_line": "Harrassowitz Verlag, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000832&vid=NYU", "call_number": "PJ4147.Z77 A72 v.21 2023", "date_acquired": "2024-02-20", "predicted_category": "Ancient Western Asia", "confidence": 0.924248112154248}, {"id": "31154069000840", "barcode": "31154069000840", "mms_id": "990026954870107876", "title": "Syrie : art, histoire, architecture /", "author": "Degeorge, G\u00e9rard, 1947-", "publisher_line": "Hermann, \u00a91983.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000840&vid=NYU", "call_number": "N7289.6 .D44 1983", "date_acquired": "2024-02-21", "predicted_category": "Ancient Western Asia", "confidence": 0.7684492015060642}, {"id": "31154069000857", "barcode": "31154069000857", "mms_id": "9998646301807876", "title": "The sanctuary of Hermes and Aphrodite at Syme Viannou.", "author": "Kotsonas, Antonis, author.", "publisher_line": "Institute for the Study of the Ancient World; in collaboration with; The Archaeological Society at Athens, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000857&vid=NYU", "call_number": "DF261.S55 K68 2024", "date_acquired": "2024-02-21", "predicted_category": "European and Classical Antiquity", "confidence": 0.9447490510333192}, {"id": "31154069000865", "barcode": "31154069000865", "mms_id": "9998646301807876", "title": "The sanctuary of Hermes and Aphrodite at Syme Viannou.", "author": "Kotsonas, Antonis, author.", "publisher_line": "Institute for the Study of the Ancient World; in collaboration with; The Archaeological Society at Athens, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000865&vid=NYU", "call_number": "DF261.S55 K68 2024", "date_acquired": "2024-02-21", "predicted_category": "European and Classical Antiquity", "confidence": 0.9447490510333192}, {"id": "31154069000873", "barcode": "31154069000873", "mms_id": "990059363870107876", "title": "Hai dai kao gu /", "author": null, "publisher_line": "Shandong da xue chu ban she, 1989-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000873&vid=NYU", "call_number": "DS793.S4 H35", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8631713160849476}, {"id": "31154069000881", "barcode": "31154069000881", "mms_id": "990043846600107876", "title": "Chengdu kao gu yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she, 2009-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000881&vid=NYU", "call_number": "DS797.77.C446 C4426", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8871666948210158}, {"id": "31154069000899", "barcode": "31154069000899", "mms_id": "990043846600107876", "title": "Chengdu kao gu yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she, 2009-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000899&vid=NYU", "call_number": "DS797.77.C446 C4426", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8871666948210158}, {"id": "31154069000907", "barcode": "31154069000907", "mms_id": "990043846600107876", "title": "Chengdu kao gu yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she, 2009-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000907&vid=NYU", "call_number": "DS797.77.C446 C4426", "date_acquired": "2024-02-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8871666948210158}, {"id": "31154069000915", "barcode": "31154069000915", "mms_id": "990028566520107876", "title": "Zeitschrift f\u00fcr Papyrologie und Epigraphik.", "author": null, "publisher_line": "Rudolf Habelt Verlag GMBH, 1967-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000915&vid=NYU", "call_number": "PA3339 .Z45", "date_acquired": "2024-02-22", "predicted_category": "Egypt & North Africa", "confidence": 0.9547714894624676}, {"id": "31154069000949", "barcode": "31154069000949", "mms_id": "9998646803307876", "title": "Monetnye splavy Kerkinitidy = Coin Alloys of Kerkinitis /", "author": "Kuta\u012dsov, V. A. author. (Vadim Aleksandrovich),", "publisher_line": "Alete\u012di\u0361a, 2020.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069000949&vid=NYU", "call_number": "CJ245 .K88 2020", "date_acquired": "2024-02-29", "predicted_category": "European and Classical Antiquity", "confidence": 0.7521364348310808}, {"id": "31154069034534", "barcode": "31154069034534", "mms_id": "990021661500107876", "title": "Rossi\u012dskai\u0361a arkheologii\u0361a.", "author": null, "publisher_line": "Izd-vo \"Nauka\", 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034534&vid=NYU", "call_number": "DK30 .A1733", "date_acquired": "2024-02-28", "predicted_category": "The Caucasus & The Western Steppe", "confidence": 0.7322348094747683}, {"id": "31154069034542", "barcode": "31154069034542", "mms_id": "9998647309807876", "title": "H\u0113 hevra\u00efk\u0113 parousia ston Helladiko ch\u014dro (4os-19os ai.) /", "author": null, "publisher_line": "Ethniko Hidryma Ereun\u014dn Institouto Vyzantin\u014dn Ereun\u014dn, 2008.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034542&vid=NYU", "call_number": "BM319 .H48 2008", "date_acquired": "2024-02-27", "predicted_category": "Ancient Western Asia", "confidence": 0.7527692962539685}, {"id": "31154069034559", "barcode": "31154069034559", "mms_id": "9998647308007876", "title": "The perception of the Pleiades in Mesopotamian culture /", "author": "Renzi-Sepe, Maria Teresa, author.", "publisher_line": "Harrassowitz Verlag, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034559&vid=NYU", "call_number": "QB19 .R46 2023", "date_acquired": "2024-02-28", "predicted_category": "Ancient Western Asia", "confidence": 0.9062156336603177}, {"id": "31154069034567", "barcode": "31154069034567", "mms_id": "9998647308107876", "title": "La Fonteta.", "author": null, "publisher_line": "Universidad de Alicante, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034567&vid=NYU", "call_number": "DP402.G93 F66 2023", "date_acquired": "2024-02-28", "predicted_category": "Cross-Cultural Studies & Other", "confidence": 0.4807253689344013}, {"id": "31154069034575", "barcode": "31154069034575", "mms_id": "9998647305107876", "title": "Apprendre \u00e0 conjuguer dans l'\u00c9gypte byzantine : un manuel de conjugaison grecque de la biblioth\u00e8que de Dioscore d'Aphrodit\u00e9 (P.Aphrod.Lit. III 1\u00b2) /", "author": "Fournet, Jean-Luc, author.", "publisher_line": "Association \u00e9gyptologique Reine \u00c9lisabeth, 2019.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034575&vid=NYU", "call_number": "PA3339 .P34 t.38 2019", "date_acquired": "2024-02-29", "predicted_category": "European and Classical Antiquity", "confidence": 0.9420661715057395}, {"id": "31154069034583", "barcode": "31154069034583", "mms_id": "9998647304807876", "title": "Ia\u00f4 saba\u00f4th : pratiques magiques dans la cit\u00e9 des Tongres : une tablette de d\u00e9fixion mise en contexte /", "author": null, "publisher_line": "Association \u00c9gyptologique Reine \u00c9lisabeth, 2019.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034583&vid=NYU", "call_number": "PA3339 .P34 t.39 2019", "date_acquired": "2024-02-29", "predicted_category": "European and Classical Antiquity", "confidence": 0.7566130907173653}, {"id": "31154069034591", "barcode": "31154069034591", "mms_id": "9998647304707876", "title": "Papyrus litt\u00e9raires et tradition textuelle : le cas d'Eschine /", "author": "Lenaerts, Jean, author.", "publisher_line": "Association \u00c9gyptologique Reine \u00c9lisabeth, 2020.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034591&vid=NYU", "call_number": "PA3339 .P34 t.40 2020", "date_acquired": "2024-02-29", "predicted_category": "Egypt & North Africa", "confidence": 0.6597938144329897}, {"id": "31154069034609", "barcode": "31154069034609", "mms_id": "9998647304607876", "title": "The bearers of business letters in Roman Egypt /", "author": "Schubert, Paul, 1963- author.", "publisher_line": "Peeters; Association \u00e9gyptologique reine Elisabeth, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069034609&vid=NYU", "call_number": "PA3339 .P34 t.41 2021", "date_acquired": "2024-02-29", "predicted_category": "Egypt & North Africa", "confidence": 0.5609278079722079}, {"id": "31154069075925", "barcode": "31154069075925", "mms_id": "990059364250107876", "title": "Chengdu kao gu fa xian /", "author": null, "publisher_line": "Ke xue chu ban she, 2001-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075925&vid=NYU", "call_number": "DS797.77.C48 C472", "date_acquired": "2024-02-12", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.7982195059489755}, {"id": "31154069075933", "barcode": "31154069075933", "mms_id": "990059364250107876", "title": "Chengdu kao gu fa xian /", "author": null, "publisher_line": "Ke xue chu ban she, 2001-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075933&vid=NYU", "call_number": "DS797.77.C48 C472", "date_acquired": "2024-02-12", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.7982195059489755}, {"id": "31154069075941", "barcode": "31154069075941", "mms_id": "990041466930107876", "title": "Dong fang kao gu /", "author": null, "publisher_line": "Ke xue chu ban she, 2004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075941&vid=NYU", "call_number": "DS793.S644 D66", "date_acquired": "2024-02-12", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.800822882839671}, {"id": "31154069075958", "barcode": "31154069075958", "mms_id": "990041466930107876", "title": "Dong fang kao gu /", "author": null, "publisher_line": "Ke xue chu ban she, 2004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075958&vid=NYU", "call_number": "DS793.S644 D66", "date_acquired": "2024-02-12", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.800822882839671}, {"id": "31154069075966", "barcode": "31154069075966", "mms_id": "990041466930107876", "title": "Dong fang kao gu /", "author": null, "publisher_line": "Ke xue chu ban she, 2004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075966&vid=NYU", "call_number": "DS793.S644 D66", "date_acquired": "2024-02-12", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.800822882839671}, {"id": "31154069075974", "barcode": "31154069075974", "mms_id": "9998646319007876", "title": "L'Empire babylonien : entre haine et fascination /", "author": "Elayi, Josette, author.", "publisher_line": "Perrin, [2024]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075974&vid=NYU", "call_number": "DS73.9 .E43 2024", "date_acquired": "2024-02-16", "predicted_category": "Ancient Western Asia", "confidence": 0.7035964569643518}, {"id": "31154069075982", "barcode": "31154069075982", "mms_id": "9998646318907876", "title": "F\u00eates d'Egypte ptol\u00e9ma\u00efque et romaine, d'apr\u00e8s la documentation papyrologique grecque /", "author": "Perpillou-Thomas, Fran\u00e7oise, -1993.", "publisher_line": "Universitas Catholica Lovaniensis, 1993.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075982&vid=NYU", "call_number": "DT68.4 .P47 1993", "date_acquired": "2024-02-16", "predicted_category": "Egypt & North Africa", "confidence": 0.9874999999999999}, {"id": "31154069075990", "barcode": "31154069075990", "mms_id": "9998646318807876", "title": "Guide to Deir el-Medina : village of artists /", "author": "Andreu-Lano\u00eb, Guillemette, author.", "publisher_line": "Institut fran\u00e7ais d'arch\u00e9ologie orientale, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069075990&vid=NYU", "call_number": "DT73.D47 A53 2023", "date_acquired": "2024-02-16", "predicted_category": "Egypt & North Africa", "confidence": 0.9874999999999999}, {"id": "31154069076006", "barcode": "31154069076006", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076006&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076014", "barcode": "31154069076014", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076014&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076022", "barcode": "31154069076022", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076022&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076030", "barcode": "31154069076030", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076030&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076048", "barcode": "31154069076048", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076048&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076055", "barcode": "31154069076055", "mms_id": "990037156580107876", "title": "Kao gu xue yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she, 1992-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076055&vid=NYU", "call_number": "DS715 .K37", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9046069094154736}, {"id": "31154069076063", "barcode": "31154069076063", "mms_id": "990080898010107876", "title": "Shanxi zhen gui wen wu dang an /", "author": null, "publisher_line": "Ke xue chu ban she, 2017-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076063&vid=NYU", "call_number": "N7346.S53 S64 2017", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9423653397476179}, {"id": "31154069076071", "barcode": "31154069076071", "mms_id": "990040390240107876", "title": "Nan fang min zu kao gu = Southern ethnology and archaeology /", "author": null, "publisher_line": "Ke xue chu ban she; Sichuan da xue chu ban she, 1987-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076071&vid=NYU", "call_number": "DS793.S644 N36", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8194662732758832}, {"id": "31154069076089", "barcode": "31154069076089", "mms_id": "990040390240107876", "title": "Nan fang min zu kao gu = Southern ethnology and archaeology /", "author": null, "publisher_line": "Ke xue chu ban she; Sichuan da xue chu ban she, 1987-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076089&vid=NYU", "call_number": "DS793.S644 N36", "date_acquired": "2024-02-16", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8194662732758832}, {"id": "31154069076097", "barcode": "31154069076097", "mms_id": "990079219630107876", "title": "Si chou zhi lu kao gu /", "author": null, "publisher_line": "She hui ke xue wen xian chu ban she; Ke xue chu ban she, 2018-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076097&vid=NYU", "call_number": "DS793.N6 S5343", "date_acquired": "2024-02-16", "predicted_category": "Central Asia & Siberia", "confidence": 0.5543134145036767}, {"id": "31154069076105", "barcode": "31154069076105", "mms_id": "990079219630107876", "title": "Si chou zhi lu kao gu /", "author": null, "publisher_line": "She hui ke xue wen xian chu ban she; Ke xue chu ban she, 2018-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076105&vid=NYU", "call_number": "DS793.N6 S5343", "date_acquired": "2024-02-16", "predicted_category": "Central Asia & Siberia", "confidence": 0.5543134145036767}, {"id": "31154069076113", "barcode": "31154069076113", "mms_id": "990079219630107876", "title": "Si chou zhi lu kao gu /", "author": null, "publisher_line": "She hui ke xue wen xian chu ban she; Ke xue chu ban she, 2018-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076113&vid=NYU", "call_number": "DS793.N6 S5343", "date_acquired": "2024-02-16", "predicted_category": "Central Asia & Siberia", "confidence": 0.5543134145036767}, {"id": "31154069076121", "barcode": "31154069076121", "mms_id": "990000661040107876", "title": "Turks : A Journey of a Thousand Years, 600-1600 /", "author": null, "publisher_line": "Distributed in the US and Canada by Harry N Abrams; Royal Academy of Arts, \u00a92005.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076121&vid=NYU", "call_number": "N7161 .T87 2005", "date_acquired": "2024-02-16", "predicted_category": "Central Asia & Siberia", "confidence": 0.33715327603791234}, {"id": "31154069076139", "barcode": "31154069076139", "mms_id": "990041599440107876", "title": "Zhongguo zhong yao kao gu fa xian = Major archaeological discoveries in China in ... /", "author": null, "publisher_line": "Wen wu chu ban she, 2000-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076139&vid=NYU", "call_number": "DS715 .Z47", "date_acquired": "2024-02-20", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8683765782649358}, {"id": "31154069076147", "barcode": "31154069076147", "mms_id": "990041599440107876", "title": "Zhongguo zhong yao kao gu fa xian = Major archaeological discoveries in China in ... /", "author": null, "publisher_line": "Wen wu chu ban she, 2000-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076147&vid=NYU", "call_number": "DS715 .Z47", "date_acquired": "2024-02-20", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8683765782649358}, {"id": "31154069076154", "barcode": "31154069076154", "mms_id": "990041462970107876", "title": "Zhejiang da xue yi shu yu kao gu yan jiu.", "author": null, "publisher_line": "Zhejiang da xue chu ban she, 2014-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076154&vid=NYU", "call_number": "N72.A73 Z44", "date_acquired": "2024-02-20", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8598829065047949}, {"id": "31154069076162", "barcode": "31154069076162", "mms_id": "9998646302407876", "title": "Asie centrale : 300-850 : des routes et des royaumes /", "author": "La Vaissi\u00e8re, \u00c9tienne de, author.", "publisher_line": "Les Belles Lettres, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076162&vid=NYU", "call_number": "DS329.4 .L34 2024", "date_acquired": "2024-02-21", "predicted_category": "Central Asia & Siberia", "confidence": 0.8621559677090911}, {"id": "31154069076170", "barcode": "31154069076170", "mms_id": "9998646302307876", "title": "Sarazm : a site along the proto-Silk Road at the intersection of the steppe and oasis cultures : results from excavation VII /", "author": "Mutin, Benjamin, author.", "publisher_line": "Brepols Publishers, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076170&vid=NYU", "call_number": "DK929.5.S37 M88 2024", "date_acquired": "2024-02-21", "predicted_category": "Central Asia & Siberia", "confidence": 0.8693259972489684}, {"id": "31154069076188", "barcode": "31154069076188", "mms_id": "9998646302207876", "title": "Slingers and sling bullets in the Roman Civil Wars of the Late Republic, 90-31 BC /", "author": "Keppie, L. J. F., author.", "publisher_line": "Archaeopress Publishing Ltd, [2023].", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076188&vid=NYU", "call_number": "GN498.S55 K46 2023", "date_acquired": "2024-02-21", "predicted_category": "European and Classical Antiquity", "confidence": 0.5201222981559024}, {"id": "31154069076196", "barcode": "31154069076196", "mms_id": "990060468820107876", "title": "Bei fang min zu kao gu = The archaeology of northern ethnicity /", "author": null, "publisher_line": "Ke xue chu ban she, 2014-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076196&vid=NYU", "call_number": "DS715 .B45", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8612930359887443}, {"id": "31154069076204", "barcode": "31154069076204", "mms_id": "990040390660107876", "title": "Bian jiang kao gu yan jiu = Research of China's frontier archaeology /", "author": null, "publisher_line": "Ke xue chu ban she, 2002-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076204&vid=NYU", "call_number": "CC79.E85 B56", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.6111418353426981}, {"id": "31154069076212", "barcode": "31154069076212", "mms_id": "990056876930107876", "title": "Xi bu kao gu /", "author": null, "publisher_line": "Ke xue chu ban she; San qin chu ban she, 2015-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076212&vid=NYU", "call_number": "DS793.N6 X49246", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8793818537466209}, {"id": "31154069076220", "barcode": "31154069076220", "mms_id": "9998753885107876", "title": "Shi ku si yan jiu /", "author": null, "publisher_line": "Ke xue chu ban she; Wen wu chu ban she, 2010", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076220&vid=NYU", "call_number": "NA4640 .S55", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.7045131782330762}, {"id": "31154069076238", "barcode": "31154069076238", "mms_id": "990033327570107876", "title": "San dai kao gu /", "author": null, "publisher_line": "Ke xue chu ban she, 2004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076238&vid=NYU", "call_number": "DS744 .S36 2004", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8683765782649358}, {"id": "31154069076246", "barcode": "31154069076246", "mms_id": "990037139650107876", "title": "Hunan kao gu ji kan /", "author": null, "publisher_line": "Yue lu shu she, 1982-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076246&vid=NYU", "call_number": "DS793.H7 H7576", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.925016078586442}, {"id": "31154069076253", "barcode": "31154069076253", "mms_id": "990040241000107876", "title": "Xi yu wen shi = Literature & history of the Western regions.", "author": null, "publisher_line": "Ke xue chu ban she, 2006-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076253&vid=NYU", "call_number": "DS793.N6 X5", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8184075752925329}, {"id": "31154069076261", "barcode": "31154069076261", "mms_id": "990043051580107876", "title": "Zhongguo wen wu nian jian /", "author": null, "publisher_line": "Ke xue chu ban she, 2003-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076261&vid=NYU", "call_number": "DS715 .Z467", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.925016078586442}, {"id": "31154069076279", "barcode": "31154069076279", "mms_id": "990081375870107876", "title": "Chang'an xue yan jiu.", "author": null, "publisher_line": "Zhonghua shu ju, 2016-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076279&vid=NYU", "call_number": "DS797.68.X536 C5363", "date_acquired": "2024-02-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9239396494682779}, {"id": "31154069076287", "barcode": "31154069076287", "mms_id": "990034152840107876", "title": "Res antiquae.", "author": null, "publisher_line": "Editions Safran, \u00a92004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076287&vid=NYU", "call_number": "DE1 .R47", "date_acquired": "2024-02-22", "predicted_category": "European and Classical Antiquity", "confidence": 0.8952837729816148}, {"id": "31154069076295", "barcode": "31154069076295", "mms_id": "990034152840107876", "title": "Res antiquae.", "author": null, "publisher_line": "Editions Safran, \u00a92004-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076295&vid=NYU", "call_number": "DE1 .R47", "date_acquired": "2024-02-22", "predicted_category": "European and Classical Antiquity", "confidence": 0.8952837729816148}, {"id": "31154069076303", "barcode": "31154069076303", "mms_id": "990033228500107876", "title": "Suhayl : journal for the history of the exact and natural sciences in Islamic civilisation.", "author": null, "publisher_line": "Universitat de Barcelona, 2000-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076303&vid=NYU", "call_number": "Q127.I742 S84", "date_acquired": "2024-02-22", "predicted_category": "Ancient Western Asia", "confidence": 0.6343695095886651}, {"id": "31154069076311", "barcode": "31154069076311", "mms_id": "990003874770107876", "title": "Archaeology, ethnology & anthropology of Eurasia.", "author": null, "publisher_line": "Elsevier; Institute of Archaeology and Ethnography SB RAS Press, 2000-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076311&vid=NYU", "call_number": "DJK24 .A75", "date_acquired": "2024-02-22", "predicted_category": "Central Asia & Siberia", "confidence": 0.5280836364240281}, {"id": "31154069076329", "barcode": "31154069076329", "mms_id": "990017935600107876", "title": "Akkadica.", "author": null, "publisher_line": "Fondation assyriologique Georges Dossin, 1977", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076329&vid=NYU", "call_number": "DS67 .A55", "date_acquired": "2024-02-22", "predicted_category": "Ancient Western Asia", "confidence": 0.6427435721592173}, {"id": "31154069076345", "barcode": "31154069076345", "mms_id": "990050554970107876", "title": "Gephyra : Zeitschrift f\u00fcr Geschichte und Kultur der Antike auf dem Gebiet der heutigen T\u00fcrkei = G\u00fcn\u00fcm\u00fcz T\u00fcrkiyesi\u02bcnin antik devir\u02bcdeki tarihi ve k\u00fclt\u00fcr\u00fc i\u00e7in dergi.", "author": null, "publisher_line": "Arkeoloji ve Sanat Yay\u0131nlar\u0131; Biering & Brinkmann; Ege Yay\u0131nlar\u0131, 2005-2018.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076345&vid=NYU", "call_number": "DS155 .G47", "date_acquired": "2024-02-28", "predicted_category": "Ancient Western Asia", "confidence": 0.733143583863777}, {"id": "31154069076352", "barcode": "31154069076352", "mms_id": "990074365870107876", "title": "Adalya.", "author": null, "publisher_line": "Suna-\u0130nan K\u0131ra\u00e7 Akdeniz Medeniyetleri Ara\u015ft\u0131rma Enstit\u00fcs\u00fc, 1996-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076352&vid=NYU", "call_number": "DS51.A64 A33", "date_acquired": "2024-02-28", "predicted_category": "Egypt & North Africa", "confidence": 0.42236631516145495}, {"id": "31154069076360", "barcode": "31154069076360", "mms_id": "990016740700107876", "title": "Anatolia antiqua : recueil de travaux publi\u00e9s par l'Institut fran\u00e7ais d'\u00e9tudes anatoliennes d'Istanbul = Eski Anadolu.", "author": null, "publisher_line": "Editions Divit; L'Institut, 1988-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076360&vid=NYU", "call_number": "DS155 .A5987", "date_acquired": "2024-02-28", "predicted_category": "Ancient Western Asia", "confidence": 0.7812296532055962}, {"id": "31154069076378", "barcode": "31154069076378", "mms_id": "990003874770107876", "title": "Archaeology, ethnology & anthropology of Eurasia.", "author": null, "publisher_line": "Elsevier; Institute of Archaeology and Ethnography SB RAS Press, 2000-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076378&vid=NYU", "call_number": "DJK24 .A75", "date_acquired": "2024-02-28", "predicted_category": "Central Asia & Siberia", "confidence": 0.5280836364240281}]</script>
+<script>
+const CATEGORIES = ["European and Classical Antiquity", "Egypt & North Africa", "Ancient Western Asia", "The Caucasus & The Western Steppe", "Central Asia & Siberia", "China, South Asia, & East Asia", "Cross-Cultural Studies & Other"];
+const MONTH_KEY = "2024-02";
+const STORAGE_KEY = `isaw-review-${MONTH_KEY}`;
+const DOWNLOAD_KEY = `isaw-review-${MONTH_KEY}-downloaded-at`;
+
+function reviewApp() {
+  return {
+    categories: CATEGORIES,
+    records: [],
+    filter: 'all',
+    focusedId: null,
+    lastDownloadAt: null,
+
+    init() {
+      if (this.records.length > 0) return; // guard against double-mount (two x-data scopes)
+      const raw = JSON.parse(document.getElementById('records-data').textContent);
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      this.lastDownloadAt = localStorage.getItem(DOWNLOAD_KEY);
+      this.records = raw.map(r => {
+        const s = saved[r.id];
+        return {
+          ...r,
+          final_category: s?.final_category ?? r.predicted_category,
+          status: s?.status ?? 'unchanged',
+          touched_at: s?.touched_at,
+        };
+      });
+      window.addEventListener('keydown', (e) => this.handleKey(e));
+    },
+
+    save() {
+      const now = new Date().toISOString();
+      const snap = {};
+      for (const r of this.records) {
+        if (r.status === 'changed') {
+          snap[r.id] = { status: r.status, final_category: r.final_category, touched_at: r.touched_at || now };
+        }
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(snap));
+    },
+
+    anchor(cat) { return 'cat-' + cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); },
+
+    changedCount()  { return this.records.filter(r => r.status === 'changed').length; },
+    changedPct()    { return this.records.length === 0 ? 0 : (100 * this.changedCount() / this.records.length); },
+    unsaved() {
+      if (!this.lastDownloadAt) return this.changedCount();
+      const cutoff = new Date(this.lastDownloadAt).getTime();
+      return this.records.filter(r => r.status === 'changed' && r.touched_at && new Date(r.touched_at).getTime() > cutoff).length;
+    },
+
+    confClass(r) {
+      if (r.confidence >= 0.8) return 'high';
+      if (r.confidence >= 0.6) return 'mid';
+      return 'low';
+    },
+    statusClass(r) { return r.status; },
+
+    allCategoriesWithRecords() {
+      const seen = new Set(this.records.map(r => r.predicted_category));
+      return this.categories.filter(c => seen.has(c));
+    },
+    visibleCategories() {
+      const seen = new Set();
+      for (const r of this.records) {
+        if (this.matchesFilter(r)) seen.add(r.predicted_category);
+      }
+      return this.categories.filter(c => seen.has(c));
+    },
+    totalInCategory(cat) { return this.records.filter(r => r.predicted_category === cat).length; },
+    changedInCategory(cat) {
+      return this.records.filter(r => r.predicted_category === cat && r.status === 'changed').length;
+    },
+    visibleInCategory(cat) {
+      return this.records
+        .filter(r => r.predicted_category === cat && this.matchesFilter(r))
+        .sort((a, b) => (a.call_number || '').localeCompare(b.call_number || ''));
+    },
+    matchesFilter(r) {
+      if (this.filter === 'all') return true;
+      if (this.filter === 'changed') return r.status === 'changed';
+      if (this.filter === 'lowconf') return r.confidence < 0.6;
+      return true;
+    },
+
+    changeCat(r, newCat) {
+      if (newCat === r.predicted_category) {
+        // Effectively reverting — same as unset
+        this.unset(r);
+        return;
+      }
+      r.final_category = newCat;
+      r.status = 'changed';
+      r.touched_at = new Date().toISOString();
+      this.save();
+    },
+    unset(r) {
+      r.status = 'unchanged';
+      r.final_category = r.predicted_category;
+      r.touched_at = new Date().toISOString();
+      this.save();
+    },
+    reset() {
+      const n = this.changedCount();
+      if (n === 0) return;
+      if (!confirm(`Undo all ${n} correction${n === 1 ? '' : 's'} for this month?`)) return;
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(DOWNLOAD_KEY);
+      this.lastDownloadAt = null;
+      for (const r of this.records) {
+        r.status = 'unchanged';
+        r.final_category = r.predicted_category;
+        r.touched_at = null;
+      }
+    },
+
+    focusRec(r) { this.focusedId = r.id; },
+    isFocused(r) { return this.focusedId === r.id; },
+    visibleFlat() {
+      const out = [];
+      for (const c of this.visibleCategories()) {
+        for (const r of this.visibleInCategory(c)) out.push(r);
+      }
+      return out;
+    },
+    moveFocus(delta) {
+      const flat = this.visibleFlat();
+      if (flat.length === 0) return;
+      const idx = flat.findIndex(r => r.id === this.focusedId);
+      const nextIdx = idx < 0 ? 0 : Math.max(0, Math.min(flat.length - 1, idx + delta));
+      this.focusedId = flat[nextIdx].id;
+      const el = document.querySelector(`p.record[data-id="${this.focusedId}"]`);
+      if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    },
+    focusedRec() { return this.records.find(r => r.id === this.focusedId); },
+
+    handleKey(e) {
+      if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+      const r = this.focusedRec();
+      if (e.key === 'j') { this.moveFocus(1); e.preventDefault(); }
+      else if (e.key === 'k') { this.moveFocus(-1); e.preventDefault(); }
+      else if (e.key === 'u' && r) { this.unset(r); e.preventDefault(); }
+      else if (/^[1-7]$/.test(e.key) && r) {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < CATEGORIES.length) { this.changeCat(r, CATEGORIES[idx]); e.preventDefault(); }
+      }
+    },
+
+    downloadCorrections() {
+      const payload = {
+        month: MONTH_KEY,
+        generated_at: new Date().toISOString(),
+        total: this.records.length,
+        changed: this.changedCount(),
+        categories: CATEGORIES,
+        items: this.records.map(r => ({
+          id: r.id,
+          barcode: r.barcode,
+          mms_id: r.mms_id,
+          title: r.title,
+          call_number: r.call_number,
+          date_acquired: r.date_acquired,
+          original_category: r.predicted_category,
+          final_category: r.final_category,
+          confidence: r.confidence,
+          status: r.status,  // "unchanged" or "changed"
+        })),
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `isaw-corrections-${MONTH_KEY}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      this.lastDownloadAt = new Date().toISOString();
+      localStorage.setItem(DOWNLOAD_KEY, this.lastDownloadAt);
+    },
+  };
+}
+</script>
+</body>
+</html>

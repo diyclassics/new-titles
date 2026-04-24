@@ -1,0 +1,31 @@
+node_modules/
+dist/
+.vite/
+*.log
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Env
+.env
+.env.local
+!.env.example
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Librarian shelflist exports — local only, never committed.
+# The built acquisitions.json (derivative) is committed; raw exports are not.
+packages/nt-data/data/exports/*
+!packages/nt-data/data/exports/.gitkeep
+!packages/nt-data/data/exports/README.md
+
+# Session/handoff notes — local reference only, not committed.
+.claude/notes/

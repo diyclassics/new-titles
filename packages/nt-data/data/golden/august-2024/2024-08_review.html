@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISAW Library Review — August 2024</title>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; margin: 0; color: #000; background: #fafafa;
+}
+.page { max-width: 900px; margin: 0 auto; padding: 20px; padding-bottom: 140px; }
+h1 { font-size: 1.5em; margin-bottom: 20px; }
+h2 {
+  font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; color: #333;
+  padding-top: 10px; border-top: 2px solid #0066cc;
+}
+p.record { margin-bottom: 10px; line-height: 1.6; padding: 10px 12px; border-radius: 4px;
+            border-left: 4px solid transparent; background: white; border: 1px solid #e0e0e0; }
+p.record.unchanged { border-left-color: #e0e0e0; }
+p.record.changed   { border-left-color: #f57f17; background: #fffbeb; }
+p.record.focused    { outline: 2px solid #0066cc; outline-offset: -1px; }
+p.record strong em { font-weight: bold; font-style: italic; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.back-to-top { font-size: 0.9em; margin-top: 20px; margin-bottom: 10px; }
+
+.toc {
+  margin: 20px 0; padding: 15px; background-color: #f5f5f5;
+  border-left: 4px solid #0066cc;
+}
+.toc ul { list-style-type: none; padding-left: 0; margin: 0; }
+.toc li { margin: 5px 0; font-size: 0.95em; }
+.toc .count { color: #666; font-size: 0.9em; }
+
+.toolbar {
+  position: sticky; top: 0; z-index: 50; background: white; border: 1px solid #d0d0d0;
+  border-radius: 6px; padding: 12px 16px; margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  font-size: 0.9em;
+}
+.toolbar .stats { flex: 1; min-width: 180px; }
+.toolbar .stats strong { color: #0066cc; font-size: 1.15em; }
+.toolbar .bar { height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;
+                 min-width: 180px; max-width: 250px; margin: 4px 0; }
+.toolbar .bar .fill { height: 100%; background: #2e7d32; transition: width 0.2s; }
+.btn {
+  padding: 6px 12px; border: 1px solid #d0d0d0; background: white; border-radius: 4px;
+  font-size: 0.85em; cursor: pointer; font-family: inherit; color: #333;
+}
+.btn:hover { background: #f5f5f5; }
+.btn.primary { background: #0066cc; color: white; border-color: #0066cc; }
+.btn.primary:hover { background: #0050a0; }
+.btn.success { background: #2e7d32; color: white; border-color: #2e7d32; }
+.btn.success:hover { background: #1b5e20; }
+.btn.danger { color: #c62828; }
+.filters { display: inline-flex; gap: 10px; align-items: center; font-size: 0.9em; }
+.filters label { cursor: pointer; }
+
+.share-note {
+  background: #fffde7; border: 1px solid #fbc02d; padding: 12px 16px; border-radius: 4px;
+  margin-bottom: 16px; font-size: 0.9em; line-height: 1.5;
+}
+.share-note strong { color: #e65100; }
+
+.rec-actions {
+  display: inline-flex; gap: 6px; align-items: center; margin-left: 12px;
+  font-size: 0.85em; vertical-align: middle;
+}
+.rec-actions .conf {
+  font-weight: 600; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;
+}
+.conf.high { background: #c8e6c9; color: #2e7d32; }
+.conf.mid  { background: #fff9c4; color: #f57f17; }
+.conf.low  { background: #ffccbc; color: #c62828; }
+.rec-actions select {
+  padding: 3px 6px; font-size: 0.82em; border: 1px solid #ccc; border-radius: 3px;
+  font-family: inherit; max-width: 240px;
+}
+.status-tag {
+  display: inline-block; font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 6px; border-radius: 2px; margin-left: 6px; vertical-align: middle;
+  color: #f57f17; border: 1px solid #f57f17;
+}
+.undo-link {
+  font-size: 0.8em; margin-left: 6px; cursor: pointer; color: #666; text-decoration: underline;
+  background: none; border: none; padding: 0; font-family: inherit;
+}
+.undo-link:hover { color: #c62828; }
+.meta-line { color: #666; font-size: 0.85em; margin-left: 4px; }
+
+.help {
+  font-size: 0.85em; color: #555; background: #e3f2fd; padding: 10px 14px;
+  border-radius: 4px; margin-bottom: 16px;
+}
+.help kbd {
+  background: white; border: 1px solid #bbb; border-bottom-width: 2px; border-radius: 3px;
+  padding: 0 5px; font-family: monospace; font-size: 0.9em;
+}
+
+.download-footer {
+  position: fixed; bottom: 0; left: 0; right: 0; background: white;
+  border-top: 2px solid #0066cc; padding: 10px 20px; z-index: 100;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+  display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap;
+  font-size: 0.9em;
+}
+.download-footer .unsaved-warning {
+  color: #c62828; font-weight: 600;
+}
+footer.sig { text-align: center; color: #666; font-size: 0.8em; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page" x-data="reviewApp()" x-init="init()">
+
+  <h1>ISAW Library New Titles — August 2024 (Review)</h1>
+
+  <div class="share-note">
+    <strong>How to use:</strong> Everything is <em>assumed correct</em> unless you change it. Scan the list and
+    change the category dropdown <em>only</em> for records that are misclassified. When you're done (or at
+    intervals), click <strong>Download corrections</strong> at the bottom to produce a
+    <code>isaw-corrections-2024-08.json</code> file and send it back to Patrick.
+    Changes save to this browser as you work, but only in <em>this</em> browser — don't clear browser data
+    before you've downloaded.
+  </div>
+
+  <div class="toolbar">
+    <div class="stats">
+      <div><strong x-text="changedCount()"></strong> correction<span x-show="changedCount() !== 1">s</span>
+        out of <span x-text="records.length"></span> records</div>
+      <div class="bar" x-show="changedCount() > 0"><div class="fill" :style="`width: ${changedPct()}%`"></div></div>
+    </div>
+    <div class="filters">
+      <label><input type="radio" value="all" x-model="filter"> All</label>
+      <label><input type="radio" value="changed" x-model="filter"> Corrections only</label>
+      <label><input type="radio" value="lowconf" x-model="filter"> Low confidence (&lt;60%)</label>
+    </div>
+    <button class="btn danger" @click="reset()" title="Undo all corrections for this month">Clear all corrections</button>
+  </div>
+
+  <div class="help">
+    <strong>Keyboard:</strong>
+    <kbd>j</kbd>/<kbd>k</kbd> next/prev record ·
+    <kbd>1</kbd>–<kbd>7</kbd> correct focused record to category N ·
+    <kbd>u</kbd> undo correction on focused record
+  </div>
+
+  <div class="toc">
+    <strong>Table of Contents:</strong>
+    <ul>
+      <template x-for="cat in allCategoriesWithRecords()" :key="cat">
+        <li>
+          <a :href="'#' + anchor(cat)" x-text="cat"></a>
+          <span class="count">
+            (<span x-text="totalInCategory(cat)"></span>
+            <template x-if="changedInCategory(cat) > 0">
+              <span> · <span x-text="changedInCategory(cat)"></span> corrected</span>
+            </template>)
+          </span>
+        </li>
+      </template>
+    </ul>
+  </div>
+
+  <template x-for="cat in visibleCategories()" :key="cat">
+    <section>
+      <h2 :id="anchor(cat)">
+        <span x-text="cat"></span>
+        <span style="font-weight: normal; font-size: 0.75em; color: #666;">
+          (<span x-text="visibleInCategory(cat).length"></span> shown /
+          <span x-text="totalInCategory(cat)"></span> total)
+        </span>
+      </h2>
+      <template x-for="r in visibleInCategory(cat)" :key="r.id">
+        <p class="record" :class="statusClass(r) + (isFocused(r) ? ' focused' : '')"
+           @click="focusRec(r)" :data-id="r.id">
+          <strong><em x-text="r.title"></em></strong>
+          <span class="meta-line" x-show="r.author"><br>By <span x-text="r.author"></span></span>
+          <span class="meta-line" x-show="r.publisher_line"><br><span x-text="r.publisher_line"></span></span>
+          <br><span style="font-family: monospace; color: #c62828;" x-text="r.call_number"></span>
+          <span class="meta-line"> · acquired <span x-text="r.date_acquired"></span></span>
+          <br><template x-if="r.bobcat_url"><a :href="r.bobcat_url" target="_blank">View item in Bobcat</a></template>
+          <span class="rec-actions">
+            <span class="conf" :class="confClass(r)" x-text="(r.confidence * 100).toFixed(0) + '%'"
+                  :title="'Model confidence in its prediction'"></span>
+            <select @click.stop @change="changeCat(r, $event.target.value)"
+                    :title="r.status === 'changed' ? 'Corrected to ' + r.final_category : 'Change category if wrong'">
+              <template x-for="cat in categories" :key="cat">
+                <option :value="cat" x-text="cat" :selected="r.final_category === cat"></option>
+              </template>
+            </select>
+            <template x-if="r.status === 'changed'">
+              <span>
+                <span class="status-tag">moved from <span x-text="r.predicted_category"></span></span>
+                <button class="undo-link" @click.stop="unset(r)" title="Revert to original prediction">undo</button>
+              </span>
+            </template>
+          </span>
+        </p>
+      </template>
+      <p class="back-to-top"><em><a href="#">Back to top</a></em></p>
+    </section>
+  </template>
+
+  <footer class="sig">
+    ISAW Library Review · Generated 2026-04-24 19:09 UTC · Changes save to this browser only — download corrections to share.
+  </footer>
+
+  <div class="download-footer">
+    <span>
+      <strong x-text="changedCount()"></strong> correction<span x-show="changedCount() !== 1">s</span>
+      out of <span x-text="records.length"></span> records
+    </span>
+    <button class="btn primary" @click="downloadCorrections()">⬇ Download corrections</button>
+    <span x-show="unsaved() > 0" class="unsaved-warning">
+      ⚠ <span x-text="unsaved()"></span> new change<span x-show="unsaved() !== 1">s</span> since last download — download again to persist.
+    </span>
+  </div>
+</div>
+
+<script id="records-data" type="application/json">[{"id": "31154062322217", "barcode": "31154062322217", "mms_id": "9998678616407876", "title": "Silk'\u016d rod\u016d misul : Y\u014fn'gu hy\u014fnhwang kwa ch\u014fnmang = The art of Silk Road : new research trends and perspective", "author": null, "publisher_line": "Chungang Asia Hakheo; Kungnip Munhwajae Y\u014fn'guso, 2021", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154062322217&vid=NYU", "call_number": "DS327.5 .S75 2021", "date_acquired": "2024-08-26", "predicted_category": "Central Asia & Siberia", "confidence": 0.6405477706407262}, {"id": "31154068985942", "barcode": "31154068985942", "mms_id": "9998678619507876", "title": "Zhoukou yun liang he pan gu qian bi jiao cang /", "author": null, "publisher_line": "Ke xue chu ban she, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068985942&vid=NYU", "call_number": "CJ3496 .Z568 2022", "date_acquired": "2024-08-22", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9093702206104509}, {"id": "31154068987658", "barcode": "31154068987658", "mms_id": "990002846930107876", "title": "History of the art of antiquity /", "author": "Winckelmann, Johann Joachim, 1717-1768.", "publisher_line": "Getty Research Institute, 2006.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987658&vid=NYU", "call_number": "N5330 .W7413 2006", "date_acquired": "2024-08-13", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.4685135607030614}, {"id": "31154068987666", "barcode": "31154068987666", "mms_id": "9998678627107876", "title": "Akhm\u00eem et la 9e province de Haute \u00c9gypte : \u00e9tude de g\u00e9ographie religieuse /", "author": "Claude, Marion, 1991- author.", "publisher_line": "Harrassowitz Verlag, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987666&vid=NYU", "call_number": "DT73.A28 .C52 2024", "date_acquired": "2024-08-13", "predicted_category": "Egypt & North Africa", "confidence": 0.9615243679003298}, {"id": "31154068987674", "barcode": "31154068987674", "mms_id": "9998678626907876", "title": "Im Westen was Neues!? : Ressourcen und die griechischen Wanderungsbewegungen nach Sizilien und Unteritalien (8.-6. Jh. v. Chr.) /", "author": "Riehle, Kai, 1980- author.", "publisher_line": "Verlag Marie Leidorf GmbH, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987674&vid=NYU", "call_number": "DG457.G7 R54 2023", "date_acquired": "2024-08-13", "predicted_category": "European and Classical Antiquity", "confidence": 0.9655172413793103}, {"id": "31154068987682", "barcode": "31154068987682", "mms_id": "990018065970107876", "title": "The Antinoopolis papyri.", "author": null, "publisher_line": "Egypt Exploration Society, 1950 [i.e. 1951]-67.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987682&vid=NYU", "call_number": "PA3315.A58 A58 1950", "date_acquired": "2024-08-13", "predicted_category": "Egypt & North Africa", "confidence": 0.8458149779735682}, {"id": "31154068987690", "barcode": "31154068987690", "mms_id": "990025938980107876", "title": "Kinship & marriage in early Arabia /", "author": "Smith, W. Robertson 1846-1894, author. (William Robertson),", "publisher_line": "Beacon Press, [196-?]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987690&vid=NYU", "call_number": "HQ508 .S68 1960z", "date_acquired": "2024-08-14", "predicted_category": "European and Classical Antiquity", "confidence": 0.8756218905472637}, {"id": "31154068987708", "barcode": "31154068987708", "mms_id": "990018258730107876", "title": "Wen wu.", "author": null, "publisher_line": "Wen wu chu ban she, 1959-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987708&vid=NYU", "call_number": "DS715 .W439", "date_acquired": "2024-08-14", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.925016078586442}, {"id": "31154068987716", "barcode": "31154068987716", "mms_id": "9998678823707876", "title": "Cyprus and the East Aegean : intercultural contacts from 3000 to 500 BC : an international archaeological symposium held at Pythagoreion, Samos, October 17th-18th 2008 /", "author": null, "publisher_line": "The AG Leventis Foundation, 2009.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987716&vid=NYU", "call_number": "DS54.3 .C932 2009", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.7089187759271449}, {"id": "31154068987724", "barcode": "31154068987724", "mms_id": "9998675021207876", "title": "Tell Qraya on the Middle Euphrates : final report of the 1981 season / Daniel Shimabuku.", "author": "Shimabuku, Daniel, author.", "publisher_line": "Undena Publications, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987724&vid=NYU", "call_number": "DS99.T47 S55 2022", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.8764141957314578}, {"id": "31154068987732", "barcode": "31154068987732", "mms_id": "9998678822907876", "title": "Adespota papyracea hexametra graeca (APHex I) : hexameters of unknown or uncertain authorship from Graeco-Roman Egypt /", "author": "Perale, Marco, 1957- author.", "publisher_line": "De Gruyter, Boston :", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987732&vid=NYU", "call_number": "PA3341 .P47 2020", "date_acquired": "2024-08-19", "predicted_category": "Egypt & North Africa", "confidence": 0.7510809141445336}, {"id": "31154068987740", "barcode": "31154068987740", "mms_id": "9998678822607876", "title": "Kulturkontakte und Kulturentwicklungen in Lorest\u0101n (West-Iran) im 3. Jahrtausend v. Chr /", "author": "Neumann, Georg, author.", "publisher_line": "Zaphon, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987740&vid=NYU", "call_number": "DS324.L8 N47 2024", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.8561858991960898}, {"id": "31154068987757", "barcode": "31154068987757", "mms_id": "9998678822507876", "title": "Philologische Untersuchungen zu den hurro-hethitischen Festritualen : ein Beitrag zum hethitisch-hurritischen Sprach- und Kulturkontakt /", "author": "Bastici, Fabio, author.", "publisher_line": "Universit\u00e4tsverlag Winter, [2024]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987757&vid=NYU", "call_number": "P958 .B37 2024", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.9262911706696424}, {"id": "31154068987765", "barcode": "31154068987765", "mms_id": "9998678822307876", "title": "Christmaker : a life of John the Baptist /", "author": "McGrath, James F. 1972- author. (James Frank),", "publisher_line": "William B Eerdmans Publishing Company, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987765&vid=NYU", "call_number": "BS2456 .M344 2024", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.9847513729294499}, {"id": "31154068987773", "barcode": "31154068987773", "mms_id": "9998678623907876", "title": "God's ghostwriters : enslaved Christians and the making of the Bible /", "author": "Moss, Candida, 1978- author.", "publisher_line": "Little Brown and Company, 2024", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987773&vid=NYU", "call_number": "BS2330.3 .M677 2024", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.7154647033987386}, {"id": "31154068987781", "barcode": "31154068987781", "mms_id": "9998678623807876", "title": "The genealogy of Greek mythology : an illustrated family tree of Greek myth from the first Gods to the founders of Rome /", "author": "James, Vanessa, professor.", "publisher_line": "Penguin, \u00a92003.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987781&vid=NYU", "call_number": "BL785 .J36 2003", "date_acquired": "2024-08-19", "predicted_category": "European and Classical Antiquity", "confidence": 0.8694508270590058}, {"id": "31154068987799", "barcode": "31154068987799", "mms_id": "9998678623707876", "title": "Namchom Phiphitthaphanthasath\u0101n h\u01e3ng Ch\u0101t \u02bbUbon R\u0101tchath\u0101n\u012b = Guide to Ubon Ratchathani National Museum.", "author": null, "publisher_line": "Krom Sinlap\u0101k\u014d\u031cn, 2542 [1999]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987799&vid=NYU", "call_number": "DS589.U26 N36 1999", "date_acquired": "2024-08-19", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8248377075346985}, {"id": "31154068987807", "barcode": "31154068987807", "mms_id": "990004281920107876", "title": "The Aegean from Bronze Age to Iron Age : continuity and change between the twelfth and eighth centuries BC /", "author": "Dickinson, O. T. P. K. (Oliver Thomas Pilkington Kirwan)", "publisher_line": "Routledge, 2006.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987807&vid=NYU", "call_number": "DF261.A177 D53 2006", "date_acquired": "2024-08-19", "predicted_category": "European and Classical Antiquity", "confidence": 0.9447490510333192}, {"id": "31154068987815", "barcode": "31154068987815", "mms_id": "9998678623607876", "title": "The Achaemenids, the Black Sea and beyond : new evidence and studies /", "author": null, "publisher_line": "Peeters, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987815&vid=NYU", "call_number": "DS281 .A245 2023", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.7379536782323187}, {"id": "31154068987823", "barcode": "31154068987823", "mms_id": "9998678622107876", "title": "Symposion 2022 : Vortr\u00e4ge zur griechischen und hellenistischen Rechtsgeschichte (Gmunden, 22-24 August 2022) /", "author": "Gesellschaft f\u00fcr Griechische und Hellenistische Rechtsgeschichte. Symposion Gmunden) 2022 : (23rd :", "publisher_line": "Verlag der \u00f6sterreichischen Akademie der Wissenschaften, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987823&vid=NYU", "call_number": "KL4106.5 .G47 2022", "date_acquired": "2024-08-20", "predicted_category": "European and Classical Antiquity", "confidence": 0.7699518780076245}, {"id": "31154068987831", "barcode": "31154068987831", "mms_id": "9998678617107876", "title": "Documentary papyri from the Fouad Collection at the Institut Fran\u00e7ais d'Arch\u00e9ologie Orientale (P.Fouad II 90-100) /", "author": null, "publisher_line": "Institut fran\u00e7ais d'arch\u00e9ologie orientale, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987831&vid=NYU", "call_number": "PJ25 .B6 t.186 2024", "date_acquired": "2024-08-26", "predicted_category": "Egypt & North Africa", "confidence": 0.9300956585724797}, {"id": "31154068987849", "barcode": "31154068987849", "mms_id": "990030793670107876", "title": "The Cambridge companion to the Aegean Bronze Age /", "author": null, "publisher_line": "Cambridge University Press, 2008.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987849&vid=NYU", "call_number": "DF220 .C36 2008", "date_acquired": "2024-08-26", "predicted_category": "European and Classical Antiquity", "confidence": 0.9615243679003298}, {"id": "31154068987856", "barcode": "31154068987856", "mms_id": "9998678616807876", "title": "Le forme della citt\u00e0 : Iran, Gandh\u0101ra e Asia centrale : scritti offerti a Pierfrancesco Callieri in occasione del suo 65o compleanno /", "author": null, "publisher_line": "Scienze e lettere; ISMEO, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987856&vid=NYU", "call_number": "DS56 .F67 2023", "date_acquired": "2024-08-26", "predicted_category": "Ancient Western Asia", "confidence": 0.5995416641249978}, {"id": "31154068987864", "barcode": "31154068987864", "mms_id": "9998678616607876", "title": "1177 B.C : the year civilization collapsed /", "author": "Cline, Eric H.", "publisher_line": "Princeton University Press, 2014.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987864&vid=NYU", "call_number": "GN778.25 .C55 2014", "date_acquired": "2024-08-26", "predicted_category": "Cross-Cultural Studies & Other", "confidence": 0.40185490738365465}, {"id": "31154068987872", "barcode": "31154068987872", "mms_id": "990030997610107876", "title": "Art and identity in dark age Greece, 1100--700 B.C.E. /", "author": "Langdon, Susan Helen, 1952-", "publisher_line": "Cambridge University Press, 2008.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987872&vid=NYU", "call_number": "N5310.5.G8 L36 2008", "date_acquired": "2024-08-26", "predicted_category": "European and Classical Antiquity", "confidence": 0.4798366682744721}, {"id": "31154068987880", "barcode": "31154068987880", "mms_id": "990000140160107876", "title": "Rethinking Mycenaean palaces II /", "author": null, "publisher_line": "Cotsen Institute of Archaeology University of California, \u00a92007.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987880&vid=NYU", "call_number": "DF220.5 .R47 2007", "date_acquired": "2024-08-26", "predicted_category": "European and Classical Antiquity", "confidence": 0.9447490510333192}, {"id": "31154068987898", "barcode": "31154068987898", "mms_id": "990037139080107876", "title": "China's terracotta warriors : the first emperor's legacy /", "author": "Liu, Yang, 1961- author.", "publisher_line": "Distributed by the University of Washington Press; MIA Minneapolis Institute of Arts, [2012]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987898&vid=NYU", "call_number": "DS747.9.Q254 L58 2012", "date_acquired": "2024-08-26", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9169871690196556}, {"id": "31154068987906", "barcode": "31154068987906", "mms_id": "9998678616307876", "title": "Economici /", "author": null, "publisher_line": "Edizioni dell'Orso, \u00a92011.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987906&vid=NYU", "call_number": "PA4253 .O314 2011", "date_acquired": "2024-08-26", "predicted_category": "European and Classical Antiquity", "confidence": 0.9106360067925492}, {"id": "31154068987914", "barcode": "31154068987914", "mms_id": "9998668128307876", "title": "Lessico delle iscrizioni reali sumeriche /", "author": "Maiocchi, Massimo, compiler.", "publisher_line": "Scienze e lettere srl; ISMEO, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987914&vid=NYU", "call_number": "PJ4037 .M35 2023", "date_acquired": "2024-08-27", "predicted_category": "Ancient Western Asia", "confidence": 0.9392398087179163}, {"id": "31154068987922", "barcode": "31154068987922", "mms_id": "9998680130207876", "title": "Roots of Peristan : the pre-islamic cultures of the Hindukush/Karakorum : proceedings of the International Interdisciplinary Conference ISMEO, Rome, Palazzo Baleani, 5-7 October, 2022 /", "author": "International Interdisciplinary Conference \"Roots of Peristan, the pre-islamic cultures of the Hindukush-Karakorum (2022 : Rome, Italy), author.", "publisher_line": "ISMEO, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987922&vid=NYU", "call_number": "DS374.K2 I58 2022", "date_acquired": "2024-08-27", "predicted_category": "Central Asia & Siberia", "confidence": 0.7200294017137546}, {"id": "31154068987930", "barcode": "31154068987930", "mms_id": "9998680130207876", "title": "Roots of Peristan : the pre-islamic cultures of the Hindukush/Karakorum : proceedings of the International Interdisciplinary Conference ISMEO, Rome, Palazzo Baleani, 5-7 October, 2022 /", "author": "International Interdisciplinary Conference \"Roots of Peristan, the pre-islamic cultures of the Hindukush-Karakorum (2022 : Rome, Italy), author.", "publisher_line": "ISMEO, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987930&vid=NYU", "call_number": "DS374.K2 I58 2022", "date_acquired": "2024-08-27", "predicted_category": "Central Asia & Siberia", "confidence": 0.7200294017137546}, {"id": "31154068987948", "barcode": "31154068987948", "mms_id": "9998640373607876", "title": "Narrative and narrativity in ancient Egypt : case studies on narrative difference in various media /", "author": null, "publisher_line": "Widmaier Verlag, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987948&vid=NYU", "call_number": "PJ1488 .N37 2023", "date_acquired": "2024-08-27", "predicted_category": "Egypt & North Africa", "confidence": 0.9061522419186653}, {"id": "31154068987955", "barcode": "31154068987955", "mms_id": "9998680129907876", "title": "Romam commigrare : i romani, i latini e l'immigrazione /", "author": "Gagliardi, Lorenzo, author.", "publisher_line": "Giuffr\u00e8 Francis Lefebvre, [2023]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987955&vid=NYU", "call_number": "KJA2930 .G345 2023", "date_acquired": "2024-08-27", "predicted_category": "European and Classical Antiquity", "confidence": 0.9846153846153847}, {"id": "31154068987963", "barcode": "31154068987963", "mms_id": "9998680128507876", "title": "An undertakers' archive from the Kynopolite Nome (P. Kynopolites) /", "author": "Baetens, Gert, author, editor.", "publisher_line": "Peeters, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987963&vid=NYU", "call_number": "PJ1921.F9 B348 2024", "date_acquired": "2024-08-27", "predicted_category": "Egypt & North Africa", "confidence": 0.9300956585724797}, {"id": "31154068987971", "barcode": "31154068987971", "mms_id": "9998680127307876", "title": "Ashdod.", "author": null, "publisher_line": "Israel Magazine, 1983.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987971&vid=NYU", "call_number": "DS110.A754 A72 1983", "date_acquired": "2024-08-28", "predicted_category": "Ancient Western Asia", "confidence": 0.8814754733513609}, {"id": "31154068987989", "barcode": "31154068987989", "mms_id": "9998680126707876", "title": "The archaeology of wine in Cyprus /", "author": "Chatz\u0113savvas, Sophokl\u0113s, author.", "publisher_line": "Napaphos Publishers, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987989&vid=NYU", "call_number": "TP559.C93 C43813 2023", "date_acquired": "2024-08-28", "predicted_category": "Ancient Western Asia", "confidence": 0.9752643702230134}, {"id": "31154068987997", "barcode": "31154068987997", "mms_id": "9998680130107876", "title": "Italia-Libia : i luoghi dell'archeologia, dagli archivi all'impegno sul campo = Italy-Libya : archaeological landscapes, from archives to fieldwork : Archivio centrale dello Stato, Roma, 9-30 giugno 2022 /", "author": null, "publisher_line": "Scienze e lettere; ISMEO, [2022]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068987997&vid=NYU", "call_number": "DT221 .I73 2022", "date_acquired": "2024-08-27", "predicted_category": "Egypt & North Africa", "confidence": 0.964275081869604}, {"id": "31154068988003", "barcode": "31154068988003", "mms_id": "9998680126607876", "title": "Sklaverei und sklaverei\u00e4hnliche Lebensformen nach altassyrischen Keilschriftquellen /", "author": "Schl\u00fcter, Sarah, author.", "publisher_line": "Zaphon, 2024.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068988003&vid=NYU", "call_number": "HT979 .S35 2024", "date_acquired": "2024-08-28", "predicted_category": "Ancient Western Asia", "confidence": 0.6598898219672251}, {"id": "31154068988011", "barcode": "31154068988011", "mms_id": "9998680126507876", "title": "The missing link II : the lost Latin historiography of the Later Roman Empire (3rd-5th century) /", "author": "Janiszewski, Pawe\u0142, 1967- author.", "publisher_line": "Peeters, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068988011&vid=NYU", "call_number": "DG311 .J355 2024", "date_acquired": "2024-08-28", "predicted_category": "European and Classical Antiquity", "confidence": 1.0}, {"id": "31154068994878", "barcode": "31154068994878", "mms_id": "9998678623207876", "title": "AR + Yin xu qing tong bing qi /", "author": null, "publisher_line": "Shanghai da xue chu ban she, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068994878&vid=NYU", "call_number": "NK7983 .A79 2021", "date_acquired": "2024-08-19", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8807651630867995}, {"id": "31154068994886", "barcode": "31154068994886", "mms_id": "9998678623207876", "title": "AR + Yin xu qing tong bing qi /", "author": null, "publisher_line": "Shanghai da xue chu ban she, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068994886&vid=NYU", "call_number": "NK7983 .A79 2021", "date_acquired": "2024-08-19", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8807651630867995}, {"id": "31154068994894", "barcode": "31154068994894", "mms_id": "9998678623207876", "title": "AR + Yin xu qing tong bing qi /", "author": null, "publisher_line": "Shanghai da xue chu ban she, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068994894&vid=NYU", "call_number": "NK7983 .A79 2021", "date_acquired": "2024-08-19", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8807651630867995}, {"id": "31154068996451", "barcode": "31154068996451", "mms_id": "9998678621007876", "title": "Yi he ming /", "author": null, "publisher_line": "Shanghai ren min chu ban she, 2021.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154068996451&vid=NYU", "call_number": "NK3634.Z6 Y5 2021", "date_acquired": "2024-08-21", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.9254337896885088}, {"id": "31154069001392", "barcode": "31154069001392", "mms_id": "9998678621907876", "title": "Ch\u016bgoku no kin, gin, garasu ten : Sh\u014ds\u014din no sato /", "author": null, "publisher_line": "NHK Kinki Media Puran; NHK \u014csaka H\u014ds\u014dkyoku, \u00a91992.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069001392&vid=NYU", "call_number": "NK6483.A1 C58 1992", "date_acquired": "2024-08-20", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8816310857727979}, {"id": "31154069035127", "barcode": "31154069035127", "mms_id": "9998678619607876", "title": "Shanghai Museum.", "author": "Shanghai bo wu guan.", "publisher_line": "The Museum, [1995]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069035127&vid=NYU", "call_number": "N7347.S48 S43 1995", "date_acquired": "2024-08-27", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.8807651630867995}, {"id": "31154069076741", "barcode": "31154069076741", "mms_id": "990059042020107876", "title": "Corpus des papyrus grecs sur les relations administratives entre le clerg\u00e9 \u00e9gyptien et les autorit\u00e9s romaines /", "author": "Messerer, Carmen, author.", "publisher_line": "Ferdinand Sch\u00f6ningh, [2017]-[2022]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076741&vid=NYU", "call_number": "PJ1014 .P3 v.41", "date_acquired": "2024-08-12", "predicted_category": "Egypt & North Africa", "confidence": 0.8928191945158526}, {"id": "31154069076758", "barcode": "31154069076758", "mms_id": "990059042020107876", "title": "Corpus des papyrus grecs sur les relations administratives entre le clerg\u00e9 \u00e9gyptien et les autorit\u00e9s romaines /", "author": "Messerer, Carmen, author.", "publisher_line": "Ferdinand Sch\u00f6ningh, [2017]-[2022]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076758&vid=NYU", "call_number": "PJ1014 .P3 v.41", "date_acquired": "2024-08-12", "predicted_category": "Egypt & North Africa", "confidence": 0.8928191945158526}, {"id": "31154069076766", "barcode": "31154069076766", "mms_id": "9998680130007876", "title": "Coptica fennica : catalog of the Coptic manuscripts from the Ilves collection exhibited at the National Archives of Finland (16 June-14 August 2020) /", "author": null, "publisher_line": "Diffusion Peeters; Association \u00e9gyptologique Reine \u00c9lisabeth, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076766&vid=NYU", "call_number": "PA3339 .P34 t.42 2023", "date_acquired": "2024-08-12", "predicted_category": "Egypt & North Africa", "confidence": 0.8075226534450333}, {"id": "31154069076782", "barcode": "31154069076782", "mms_id": "9998678629807876", "title": "Altuigurische Aparimit\u0101yus-Literatur und kleinere tantrische Texte /", "author": null, "publisher_line": "Brepols, [2016]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076782&vid=NYU", "call_number": "P911 .B47 Bd.36 2016", "date_acquired": "2024-08-12", "predicted_category": "Ancient Western Asia", "confidence": 0.8738470074207644}, {"id": "31154069076790", "barcode": "31154069076790", "mms_id": "9998678629707876", "title": "Der altt\u00fcrkische Kommentar zum Vimalak\u012brtinirde\u015ba-S\u016btra /", "author": null, "publisher_line": "Brepols, [2011]", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076790&vid=NYU", "call_number": "P911 .B47 Bd.29:2011", "date_acquired": "2024-08-12", "predicted_category": "Ancient Western Asia", "confidence": 0.5038607512105745}, {"id": "31154069076808", "barcode": "31154069076808", "mms_id": "9998678629507876", "title": "Some early lists of the books of the New Testament /", "author": "Grosheide, F. W. 1881-1972, editor. (Frederik Willem),", "publisher_line": "EJ Brill, 1948.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076808&vid=NYU", "call_number": "BS2320 .G822 1948", "date_acquired": "2024-08-12", "predicted_category": "Ancient Western Asia", "confidence": 0.9216688277019297}, {"id": "31154069076816", "barcode": "31154069076816", "mms_id": "9998678629407876", "title": "Scriptorum paganorum I-IV saec. de Christianis testimonia /", "author": null, "publisher_line": "EJ Brill, 1948.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076816&vid=NYU", "call_number": "BR160.A2 B6 1948", "date_acquired": "2024-08-12", "predicted_category": "European and Classical Antiquity", "confidence": 0.5381973684450881}, {"id": "31154069076824", "barcode": "31154069076824", "mms_id": "9998678626607876", "title": "Design and destruction : the Palace of Ashurbanipal at Nineveh /", "author": "Reade, Julian, author.", "publisher_line": "Druck Ferdinand Berger & S\u00f6hne GmbH; Selbstverlag des Instituts f\u00fcr Orientalistik der Universit\u00e4t Wien, 2022.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076824&vid=NYU", "call_number": "DS70.5.N47 R43 2022", "date_acquired": "2024-08-13", "predicted_category": "Ancient Western Asia", "confidence": 0.8637894675733552}, {"id": "31154069076840", "barcode": "31154069076840", "mms_id": "990016590420107876", "title": "Aphek-Antipatris, 1972-1973 /", "author": "Universi\u1e6dat Tel-Aviv. Makhon le-arkhe\u02bcologyah.", "publisher_line": "Tel Aviv University Institute of Archaeology, 1976.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076840&vid=NYU", "call_number": "DS110.A63 A65 1976", "date_acquired": "2024-08-14", "predicted_category": "Ancient Western Asia", "confidence": 0.815770120773157}, {"id": "31154069076857", "barcode": "31154069076857", "mms_id": "990012831540107876", "title": "Sapientia Iesu filii Sirach /", "author": null, "publisher_line": "Vandenhoeck & Ruprecht, 1965.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076857&vid=NYU", "call_number": "BS741 .S6 v.12:pt.2 1965", "date_acquired": "2024-08-19", "predicted_category": "Ancient Western Asia", "confidence": 0.6213592233009709}, {"id": "31154069076865", "barcode": "31154069076865", "mms_id": "9998678621407876", "title": "Gr\u00e4ber in Kontaktregionen : Aussagepotenzial und Methoden bei der Auswertung r\u00f6merzeitlicher Nekropolen /", "author": null, "publisher_line": "Universit\u00e4t Salzburg Fachbereich Altertumswissenschaften, 2023.", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076865&vid=NYU", "call_number": "DG82 .G73 2023", "date_acquired": "2024-08-20", "predicted_category": "European and Classical Antiquity", "confidence": 0.9846153846153847}, {"id": "31154069076881", "barcode": "31154069076881", "mms_id": "990018258730107876", "title": "Wen wu.", "author": null, "publisher_line": "Wen wu chu ban she, 1959-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076881&vid=NYU", "call_number": "DS715 .W439", "date_acquired": "2024-08-26", "predicted_category": "China, South Asia, & East Asia", "confidence": 0.925016078586442}, {"id": "31154069076899", "barcode": "31154069076899", "mms_id": "990035382270107876", "title": "Coptica : journal of the Saint Mark Foundation and Saint Shenouda the Archimandrite Coptic Society.", "author": null, "publisher_line": "The Saint Mark Foundation, 2002-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076899&vid=NYU", "call_number": "BX130 .C67", "date_acquired": "2024-08-27", "predicted_category": "Ancient Western Asia", "confidence": 0.8588980871664117}, {"id": "31154069076915", "barcode": "31154069076915", "mms_id": "990028566520107876", "title": "Zeitschrift f\u00fcr Papyrologie und Epigraphik.", "author": null, "publisher_line": "Rudolf Habelt Verlag GMBH, 1967-", "bobcat_url": "https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,31154069076915&vid=NYU", "call_number": "PA3339 .Z45", "date_acquired": "2024-08-28", "predicted_category": "Egypt & North Africa", "confidence": 0.9547714894624676}]</script>
+<script>
+const CATEGORIES = ["European and Classical Antiquity", "Egypt & North Africa", "Ancient Western Asia", "The Caucasus & The Western Steppe", "Central Asia & Siberia", "China, South Asia, & East Asia", "Cross-Cultural Studies & Other"];
+const MONTH_KEY = "2024-08";
+const STORAGE_KEY = `isaw-review-${MONTH_KEY}`;
+const DOWNLOAD_KEY = `isaw-review-${MONTH_KEY}-downloaded-at`;
+
+function reviewApp() {
+  return {
+    categories: CATEGORIES,
+    records: [],
+    filter: 'all',
+    focusedId: null,
+    lastDownloadAt: null,
+
+    init() {
+      if (this.records.length > 0) return; // guard against double-mount (two x-data scopes)
+      const raw = JSON.parse(document.getElementById('records-data').textContent);
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      this.lastDownloadAt = localStorage.getItem(DOWNLOAD_KEY);
+      this.records = raw.map(r => {
+        const s = saved[r.id];
+        return {
+          ...r,
+          final_category: s?.final_category ?? r.predicted_category,
+          status: s?.status ?? 'unchanged',
+          touched_at: s?.touched_at,
+        };
+      });
+      window.addEventListener('keydown', (e) => this.handleKey(e));
+    },
+
+    save() {
+      const now = new Date().toISOString();
+      const snap = {};
+      for (const r of this.records) {
+        if (r.status === 'changed') {
+          snap[r.id] = { status: r.status, final_category: r.final_category, touched_at: r.touched_at || now };
+        }
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(snap));
+    },
+
+    anchor(cat) { return 'cat-' + cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); },
+
+    changedCount()  { return this.records.filter(r => r.status === 'changed').length; },
+    changedPct()    { return this.records.length === 0 ? 0 : (100 * this.changedCount() / this.records.length); },
+    unsaved() {
+      if (!this.lastDownloadAt) return this.changedCount();
+      const cutoff = new Date(this.lastDownloadAt).getTime();
+      return this.records.filter(r => r.status === 'changed' && r.touched_at && new Date(r.touched_at).getTime() > cutoff).length;
+    },
+
+    confClass(r) {
+      if (r.confidence >= 0.8) return 'high';
+      if (r.confidence >= 0.6) return 'mid';
+      return 'low';
+    },
+    statusClass(r) { return r.status; },
+
+    allCategoriesWithRecords() {
+      const seen = new Set(this.records.map(r => r.predicted_category));
+      return this.categories.filter(c => seen.has(c));
+    },
+    visibleCategories() {
+      const seen = new Set();
+      for (const r of this.records) {
+        if (this.matchesFilter(r)) seen.add(r.predicted_category);
+      }
+      return this.categories.filter(c => seen.has(c));
+    },
+    totalInCategory(cat) { return this.records.filter(r => r.predicted_category === cat).length; },
+    changedInCategory(cat) {
+      return this.records.filter(r => r.predicted_category === cat && r.status === 'changed').length;
+    },
+    visibleInCategory(cat) {
+      return this.records
+        .filter(r => r.predicted_category === cat && this.matchesFilter(r))
+        .sort((a, b) => (a.call_number || '').localeCompare(b.call_number || ''));
+    },
+    matchesFilter(r) {
+      if (this.filter === 'all') return true;
+      if (this.filter === 'changed') return r.status === 'changed';
+      if (this.filter === 'lowconf') return r.confidence < 0.6;
+      return true;
+    },
+
+    changeCat(r, newCat) {
+      if (newCat === r.predicted_category) {
+        // Effectively reverting — same as unset
+        this.unset(r);
+        return;
+      }
+      r.final_category = newCat;
+      r.status = 'changed';
+      r.touched_at = new Date().toISOString();
+      this.save();
+    },
+    unset(r) {
+      r.status = 'unchanged';
+      r.final_category = r.predicted_category;
+      r.touched_at = new Date().toISOString();
+      this.save();
+    },
+    reset() {
+      const n = this.changedCount();
+      if (n === 0) return;
+      if (!confirm(`Undo all ${n} correction${n === 1 ? '' : 's'} for this month?`)) return;
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(DOWNLOAD_KEY);
+      this.lastDownloadAt = null;
+      for (const r of this.records) {
+        r.status = 'unchanged';
+        r.final_category = r.predicted_category;
+        r.touched_at = null;
+      }
+    },
+
+    focusRec(r) { this.focusedId = r.id; },
+    isFocused(r) { return this.focusedId === r.id; },
+    visibleFlat() {
+      const out = [];
+      for (const c of this.visibleCategories()) {
+        for (const r of this.visibleInCategory(c)) out.push(r);
+      }
+      return out;
+    },
+    moveFocus(delta) {
+      const flat = this.visibleFlat();
+      if (flat.length === 0) return;
+      const idx = flat.findIndex(r => r.id === this.focusedId);
+      const nextIdx = idx < 0 ? 0 : Math.max(0, Math.min(flat.length - 1, idx + delta));
+      this.focusedId = flat[nextIdx].id;
+      const el = document.querySelector(`p.record[data-id="${this.focusedId}"]`);
+      if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    },
+    focusedRec() { return this.records.find(r => r.id === this.focusedId); },
+
+    handleKey(e) {
+      if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+      const r = this.focusedRec();
+      if (e.key === 'j') { this.moveFocus(1); e.preventDefault(); }
+      else if (e.key === 'k') { this.moveFocus(-1); e.preventDefault(); }
+      else if (e.key === 'u' && r) { this.unset(r); e.preventDefault(); }
+      else if (/^[1-7]$/.test(e.key) && r) {
+        const idx = parseInt(e.key, 10) - 1;
+        if (idx < CATEGORIES.length) { this.changeCat(r, CATEGORIES[idx]); e.preventDefault(); }
+      }
+    },
+
+    downloadCorrections() {
+      const payload = {
+        month: MONTH_KEY,
+        generated_at: new Date().toISOString(),
+        total: this.records.length,
+        changed: this.changedCount(),
+        categories: CATEGORIES,
+        items: this.records.map(r => ({
+          id: r.id,
+          barcode: r.barcode,
+          mms_id: r.mms_id,
+          title: r.title,
+          call_number: r.call_number,
+          date_acquired: r.date_acquired,
+          original_category: r.predicted_category,
+          final_category: r.final_category,
+          confidence: r.confidence,
+          status: r.status,  // "unchanged" or "changed"
+        })),
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `isaw-corrections-${MONTH_KEY}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      this.lastDownloadAt = new Date().toISOString();
+      localStorage.setItem(DOWNLOAD_KEY, this.lastDownloadAt);
+    },
+  };
+}
+</script>
+</body>
+</html>

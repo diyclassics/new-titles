@@ -1,0 +1,2977 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-24T18:28:05.289985+00:00",
+  "records": [
+    {
+      "id": "31154068978145",
+      "barcode": "31154068978145",
+      "mms_id": "9998781077107876",
+      "title": "Under the yoke of Ashur : the Assyrian century in the land of Israel /",
+      "authors": [
+        "Cogan, Mordechai, author."
+      ],
+      "publisher": "Carta Jerusalem",
+      "pub_date": "2021.",
+      "pub_place": "Jerusalem :",
+      "call_number": "DS121.6 .C64 2021",
+      "acquired_at": "2026-02-02",
+      "subject_headings": [
+        "Jews",
+        "Middle East--Assyria",
+        "Jews in Babylonian captivity--(598 - 515 B.C.)",
+        "953-515 B.C",
+        "History",
+        "Jews--History--953-586 B.C.",
+        "Assyria--History.",
+        "Imperialism--History--To 1500.",
+        "Assyria--Politics and government.",
+        "Assyria (kingdom)",
+        "Juifs--Histoire--953-586 av. J.-C."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/29492"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154068978152",
+      "barcode": "31154068978152",
+      "mms_id": "9998784208907876",
+      "title": "Der Stein von Rosetta /",
+      "authors": [
+        "Hoffmann, Friedhelm, author."
+      ],
+      "publisher": "Reclam",
+      "pub_date": "2024.",
+      "pub_place": "Ditzingen :",
+      "call_number": "PJ1531.R4 G4 2024",
+      "acquired_at": "2026-02-09",
+      "subject_headings": [
+        "Rosetta stone.",
+        "Egyptian language--Writing, Hieroglyphic.",
+        "Egyptian language--Writing, Demotic.",
+        "demotic.",
+        "Bolbitine.",
+        "Égyptien (Langue)--Écriture hiéroglyphique.",
+        "Égyptien (Langue)--Écriture démotique."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/727085"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154068978160",
+      "barcode": "31154068978160",
+      "mms_id": "9998784208007876",
+      "title": "Atlit-Yam, a submerged pre-pottery Neolithic C site off the Carmel Coast, Israel : 9,000 years under the sea /",
+      "authors": [],
+      "publisher": "Springer",
+      "pub_date": "[2025]",
+      "pub_place": "Cham, Switzerland :",
+      "call_number": "GN776.32.I75 A85 2025",
+      "acquired_at": "2026-02-09",
+      "subject_headings": [
+        "Carmel Coast (Israel)--Antiquities.",
+        "ʻAtlit (Israel)--Antiquities.",
+        "Atlit-Yam Site (Israel)",
+        "Underwater archaeology--Israel--Carmel Coast.",
+        "Neolithic period--Israel--Carmel Coast.",
+        "Atlit Yam.",
+        "Archéologie sous-marine--Israël--Carmel, Côte du.",
+        "Néolithique--Israël--Carmel, Côte du."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/97875559"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154068978178",
+      "barcode": "31154068978178",
+      "mms_id": "9998784829007876",
+      "title": "L'historiola nella Mesopotamia antica : mito, rito e performatività /",
+      "authors": [
+        "Ceravolo, Marinella, author."
+      ],
+      "publisher": "Bulzoni editore",
+      "pub_date": "[2022]",
+      "pub_place": "Roma :",
+      "call_number": "BL2350.I7 C47 2022",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Iraq--Religion.",
+        "Rites and ceremonies--Iraq.",
+        "Mythology, Assyro-Babylonian.",
+        "Incantations, Assyro-Babylonian.",
+        "Incantations, Assyro-Babylonian",
+        "Mythology, Assyro-Babylonian",
+        "Religion",
+        "Rites and ceremonies",
+        "Iraq",
+        "Mesopotamia (region)",
+        "Rites et cérémonies--Irak.",
+        "Mythologie assyro-babylonienne."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/874602"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154068978194",
+      "barcode": "31154068978194",
+      "mms_id": "9998785523507876",
+      "title": "Haykakan patkerakʻandaknerě IV-VII darerum /",
+      "authors": [
+        "Aṛakʻelyan, B. N. author. (Babken Nikoghosi),"
+      ],
+      "publisher": "Haykakan SSṚ GA hratarakchʻutʻyun",
+      "pub_date": "1949.",
+      "pub_place": "Erevan :",
+      "call_number": "NK1039.A7 .A735 1949",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Relief (Decorative arts)--Armenia--History--To 1500.",
+        "Sculpture, Ancient--Armenia.",
+        "Sculpture, Medieval--Armenia.",
+        "Armenia (region)",
+        "Sculpture antique--Arménie.",
+        "Sculpture médiévale--Arménie."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/874350"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069005591",
+      "barcode": "31154069005591",
+      "mms_id": "9998784927607876",
+      "title": "Collected articles on ancient eastern Afghanistan and northern Pakistan /",
+      "authors": [
+        "Kuwayama, Shōshin, author."
+      ],
+      "publisher": "Rinsen Shoten",
+      "pub_date": "2024.",
+      "pub_place": "Kyōto-shi :",
+      "call_number": "DS358 .K89 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Afghanistan--History.",
+        "Pakistan--History.",
+        "Afghanistan--Antiquities.",
+        "Pakistan--Antiquities.",
+        "Hindu Kush Mountains (Afghanistan and Pakistan)",
+        "Afuganisutan-Rekishi.",
+        "Pakisutan-Rekishi.",
+        "Iseki ibutsu-Afuganisutan.",
+        "Iseki ibutsu-Pakisutan.",
+        "Paropamisos/Caucasus M.",
+        "Afghanistan.",
+        "Pakistan.",
+        "Hindū Kūsh (Afghānistān et Pākistān)",
+        "Afghānistān--Histoire.",
+        "Pākistān--Histoire.",
+        "Afghānistān--Antiquités.",
+        "Pākistān--Antiquités."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/59983",
+        "http://vocab.getty.edu/tgn/7016612",
+        "http://vocab.getty.edu/tgn/1000133"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008058",
+      "barcode": "31154069008058",
+      "mms_id": "990035182230107876",
+      "title": "Lingua Aegyptia.",
+      "authors": [],
+      "publisher": "Widmaier Verlag; Seminar für Ägyptologie und Koptologie Universität Göttingen",
+      "pub_date": "1991-",
+      "pub_place": "Göttingen :",
+      "call_number": "PJ1001 .L56",
+      "acquired_at": "2026-02-02",
+      "subject_headings": [
+        "Egyptian literature--History and criticism--Periodicals.",
+        "Egyptian language",
+        "Egyptian literature",
+        "Criticism, interpretation, etc.",
+        "Periodicals",
+        "Periodicals.",
+        "Egyptian language--Periodicals.",
+        "Egyptology--Periodicals."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008066",
+      "barcode": "31154069008066",
+      "mms_id": "990096954170107876",
+      "title": "Ezra : a new translation with introduction and commentary /",
+      "authors": [],
+      "publisher": "Yale University Press",
+      "pub_date": "[2023]",
+      "pub_place": "New Haven ; London :",
+      "call_number": "BS192.2.A1 1964 G3 v.14A 2023",
+      "acquired_at": "2026-02-02",
+      "subject_headings": [
+        "Bible. Ezra Commentaries.",
+        "Bible. Ezra",
+        "Commentaries",
+        "Sacred works",
+        "Sacred works.",
+        "Bible. Ezra Commentaries",
+        "Palaestina.",
+        "Livres sacrés."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/991396"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008074",
+      "barcode": "31154069008074",
+      "mms_id": "9998780978007876",
+      "title": "Hinterland monuments of ancient nomads : trilith stone structures of south-eastern Arabia /",
+      "authors": [
+        "Garba, Roman, author."
+      ],
+      "publisher": "Archaeopress Publishing",
+      "pub_date": "[2025]",
+      "pub_place": "Bicester :",
+      "call_number": "GN790 .G37 2025",
+      "acquired_at": "2026-02-02",
+      "subject_headings": [
+        "Megalithic monuments--Oman.",
+        "Megalithic monuments--Yemen (Republic)",
+        "Oman--Antiquities.",
+        "Yemen (Republic)--Antiquities.",
+        "Monuments--Arabian Peninsula.",
+        "Megalithic monuments--Arabian Peninsula.",
+        "Arabia.",
+        "Oman.",
+        "Yemen.",
+        "Monuments--Arabie (Péninsule)",
+        "Monuments mégalithiques--Arabie (Péninsule)",
+        "Monuments mégalithiques--Oman.",
+        "Monuments mégalithiques--Yémen.",
+        "Yémen--Antiquités."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/29475",
+        "http://vocab.getty.edu/tgn/1000131",
+        "http://vocab.getty.edu/tgn/7000261"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008082",
+      "barcode": "31154069008082",
+      "mms_id": "9998782611607876",
+      "title": "Akademik M.I. Rostovt͡sev : otkrytie skifo-sarmatskogo mira = Academician Mikhael L. Rostovtzeff: The discovery of Scythian-Sarmatian world /",
+      "authors": [
+        "Chibirov, A. L. author. (Alekseĭ Li͡udvigovich),"
+      ],
+      "publisher": "VNT͡S RAN",
+      "pub_date": "2024.",
+      "pub_place": "Vladikavkaz :",
+      "call_number": "DK34.S4 C53 2024",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Rostovtzeff, Michael Ivanovitch,--1870-1952.",
+        "Scythians.",
+        "Sarmatians.",
+        "Ethnology--Russia (Federation)--Caucasus, Northern.",
+        "Caucasus, Northern (Russia)--Antiquities.",
+        "Caucasus, Northern (Russia)--History.",
+        "Scythae/Sagae/Sacae.",
+        "Sarmatae.",
+        "Ciscaucasia.",
+        "Scythes.",
+        "Sarmates.",
+        "Ethnologie--Russie--Ciscaucasie.",
+        "Ciscaucasie (Russie)--Histoire."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/60676",
+        "https://pleiades.stoa.org/places/226752",
+        "http://vocab.getty.edu/tgn/7025826"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008090",
+      "barcode": "31154069008090",
+      "mms_id": "9998782612207876",
+      "title": "Issledovanii͡a arkheologicheskikh pami͡atnikov Abkhazii /",
+      "authors": [
+        "Bzhanii͡a, D. S., author."
+      ],
+      "publisher": "Dom pechati",
+      "pub_date": "2023.",
+      "pub_place": "Sukhum :",
+      "call_number": "DK511.A2 B94 2023",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Excavations (Archaeology)--Georgia (Republic)--Abkhazia.",
+        "Abkhazia (Georgia)--Antiquities.",
+        "Georgia (Republic)--Antiquities.",
+        "Georgia (Republic)",
+        "Georgia (Republic)--Abkhazia",
+        "Apkhazeti.",
+        "Géorgie (République)--Antiquités.",
+        "Fouilles (Archéologie)--Géorgie (République)--Abkhazie."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7012217"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008108",
+      "barcode": "31154069008108",
+      "mms_id": "9998782612007876",
+      "title": "Kochevniki v Sogdiane : istoriko-kulʹturnyĭ kontekst orlatskikh nakhodok /",
+      "authors": [
+        "Ilʹi͡asov, Dzhangar, author."
+      ],
+      "publisher": "Evrazii͡a",
+      "pub_date": "2025.",
+      "pub_place": "Sankt-Peterburg :",
+      "call_number": "DK949.S26 I45 2025",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Nomads--Asia, Central--History.",
+        "Excavations (Archaeology)--Uzbekistan.",
+        "Art, Central Asian--Uzbekistan--Orlat.",
+        "Sogdians--History.",
+        "Archaeology--Uzbekistan--Orlat.",
+        "Sogdiana.",
+        "Sogdiens--Histoire.",
+        "Fouilles (Archéologie)--Ouzbékistan."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/60058"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008124",
+      "barcode": "31154069008124",
+      "mms_id": "9998782611807876",
+      "title": "Eating and drinking along ancient roads and rivers : study opportunities, archaeological sources and open issues about diet habits /",
+      "authors": [],
+      "publisher": "Archaeopress Archaeology",
+      "pub_date": "[2025]",
+      "pub_place": "Bicester :",
+      "call_number": "DG28 .E28 2025",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Food habits.",
+        "Roads, Roman--History--To 1500.",
+        "Rivers--History--To 1500.",
+        "Social archaeology--Rome.",
+        "Social archaeology.",
+        "Food habits",
+        "Rivers--History.",
+        "Roads--History.",
+        "Social archaeology",
+        "Roman Empire.",
+        "Habitudes alimentaires.",
+        "Archéologie sociale.",
+        "Archéologie sociale--Rome."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7030347"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008132",
+      "barcode": "31154069008132",
+      "mms_id": "9998782610207876",
+      "title": "Ancient Magdala : archaeological excavations (2010-2017) /",
+      "authors": [],
+      "publisher": "Archaeopress Archaeology",
+      "pub_date": "[2025]-",
+      "pub_place": "Bicester :",
+      "call_number": "DS110.M54 A53 2025",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Excavations (Archaeology)--Israel--Migdal.",
+        "Migdal (Israel)--Antiquities.",
+        "Excavations (Archaeology)",
+        "Israel",
+        "Israel--Migdal",
+        "2010-2017",
+        "Magdala/Taricheai."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/678272"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008140",
+      "barcode": "31154069008140",
+      "mms_id": "9998782610007876",
+      "title": "Dura-Europos : past, present, future /",
+      "authors": [],
+      "publisher": "Brepols",
+      "pub_date": "[2025]",
+      "pub_place": "Turnhout, Belgium :",
+      "call_number": "DS99.D8 D88 2025",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Excavations (Archaeology)--Syria--Dura-Europos (Extinct city)--Congresses.",
+        "Dura-Europos (Extinct city)--Congresses.",
+        "Excavations (Archaeology)",
+        "Middle East--Dura-Europos (Extinct city)",
+        "Syria",
+        "Conference papers and proceedings",
+        "D(o)ura/Europos.",
+        "Doura-Europos (Ville ancienne)--Congrès.",
+        "Fouilles (Archéologie)--Syrie--Doura-Europos (Ville ancienne)--Congrès."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/893990"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008157",
+      "barcode": "31154069008157",
+      "mms_id": "9998782609907876",
+      "title": "The village gymnasium at Philoteris/Watfa in the Fayum /",
+      "authors": [
+        "Kopp, Peter, 1967- author"
+      ],
+      "publisher": "Harrassowitz Verlag",
+      "pub_date": "2025.",
+      "pub_place": "Wiesbaden :",
+      "call_number": "DT57 .D47 no. 10 2025",
+      "acquired_at": "2026-02-05",
+      "subject_headings": [
+        "Excavations (Archaeology)--Egypt--Madīnat Wāṭifah, Kawm.",
+        "Gymnasiums--Egypt--Madīnat Wāṭifah, Kawm--Designs and plans.",
+        "Madīnat Wāṭifah, Kawm (Egypt)--Antiquities.",
+        "Gymnasiums",
+        "Architectural drawings",
+        "Philoteris."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/737010"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008165",
+      "barcode": "31154069008165",
+      "mms_id": "9998783112107876",
+      "title": "Yüzey araştırmaları ve kazılar ışığında Uşak /",
+      "authors": [],
+      "publisher": "Uşak Müzesi Müdürlüğü",
+      "pub_date": "2017.",
+      "pub_place": "İstanbul :",
+      "call_number": "DS51.U8 Y897 2017",
+      "acquired_at": "2026-02-06",
+      "subject_headings": [
+        "Uşak İli (Turkey)--Antiquities.",
+        "Excavations (Archaeology)--Turkey--Uşak İli.",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Turkey--Uşak",
+        "History",
+        "Uşak.",
+        "Fouilles (Archéologie)--Turquie--Uşak (İl)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/1001584"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008173",
+      "barcode": "31154069008173",
+      "mms_id": "9998783111407876",
+      "title": "La Siria antica : arte e architettura /",
+      "authors": [
+        "Matthiae, Paolo, author."
+      ],
+      "publisher": "Giulio Einaudi editore",
+      "pub_date": "[2024]",
+      "pub_place": "Torino :",
+      "call_number": "DS94.5 .M366 2024",
+      "acquired_at": "2026-02-06",
+      "subject_headings": [
+        "Syria--Antiquities.",
+        "Bronze age--Syria.",
+        "Art, Ancient--Syria.",
+        "Excavations (Archaeology)--Syria.",
+        "Syria.",
+        "Syrie--Antiquités.",
+        "Art antique--Syrie."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/1306"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008181",
+      "barcode": "31154069008181",
+      "mms_id": "9998783110907876",
+      "title": "Città e parole, argilla e pietra : studi offerti a Clelia Mora da allievi, colleghi e amici /",
+      "authors": [],
+      "publisher": "Edipuglia",
+      "pub_date": "[2020]",
+      "pub_place": "Bari :",
+      "call_number": "DS66 .C58 2020",
+      "acquired_at": "2026-02-06",
+      "subject_headings": [
+        "Seals (Numismatics)",
+        "seals (marks)",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Hittites",
+        "Turkey",
+        "Festschriften",
+        "Festschriften.",
+        "Turkey--Antiquities.",
+        "Excavations (Archaeology)--Turkey.",
+        "Asia Minor.",
+        "Turquie--Antiquités.",
+        "Hittites.",
+        "Sceaux."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/837"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008207",
+      "barcode": "31154069008207",
+      "mms_id": "9998784728607876",
+      "title": "Mineralovodskiĭ mogilʹnik VI-IV vv. do n.ė. = Mineralovodsky burial ground of the VI-IV centuries BC : nauchnai͡a monografii͡a /",
+      "authors": [
+        "Berezin, I͡A. B., author."
+      ],
+      "publisher": "SKFU",
+      "pub_date": "2024.",
+      "pub_place": "Stavropolʹ : Moskva,",
+      "call_number": "DK511.M478 B47 2024",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Mineralʹnye Vody (Russia)--Antiquities.",
+        "Excavations (Archaeology)--Russia (Federation)--Mineralʹnye Vody.",
+        "Archaeology--Russia (Federation)--Caucasus, Northern.",
+        "Archaeology.",
+        "Mineralovodsky burial ground.",
+        "Archéologie--Russie--Ciscaucasie."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/860488303"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008231",
+      "barcode": "31154069008231",
+      "mms_id": "9998784728507876",
+      "title": "Polʹt͡sevskie pami͡atniki Primorʹi͡a /",
+      "authors": [
+        "Dʹi͡akova, O. V. author. (Olʹga Vasilʹevna),"
+      ],
+      "publisher": "IIAĖ DVO RAN",
+      "pub_date": "2024.",
+      "pub_place": "Vladivostok :",
+      "call_number": "DK771.A3 D53 2024",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Primorskiĭ kraĭ (Russia)--Antiquities.",
+        "Iron age--Russia (Federation)--Primorskiĭ kraĭ.",
+        "Excavations (Archaeology)--Russia (Federation)--Primorskiĭ kraĭ.",
+        "Primorskiy (Maritime) Kray.",
+        "Fouilles (Archéologie)--Russie--Primorski Kraj."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7011539"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008256",
+      "barcode": "31154069008256",
+      "mms_id": "9998784307707876",
+      "title": "Handbook of digital Egyptology : texts /",
+      "authors": [],
+      "publisher": "Editorial Universidad de Alcalá",
+      "pub_date": "[2021].",
+      "pub_place": "Alcalá de Henares :",
+      "call_number": "PJ1035 .H36 2021",
+      "acquired_at": "2026-02-09",
+      "subject_headings": [
+        "Egypt--Study and teaching--Electronic information resources--Handbooks, manuals, etc.",
+        "Ancient Egypt (region)",
+        "Égypte--Étude en enseignement--Sources d'information électroniques--Guides, manuels, etc."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/981503"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008264",
+      "barcode": "31154069008264",
+      "mms_id": "9998784926907876",
+      "title": "Yin Zhou qing tong qi zong lan /",
+      "authors": [
+        "Hayashi, Minao, 1925-2006, author."
+      ],
+      "publisher": "Shanghai gu ji chu ban she",
+      "pub_date": "2017-2022.",
+      "pub_place": "Shanghai :",
+      "call_number": "NK7983.22 .H39127",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Bronzes, Chinese--To 221 B.C.",
+        "Bronzes, Chinese--To 221 B.C.--Pictorial works.",
+        "China--Antiquities.",
+        "Antiquities",
+        "Bronzes, Chinese",
+        "China",
+        "To 221 B.C.",
+        "Illustrated works",
+        "Ancient China.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.--Ouvrages illustrés.",
+        "Chine--Antiquités."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008272",
+      "barcode": "31154069008272",
+      "mms_id": "9998784926907876",
+      "title": "Yin Zhou qing tong qi zong lan /",
+      "authors": [
+        "Hayashi, Minao, 1925-2006, author."
+      ],
+      "publisher": "Shanghai gu ji chu ban she",
+      "pub_date": "2017-2022.",
+      "pub_place": "Shanghai :",
+      "call_number": "NK7983.22 .H39127",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Bronzes, Chinese--To 221 B.C.",
+        "Bronzes, Chinese--To 221 B.C.--Pictorial works.",
+        "China--Antiquities.",
+        "Antiquities",
+        "Bronzes, Chinese",
+        "China",
+        "To 221 B.C.",
+        "Illustrated works",
+        "Ancient China.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.--Ouvrages illustrés.",
+        "Chine--Antiquités."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008280",
+      "barcode": "31154069008280",
+      "mms_id": "9998784926907876",
+      "title": "Yin Zhou qing tong qi zong lan /",
+      "authors": [
+        "Hayashi, Minao, 1925-2006, author."
+      ],
+      "publisher": "Shanghai gu ji chu ban she",
+      "pub_date": "2017-2022.",
+      "pub_place": "Shanghai :",
+      "call_number": "NK7983.22 .H39127",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Bronzes, Chinese--To 221 B.C.",
+        "Bronzes, Chinese--To 221 B.C.--Pictorial works.",
+        "China--Antiquities.",
+        "Antiquities",
+        "Bronzes, Chinese",
+        "China",
+        "To 221 B.C.",
+        "Illustrated works",
+        "Ancient China.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.--Ouvrages illustrés.",
+        "Chine--Antiquités."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008298",
+      "barcode": "31154069008298",
+      "mms_id": "9998784926907876",
+      "title": "Yin Zhou qing tong qi zong lan /",
+      "authors": [
+        "Hayashi, Minao, 1925-2006, author."
+      ],
+      "publisher": "Shanghai gu ji chu ban she",
+      "pub_date": "2017-2022.",
+      "pub_place": "Shanghai :",
+      "call_number": "NK7983.22 .H39127",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Bronzes, Chinese--To 221 B.C.",
+        "Bronzes, Chinese--To 221 B.C.--Pictorial works.",
+        "China--Antiquities.",
+        "Antiquities",
+        "Bronzes, Chinese",
+        "China",
+        "To 221 B.C.",
+        "Illustrated works",
+        "Ancient China.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.",
+        "Bronzes chinois--Jusqu'à 221 av. J.-C.--Ouvrages illustrés.",
+        "Chine--Antiquités."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008306",
+      "barcode": "31154069008306",
+      "mms_id": "9998784928007876",
+      "title": "Changsha Zoumalou xi Han jian du = Changsha Zoumalou xiHan jiandu /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha Shi :",
+      "call_number": "PL2448 .C436 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Changsha.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8208120"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008314",
+      "barcode": "31154069008314",
+      "mms_id": "9998784928007876",
+      "title": "Changsha Zoumalou xi Han jian du = Changsha Zoumalou xiHan jiandu /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha Shi :",
+      "call_number": "PL2448 .C436 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Changsha.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8208120"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008322",
+      "barcode": "31154069008322",
+      "mms_id": "9998784928007876",
+      "title": "Changsha Zoumalou xi Han jian du = Changsha Zoumalou xiHan jiandu /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha Shi :",
+      "call_number": "PL2448 .C436 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Changsha.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8208120"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008330",
+      "barcode": "31154069008330",
+      "mms_id": "9998784928007876",
+      "title": "Changsha Zoumalou xi Han jian du = Changsha Zoumalou xiHan jiandu /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha Shi :",
+      "call_number": "PL2448 .C436 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Changsha.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8208120"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008348",
+      "barcode": "31154069008348",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008355",
+      "barcode": "31154069008355",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008363",
+      "barcode": "31154069008363",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008371",
+      "barcode": "31154069008371",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008389",
+      "barcode": "31154069008389",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008397",
+      "barcode": "31154069008397",
+      "mms_id": "9998784927907876",
+      "title": "Panlongcheng (1995-2019) /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.48.P36 P3656 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Panlongcheng Site (China)--Exhibitions.",
+        "Bronzes, Chinese--China--Panlongcheng Site--To 221 B.C.",
+        "Excavations (Archaeology)--China--Panlongcheng Site.",
+        "Wuhan (China)--Antiquities.",
+        "Panlongcheng."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008405",
+      "barcode": "31154069008405",
+      "mms_id": "9998784927507876",
+      "title": "Hubei chu tu Chu jian wu zhong /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "PL2448 .H8345 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Hubei Sheng.",
+        "Manuscripts, Chinese.",
+        "Wooden tablets--China--Hubei Sheng.",
+        "Hubei.",
+        "Inscriptions chinoises--Chine--Hubei.",
+        "Tablettes en bois--Chine--Hubei."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7002078"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008413",
+      "barcode": "31154069008413",
+      "mms_id": "9998784927507876",
+      "title": "Hubei chu tu Chu jian wu zhong /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "PL2448 .H8345 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Hubei Sheng.",
+        "Manuscripts, Chinese.",
+        "Wooden tablets--China--Hubei Sheng.",
+        "Hubei.",
+        "Inscriptions chinoises--Chine--Hubei.",
+        "Tablettes en bois--Chine--Hubei."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7002078"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008421",
+      "barcode": "31154069008421",
+      "mms_id": "9998784927507876",
+      "title": "Hubei chu tu Chu jian wu zhong /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "PL2448 .H8345 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Hubei Sheng.",
+        "Manuscripts, Chinese.",
+        "Wooden tablets--China--Hubei Sheng.",
+        "Hubei.",
+        "Inscriptions chinoises--Chine--Hubei.",
+        "Tablettes en bois--Chine--Hubei."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7002078"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008439",
+      "barcode": "31154069008439",
+      "mms_id": "9998784927707876",
+      "title": "Shizong Dayuanzi mu di /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.86.S558 S5586 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Tombs--China--Shizong Xian.",
+        "Excavations (Archaeology)--China--Shizong Xian.",
+        "Shizong Xian (China)--Antiquities.",
+        "Dayuanzi Site (China)",
+        "Dayunanzi cemetery."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008447",
+      "barcode": "31154069008447",
+      "mms_id": "9998784927707876",
+      "title": "Shizong Dayuanzi mu di /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.86.S558 S5586 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Tombs--China--Shizong Xian.",
+        "Excavations (Archaeology)--China--Shizong Xian.",
+        "Shizong Xian (China)--Antiquities.",
+        "Dayuanzi Site (China)",
+        "Dayunanzi cemetery."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008462",
+      "barcode": "31154069008462",
+      "mms_id": "9998784927807876",
+      "title": "Sanyuan Tianjing'an jian zhu yi zhi : 2015-2019 nian kao gu fa jue bao gao /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.68.S369 S2688 2024",
+      "acquired_at": "2026-02-11",
+      "subject_headings": [
+        "Excavations (Archaeology)--China--Sanyuan Xian.",
+        "Sanyuan Xian (China)--Antiquities.",
+        "Tianjing'an Site (China)",
+        "Tianjing'an Site."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008470",
+      "barcode": "31154069008470",
+      "mms_id": "9998784727407876",
+      "title": "Archaeology of Eastern Anatolia. from prehistoric times to the end of the Iron Ages =",
+      "authors": [
+        "Archaeology of Eastern Anatolia Colloquium 2021), issuing body. (2nd :"
+      ],
+      "publisher": "Peeters",
+      "pub_date": "2025.",
+      "pub_place": "Leuven :",
+      "call_number": "DS51.E27 A73 2021",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Turkey, Eastern--Antiquities--Congresses.",
+        "Excavations (Archaeology)--Turkey, Eastern--Congresses.",
+        "Asia Minor.",
+        "Turkey, Eastern.",
+        "Fouilles (Archéologie)--Turquie (Est)--Congrès."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/837"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008488",
+      "barcode": "31154069008488",
+      "mms_id": "9998649526507876",
+      "title": "Ke ji kao gu yu wen wu bao hu ji shu /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2018-",
+      "pub_place": "Beijing :",
+      "call_number": "CC101.C6 K45",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Archaeology--China.",
+        "Archaeology--Methodology.",
+        "Archaeology--Technology.",
+        "China--Antiquities--Conservation and restoration.",
+        "Excavations (Archaeology)--China--Technology.",
+        "Antiquities--Collection and preservation",
+        "Archaeology",
+        "Archaeology--Methodology",
+        "China",
+        "Imperial China.",
+        "China.",
+        "Ancient China.",
+        "Archéologie--Chine.",
+        "Archéologie--Méthodologie.",
+        "Archéologie--Technologie.",
+        "Chine--Antiquités--Conservation et restauration."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008496",
+      "barcode": "31154069008496",
+      "mms_id": "990040241000107876",
+      "title": "Xi yu wen shi = Literature & history of the Western regions.",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2006-",
+      "pub_place": "Beijing :",
+      "call_number": "DS793.N6 X5",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China, Northwest--History--Periodicals.",
+        "China, Northwest--Civilization--Periodicals.",
+        "Civilization",
+        "Northwest China",
+        "History",
+        "Periodicals",
+        "Northwest China."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008504",
+      "barcode": "31154069008504",
+      "mms_id": "990056876930107876",
+      "title": "Xi bu kao gu /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she; San qin chu ban she",
+      "pub_date": "2015-",
+      "pub_place": "Xi'an :",
+      "call_number": "DS793.N6 X49246",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China, Northwest--Antiquities--Periodicals.",
+        "China, Southwest--Antiquities--Periodicals.",
+        "Excavations (Archaeology)--China, Northwest--Periodicals.",
+        "Excavations (Archaeology)--China, Southwest--Periodicals.",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Northwest China",
+        "Southwest China",
+        "Periodicals",
+        "Periodicals.",
+        "Southwest China.",
+        "Northwest China."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008512",
+      "barcode": "31154069008512",
+      "mms_id": "990043051580107876",
+      "title": "Zhongguo wen wu nian jian /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2003-",
+      "pub_place": "Beijing :",
+      "call_number": "DS715 .Z467",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China--Relics--Periodicals.",
+        "China--Antiquities--Periodicals.",
+        "Antiquities",
+        "Relics",
+        "China",
+        "Periodicals",
+        "Periodicals.",
+        "Imperial China.",
+        "China.",
+        "Ancient China.",
+        "Zhongguo nian jian"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008520",
+      "barcode": "31154069008520",
+      "mms_id": "990039321510107876",
+      "title": "Liye Qin jian /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2012-",
+      "pub_place": "Beijing :",
+      "call_number": "PL2448 .L5 2012",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Liye--History and criticism.",
+        "Wooden tablets--China--Liye.",
+        "Bamboo work--China--Liye.",
+        "Liye (China)--Antiquities.",
+        "China--History--Qin dynasty, 221-207 B.C.",
+        "Qin Dynasty (China)",
+        "Antiquities",
+        "Bamboo work",
+        "Inscriptions, Chinese",
+        "Wooden tablets",
+        "China",
+        "China--Liye",
+        "221-207 B.C",
+        "Criticism, interpretation, etc.",
+        "History",
+        "Jian (kao gu)--yan jiu--qin han shi dai--hu nan sheng--long shan xian.",
+        "Liye.",
+        "China.",
+        "Ancient China.",
+        "Imperial China.",
+        "Chine--Histoire--221-207 av. J.-C. (Dynastie des Qin)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8602708",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463",
+        "http://vocab.getty.edu/tgn/8697462"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008538",
+      "barcode": "31154069008538",
+      "mms_id": "990039321510107876",
+      "title": "Liye Qin jian /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2012-",
+      "pub_place": "Beijing :",
+      "call_number": "PL2448 .L5 2012",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Liye--History and criticism.",
+        "Wooden tablets--China--Liye.",
+        "Bamboo work--China--Liye.",
+        "Liye (China)--Antiquities.",
+        "China--History--Qin dynasty, 221-207 B.C.",
+        "Qin Dynasty (China)",
+        "Antiquities",
+        "Bamboo work",
+        "Inscriptions, Chinese",
+        "Wooden tablets",
+        "China",
+        "China--Liye",
+        "221-207 B.C",
+        "Criticism, interpretation, etc.",
+        "History",
+        "Jian (kao gu)--yan jiu--qin han shi dai--hu nan sheng--long shan xian.",
+        "Liye.",
+        "China.",
+        "Ancient China.",
+        "Imperial China.",
+        "Chine--Histoire--221-207 av. J.-C. (Dynastie des Qin)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8602708",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463",
+        "http://vocab.getty.edu/tgn/8697462"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008546",
+      "barcode": "31154069008546",
+      "mms_id": "9998784624207876",
+      "title": "Tarsus Müzesi taş eserleri : heykeltıraşlık ve mimari plastik eserler /",
+      "authors": [
+        "Durugönül, Serra, 1962- editor."
+      ],
+      "publisher": "Mersin Üniversitesi Kilikia Arkeolojisini Araştırma Merkezi",
+      "pub_date": "[2016]",
+      "pub_place": "Mersin :",
+      "call_number": "NB118.T9 T37 2016",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Tarsus (Turkey)--Antiquities.",
+        "Museums--Turkey--Tarsus.",
+        "Sculpture, Ancient--Turkey--Tarsus--Catalogs.",
+        "Sculpture, Hellenistic--Turkey--Tarsus--Catalogs.",
+        "Sculpture, Roman--Turkey--Tarsus--Catalogs.",
+        "Sculpture, Byzantine--Turkey--Tarsus--Catalogs.",
+        "Decoration and ornament, Architectural--Turkey--Tarsus.",
+        "Antiquities",
+        "Decoration and ornament, Architectural",
+        "Museums",
+        "Sculpture, Ancient",
+        "Sculpture, Byzantine",
+        "Sculpture, Hellenistic",
+        "Sculpture, Roman",
+        "Turkey--Tarsus",
+        "catalogs (documents)",
+        "Catalogs",
+        "Catalogs.",
+        "Tarsus/Antiochia ad Cydnum.",
+        "Catalogues.",
+        "Musées--Turquie--Tarsus.",
+        "Sculpture antique--Turquie--Tarsus--Catalogues.",
+        "Sculpture hellénistique--Turquie--Tarsus--Catalogues.",
+        "Sculpture romaine--Turquie--Tarsus--Catalogues.",
+        "Sculpture byzantine--Turquie--Tarsus--Catalogues.",
+        "Décoration et ornement architecturaux--Turquie--Tarsus."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/648789"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008553",
+      "barcode": "31154069008553",
+      "mms_id": "9998784724307876",
+      "title": "Egyptian meeting Canaanites : and the genesis of alphabetic writing around 1900 BCE /",
+      "authors": [
+        "Morenz, Ludwig D., author."
+      ],
+      "publisher": "Editorial Universidad de Alcalá",
+      "pub_date": "[2023]",
+      "pub_place": "Alcalá de Henares :",
+      "call_number": "P211 .M73 2023",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Alphabet--History.",
+        "Writing--Egypt--History.",
+        "Writing--Palestine--History.",
+        "Egyptians.",
+        "Canaanites.",
+        "Civilization, Ancient.",
+        "Ancient Egypt (region)",
+        "Alphabet--Histoire.",
+        "Écriture--Égypte--Histoire.",
+        "Écriture--Palestine--Histoire.",
+        "Égyptiens.",
+        "Cananéens.",
+        "Civilisation ancienne."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/981503"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008561",
+      "barcode": "31154069008561",
+      "mms_id": "9998784624107876",
+      "title": "Krētologika symmeikta /",
+      "authors": [
+        "Kritzas, Ch. V., 1944- author."
+      ],
+      "publisher": "Philosophikē Scholē Panepistēmio Krētēs",
+      "pub_date": "2024.",
+      "pub_place": "Rethymno :",
+      "call_number": "CN380.C7 K758 2024",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Inscriptions, Greek--Greece--Crete.",
+        "Epigrams, Greek--Greece--Crete.",
+        "Epitaphs--Greece--Crete.",
+        "Crete (Greece)--Civilization--Early works to 1800--Sources.",
+        "Crete (Greece)--Antiquities--Sources.",
+        "Creta (island)",
+        "Inscriptions grecques--Grèce--Crète.",
+        "Épitaphes--Grèce--Crète.",
+        "Crète (Grèce)--Civilisation--Ouvrages avant 1800--Sources.",
+        "Crète (Grèce)--Antiquités--Sources."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/589748"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008587",
+      "barcode": "31154069008587",
+      "mms_id": "9998784919407876",
+      "title": "Jia su qi zhi pu 14C ce nian yan jiu : Xia Shang Zhou shi qi kao gu yi zhi yu Yinxu jia gu ce nian /",
+      "authors": [
+        "Guo, Zhiyu, author."
+      ],
+      "publisher": "Beijing da xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "CC78.6 .G868 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Archaeological dating--China.",
+        "Radiocarbon dating.",
+        "radiocarbon dating.",
+        "Ancient China.",
+        "Archéologie--Datation--Chine.",
+        "Datation--Méthode du carbone 14."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008595",
+      "barcode": "31154069008595",
+      "mms_id": "9998784919807876",
+      "title": "Chu tu wen xian yu Han Tang fa zhi shi xin lun = Unearthed documents and new arguments on the legal history of the Han and Tang dynasties = Chutu wenxian yu Han Tang fazhishi xinlun /",
+      "authors": [
+        "Zheng, Xianwen, 1966- author."
+      ],
+      "publisher": "Beijing da xue chu ban she",
+      "pub_date": "2025.",
+      "pub_place": "Beijing :",
+      "call_number": "KNN132 .Z4464 2025",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Law--China--History.",
+        "China--History--Han dynasty, 202 B.C.-220 A.D.",
+        "China--History--Tang dynasty, 618-907.",
+        "Imperial China.",
+        "Droit--Chine--Histoire.",
+        "Chine--Histoire--202 av. J.-C.-220 (Dynastie des Han)",
+        "Chine--Histoire--618-907 (Dynastie des Tang)"
+      ],
+      "place_refs": [
+        "https://vocab.getty.edu/tgn/8697462"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008603",
+      "barcode": "31154069008603",
+      "mms_id": "9998784919707876",
+      "title": "Jin ke yu lü : di xia chu tu de jian bo fa zhi wen shu = The golden rules : legal documents on unearthed bamboo slips = Jinke yulü : dixia chutu de jianbo fazhi wenshu /",
+      "authors": [
+        "Li, Mingxiao (Researcher), author."
+      ],
+      "publisher": "Xi nan da xue chu ban she",
+      "pub_date": "2025.",
+      "pub_place": "Chongqing Shi :",
+      "call_number": "KNN122 .L526 2025",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Law--China--History.",
+        "Inscriptions, Chinese--History and criticism.",
+        "Bamboo inscriptions--China--History and criticism.",
+        "Imperial China.",
+        "Droit--Chine--Histoire.",
+        "Inscriptions chinoises--Histoire et critique."
+      ],
+      "place_refs": [
+        "https://vocab.getty.edu/tgn/8697462"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008611",
+      "barcode": "31154069008611",
+      "mms_id": "9998784919507876",
+      "title": "Xian Qin shi qi de ren qun yu she hui : kao gu xue shi jiao de duo wei tan suo /",
+      "authors": [
+        "Teng, Mingyu, author."
+      ],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS741.65 .T4636 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "China--Civilization--To 221 B.C.",
+        "Ancient China.",
+        "Chine--Civilisation--Jusqu'à 221 av. J.-C."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008629",
+      "barcode": "31154069008629",
+      "mms_id": "9998784920107876",
+      "title": "Jiangxi Anfu Qifeng Shan Han mu qun kao gu fa jue bao gao /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2025.",
+      "pub_place": "Beijing Shi :",
+      "call_number": "DS797.57.A542 J536 2025",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Anfu Xian (China)--Antiquities.",
+        "Tombs--China--Anfu Xian.",
+        "Excavations (Archaeology)--China--Anfu Xian.",
+        "China--History--Han dynasty, 202 B.C.-220 A.D.",
+        "Qifengshan tombs.",
+        "Chine--Histoire--202 av. J.-C.-220 (Dynastie des Han)"
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008637",
+      "barcode": "31154069008637",
+      "mms_id": "9998784919607876",
+      "title": "Fangshan Anzhuang mu di kao gu fa jue bao gao /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024 nian 11 yue.",
+      "pub_place": "Beijing :",
+      "call_number": "DS795.4.F36 F362 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Fangshan Qu (Beijing, China)--Antiquities.",
+        "Tombs--China--Beijing.",
+        "Excavations (Archaeology)--China--Beijing.",
+        "Anzhuang cemetery.",
+        "Tombeaux--Chine--Pékin.",
+        "Fouilles (Archéologie)--Chine--Pékin."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008645",
+      "barcode": "31154069008645",
+      "mms_id": "9998784919907876",
+      "title": "Jingzhou Hujiacaochang mu di kao gu fa jue bao gao = Archaeological Excavation Report of the Hujia Caochang Cemetery in Jingzhou /",
+      "authors": [
+        "Jingzhou bo wu guan, author."
+      ],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing Shi :",
+      "call_number": "DS797.48.J554 J569 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Excavations (Archaeology)--China--Jingzhou (Hubei Sheng)",
+        "Tombs--China--Hujiacaochang Cemetery Site.",
+        "Bamboo inscriptions--China--Hujiacaochang Cemetery Site.",
+        "Hujiacaochang Cemetery Site.",
+        "Jingzhou (Hubei Sheng, China)--Antiquities.",
+        "Hujia Caochang cemetery."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008652",
+      "barcode": "31154069008652",
+      "mms_id": "9998784920007876",
+      "title": "Fuyang Shuanggudui Han mu /",
+      "authors": [],
+      "publisher": "Zhonghua shu ju",
+      "pub_date": "2022.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.22.F894 F8963 2022",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Tombs--China--Fuyang Shi.",
+        "Excavations (Archaeology)--China--Fuyang Shi.",
+        "Fuyang Shi (China)--Antiquities.",
+        "China--History--Han dynasty, 202 B.C.-220 A.D.",
+        "Fuyang.",
+        "Tombeaux--Chine--Fuyang (Shi)",
+        "Fouilles (Archéologie)--Chine--Fuyang (Shi)",
+        "Chine--Histoire--202 av. J.-C.-220 (Dynastie des Han)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8200752"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008660",
+      "barcode": "31154069008660",
+      "mms_id": "9998784919307876",
+      "title": "Dong Han Xiapi guo kao gu diao cha bao gao /",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing Shi :",
+      "call_number": "DS797.56.S856 D664 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Suining Xian (Jiangsu Sheng, China)--Antiquities.",
+        "Excavations (Archaeology)--China--Suining Xian (Jiangsu Sheng)",
+        "China--History--Han dynasty, 202 B.C.-220 A.D.",
+        "Suining.",
+        "Chine--Histoire--202 av. J.-C.-220 (Dynastie des Han)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8686894"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069008686",
+      "barcode": "31154069008686",
+      "mms_id": "9998784919107876",
+      "title": "Changsha Zoumalou Xi Han jian du kao gu fa jue bao gao = Changsha Zoumalou XiHan jiandu kaogu fajue baogao /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha Shi :",
+      "call_number": "PL2448 .C4368 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Excavations (Archaeology)--China--Changsha Shi.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha.",
+        "Fouilles (Archéologie)--Chine--Changsha."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008694",
+      "barcode": "31154069008694",
+      "mms_id": "9998784919007876",
+      "title": "Changsha Zoumalou Xi Han jian du yan jiu = Changsha Zoumalou XiHan jiandu yanjiu /",
+      "authors": [],
+      "publisher": "Yuelu shu she",
+      "pub_date": "2024.",
+      "pub_place": "Changsha :",
+      "call_number": "PL2448 .C3663 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Inscriptions, Chinese--China--Changsha Shi.",
+        "Wooden tablets--China--Changsha Shi.",
+        "Zoumalou.",
+        "Inscriptions chinoises--Chine--Changsha.",
+        "Tablettes en bois--Chine--Changsha."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069008702",
+      "barcode": "31154069008702",
+      "mms_id": "9998784919207876",
+      "title": "Fuling Shituo yi zhi : 1998-2001 nian du kao gu fa jue bao gao /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2024.",
+      "pub_place": "Beijing :",
+      "call_number": "DS797.77.F855 F8556 2024",
+      "acquired_at": "2026-02-13",
+      "subject_headings": [
+        "Fuling (Sichuan Sheng, China)--Antiquities.",
+        "Excavations (Archaeology)--China--Fuling (Sichuan Sheng)",
+        "Shituo site."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069009056",
+      "barcode": "31154069009056",
+      "mms_id": "9998784208807876",
+      "title": "Ancient metals : microstructure and metallurgy /",
+      "authors": [
+        "Scott, David A., 1948- author."
+      ],
+      "publisher": "Conservation Science Press",
+      "pub_date": "2012-<2013>",
+      "pub_place": "[Los Angeles] :",
+      "call_number": "TN690 .S346 2012",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Metallography.",
+        "Alloys--Metallography.",
+        "Metallographic specimens.",
+        "Art objects--Conservation and restoration.",
+        "Metallurgy in archaeology.",
+        "metallography.",
+        "archaeometallurgy.",
+        "Alloys--Metallography",
+        "Art objects--Conservation and restoration",
+        "Metallographic specimens",
+        "Metallography",
+        "Colombia.",
+        "Ecuador.",
+        "Alliages--Métallographie.",
+        "Métallographie--Éprouvettes.",
+        "Objets d'art--Conservation et restauration.",
+        "Métallographie.",
+        "Métallurgie en archéologie."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/1000050",
+        "http://vocab.getty.edu/tgn/1000051"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009064",
+      "barcode": "31154069009064",
+      "mms_id": "9998784208807876",
+      "title": "Ancient metals : microstructure and metallurgy /",
+      "authors": [
+        "Scott, David A., 1948- author."
+      ],
+      "publisher": "Conservation Science Press",
+      "pub_date": "2012-<2013>",
+      "pub_place": "[Los Angeles] :",
+      "call_number": "TN690 .S346 2012",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Metallography.",
+        "Alloys--Metallography.",
+        "Metallographic specimens.",
+        "Art objects--Conservation and restoration.",
+        "Metallurgy in archaeology.",
+        "metallography.",
+        "archaeometallurgy.",
+        "Alloys--Metallography",
+        "Art objects--Conservation and restoration",
+        "Metallographic specimens",
+        "Metallography",
+        "Colombia.",
+        "Ecuador.",
+        "Alliages--Métallographie.",
+        "Métallographie--Éprouvettes.",
+        "Objets d'art--Conservation et restauration.",
+        "Métallographie.",
+        "Métallurgie en archéologie."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/1000050",
+        "http://vocab.getty.edu/tgn/1000051"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009072",
+      "barcode": "31154069009072",
+      "mms_id": "9998784208807876",
+      "title": "Ancient metals : microstructure and metallurgy /",
+      "authors": [
+        "Scott, David A., 1948- author."
+      ],
+      "publisher": "Conservation Science Press",
+      "pub_date": "2012-<2013>",
+      "pub_place": "[Los Angeles] :",
+      "call_number": "TN690 .S346 2012",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Metallography.",
+        "Alloys--Metallography.",
+        "Metallographic specimens.",
+        "Art objects--Conservation and restoration.",
+        "Metallurgy in archaeology.",
+        "metallography.",
+        "archaeometallurgy.",
+        "Alloys--Metallography",
+        "Art objects--Conservation and restoration",
+        "Metallographic specimens",
+        "Metallography",
+        "Colombia.",
+        "Ecuador.",
+        "Alliages--Métallographie.",
+        "Métallographie--Éprouvettes.",
+        "Objets d'art--Conservation et restauration.",
+        "Métallographie.",
+        "Métallurgie en archéologie."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/1000050",
+        "http://vocab.getty.edu/tgn/1000051"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009080",
+      "barcode": "31154069009080",
+      "mms_id": "9998785440307876",
+      "title": "The city of Babylon : a history, c. 2000 BC - AD 116 /",
+      "authors": [
+        "Dalley, Stephanie, author."
+      ],
+      "publisher": "Cambridge University Press",
+      "pub_date": "2021.",
+      "pub_place": "Cambridge, United Kingdom ; New York, NY :",
+      "call_number": "DS70.5.B3 D33 2021",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Iraq--Babylon (Extinct city)",
+        "History",
+        "Babylon (Extinct city)--History.",
+        "Babylon.",
+        "Babylone (Ville ancienne)--Histoire."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/893951"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009098",
+      "barcode": "31154069009098",
+      "mms_id": "9998753680207876",
+      "title": "The Neo- and Late Babylonian records in the Babylon collection of the Istanbul Archaeological Museums (Eski Şark Eserleri Müzesi) /",
+      "authors": [
+        "Eski Şark Eserleri Müzesi (Istanbul, Turkey), creator."
+      ],
+      "publisher": "Harrassowitz Verlag",
+      "pub_date": "2025.",
+      "pub_place": "Wiesbaden :",
+      "call_number": "PJ3711.E75 v.3 2025",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Eski Şark Eserleri Müzesi (Istanbul, Turkey)--Catalogs.",
+        "Akkadian language--Texts--Catalogs.",
+        "Cuneiform tablets--Iraq--Babylon (Extinct city)",
+        "Babylon (Extinct city)",
+        "Babylon.",
+        "Akkadien (Langue)--Textes--Catalogues.",
+        "Tablettes cunéiformes--Irak--Babylone (Ville ancienne)",
+        "Babylone (Ville ancienne)"
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/893951"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009106",
+      "barcode": "31154069009106",
+      "mms_id": "9998785434307876",
+      "title": "Scents of Arabia : interdisciplinary approaches to ancient olfactory worlds : papers from a special session of the Fifty-Fifth Meeting of the Seminar for Arabian Studies, held in Berlin on 6th August 2022 /",
+      "authors": [
+        "Seminar for Arabian Studies Berlin, Germany), 2022 : Special Session, creator. (55th :"
+      ],
+      "publisher": "Archaeopress Publishing Ltd",
+      "pub_date": "[2025]",
+      "pub_place": "Bicester :",
+      "call_number": "BH301.O35 S34 2025",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Odors--Arabian Peninsula--History--To 1500.",
+        "Essences and essential oils--Social aspects--History--Arabian Peninsula--To 1500--Congresses.",
+        "Essences and essential oils industry--Arabian Peninsula--History--To 1500--Congresses.",
+        "Arabian Peninsula--History--To 622--Congresses.",
+        "Essences and essential oils--Social aspects",
+        "Essences and essential oils industry--History.",
+        "Arabian Peninsula",
+        "Conference papers and proceedings",
+        "Arabia.",
+        "Arabie (Péninsule)--Histoire--Jusqu'à 622--Congrès."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/29475"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009114",
+      "barcode": "31154069009114",
+      "mms_id": "9998785433707876",
+      "title": "Naga Amuntemple : Relief, malerei, inschriften /",
+      "authors": [
+        "Wildung, Dietrich, author."
+      ],
+      "publisher": "Ugarit-Verlag",
+      "pub_date": "2023.",
+      "pub_place": "Tecklenburg :",
+      "call_number": "NB1097.6.S732 N343 2023",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Relief (Sculpture), Ancient--Sudan--Naqa (Extinct city)",
+        "Temples--Sudan--Naqa (Extinct city)",
+        "Excavations (Archaeology)--Sudan--Naqa (Extinct city)",
+        "Naqa (Extinct city)--Antiquities.",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Relief (Sculpture), Ancient",
+        "Temples",
+        "Sudan--Naqa (Extinct city)",
+        "Naqa."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/805635"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009122",
+      "barcode": "31154069009122",
+      "mms_id": "9998785433607876",
+      "title": "Ḫattannaš : a festschrift in honor of Theo van den Hout /",
+      "authors": [],
+      "publisher": "Institute for the Study of Ancient Cultures of the University of Chicago",
+      "pub_date": "[2025]",
+      "pub_place": "[Chicago] :",
+      "call_number": "P945 .H388 2025",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Hittite language.",
+        "Hittites--Civilization.",
+        "Hittites--History.",
+        "Luwian language.",
+        "Akkadian language.",
+        "Akkadian language",
+        "Hittite language",
+        "Hittites",
+        "Civilization",
+        "Luwian language",
+        "History",
+        "Hittite Empire.",
+        "Hittite (Langue)",
+        "Hittites--Histoire.",
+        "Akkadien (Langue)",
+        "Hittites--Civilisation.",
+        "Louvite (Langue)"
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/6002562"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009221",
+      "barcode": "31154069009221",
+      "mms_id": "9998785423307876",
+      "title": "Rediscovery of a lost history of Central Asian Christianity : historical context and archaeological evidence /",
+      "authors": [
+        "White, Kevin T., author."
+      ],
+      "publisher": "Gorgias Press",
+      "pub_date": "2026",
+      "pub_place": "Piscataway, NJ :",
+      "call_number": "BX103.3 .W45 2026",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Eastern churches--Asia, Central--History.",
+        "Asia, Central--History.",
+        "Central Asia.",
+        "Églises orientales--Asie centrale--Histoire.",
+        "Asie centrale--Histoire."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697475"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009239",
+      "barcode": "31154069009239",
+      "mms_id": "990028566520107876",
+      "title": "Zeitschrift für Papyrologie und Epigraphik.",
+      "authors": [],
+      "publisher": "Rudolf Habelt Verlag GMBH",
+      "pub_date": "1967-",
+      "pub_place": "Bonn :",
+      "call_number": "PA3339 .Z45",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Manuscripts (Papyri)--Periodicals.",
+        "Inscriptions",
+        "Manuscripts, Greek (Papyri)",
+        "Manuscripts (Papyri)",
+        "Periodicals",
+        "Periodicals.",
+        "Papyri.",
+        "Inscripties.",
+        "Oudheid.",
+        "Greek philology--Periodicals.",
+        "Inscriptions--Periodicals.",
+        "Manuscripts, Greek (Papyri)--Periodicals.",
+        "Papyrus (Manuscrits)--Périodiques.",
+        "Papyrus grecs--Périodiques.",
+        "Inscriptions--Périodiques."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069009247",
+      "barcode": "31154069009247",
+      "mms_id": "9998785422807876",
+      "title": "In taberna : finger food dall'antica Roma /",
+      "authors": [
+        "Tapinassi, Martina, 1986- author."
+      ],
+      "publisher": "L'Erma di Bretschneider",
+      "pub_date": "2025.",
+      "pub_place": "Roma ; Bristol (USA) :",
+      "call_number": "TX713 .T37 2025",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Cooking, Roman--History.",
+        "Food habits--Rome--History.",
+        "Food--Rome--History.",
+        "cookbooks.",
+        "recipes.",
+        "Cookbooks.",
+        "Recipes.",
+        "Recettes.",
+        "Roman Empire.",
+        "Livres de cuisine.",
+        "Habitudes alimentaires--Rome--Histoire.",
+        "Aliments--Rome--Histoire.",
+        "Cuisine romaine--Histoire."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7030347"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009254",
+      "barcode": "31154069009254",
+      "mms_id": "9998785422707876",
+      "title": "Algorithmic musings in Syriac : a verse poem on computation attributed to George of the Arabs /",
+      "authors": [],
+      "publisher": "Gorgias Press LLC",
+      "pub_date": "2024.",
+      "pub_place": "Piscataway, NJ :",
+      "call_number": "BV43 .A446 2024",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Fasts and feasts.",
+        "Church calendar.",
+        "Syria.",
+        "Calendrier liturgique."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/1306"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009262",
+      "barcode": "31154069009262",
+      "mms_id": "990056893390107876",
+      "title": "Ash-sharq : bulletin of the Ancient Near East.",
+      "authors": [],
+      "publisher": "Archaeopress Publishing Ltd",
+      "pub_date": "2017-",
+      "pub_place": "Oxford, UK :",
+      "call_number": "DS56 .S45",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Archaeology--Middle East--Periodicals.",
+        "Excavations (Archaeology)--Middle East--Periodicals.",
+        "Middle East--Antiquities--Periodicals.",
+        "Antiquities",
+        "Archaeology",
+        "Excavations (Archaeology)",
+        "Middle East",
+        "Periodicals",
+        "Middle East.",
+        "Moyen-Orient--Antiquités--Périodiques."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7001526"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009270",
+      "barcode": "31154069009270",
+      "mms_id": "990035170110107876",
+      "title": "Aramazd : Armenian journal of Near Eastern studies.",
+      "authors": [],
+      "publisher": "Archaeopress Journals; Association for Near Eastern and Caucasian Studies",
+      "pub_date": "2006-",
+      "pub_place": "Yerevan [Armenia] :",
+      "call_number": "DS161 .A65",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Armenians--History--Periodicals.",
+        "Armenia--Civilization--Periodicals.",
+        "Armenia--Antiquities--Periodicals.",
+        "Excavations (Archaeology)--Middle East--Periodicals.",
+        "Antiquities, Prehistoric--Middle East--Periodicals.",
+        "Middle East--Antiquities--Periodicals.",
+        "Antiquities",
+        "Armenians",
+        "Civilization",
+        "Armenia",
+        "Middle East",
+        "History",
+        "Periodicals",
+        "Periodicals.",
+        "Middle Eastern philology.",
+        "Caucasian philology.",
+        "Middle East--Antiquities.",
+        "Caucasus--Antiquities.",
+        "Armenia (region)",
+        "Middle East.",
+        "Armenia--History--Periodicals."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/874350",
+        "http://vocab.getty.edu/tgn/7001526"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009288",
+      "barcode": "31154069009288",
+      "mms_id": "9998785422307876",
+      "title": "Khirbet al-Khalde : final publications from the Khirbet al-Khalde archaeological project 2023 /",
+      "authors": [],
+      "publisher": "Brepols",
+      "pub_date": "[2025]",
+      "pub_place": "Turnhout :",
+      "call_number": "DS153.3 .K457 2025",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Human settlements--Jordan--History.",
+        "Excavations (Archaeology)--Jordan.",
+        "Jordan--Antiquities.",
+        "Khirbet al-Khalde (Jordan)",
+        "Human settlements--History.",
+        "Jordan",
+        "'Praesidio'.",
+        "Établissements humains--Jordanie--Histoire.",
+        "Jordanie--Antiquités."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/746796"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009296",
+      "barcode": "31154069009296",
+      "mms_id": "990028697980107876",
+      "title": "Mesopotamia /",
+      "authors": [],
+      "publisher": "Giappichelli",
+      "pub_date": "1966-",
+      "pub_place": "Torino :",
+      "call_number": "DS69.5 .M46",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Iraq--Antiquities--Periodicals.",
+        "Archeologie.",
+        "Epigrafie.",
+        "Mesopotamia (general region)",
+        "Antiquities.",
+        "Iraq.",
+        "Periodicals."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069009304",
+      "barcode": "31154069009304",
+      "mms_id": "9998785420607876",
+      "title": "Pharos (Alexandria) : Insel der Gräber und Heiligtümer /",
+      "authors": [
+        "Helmbold-Doyé, Jana, author."
+      ],
+      "publisher": "Golden House Publications",
+      "pub_date": "2021.",
+      "pub_place": "Berlin ; London :",
+      "call_number": "DT73.A4 H45 2021",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Egyptology.",
+        "Alexandria (Egypt)--Antiquities.",
+        "Pharos Lighthouse (Alexandria, Egypt)",
+        "Antiquities",
+        "Egyptology",
+        "Egypt--Alexandria",
+        "Pharos.",
+        "Alexandria.",
+        "Phare d'Alexandrie (Égypte)",
+        "Égyptologie."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/727197",
+        "https://pleiades.stoa.org/places/727070"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009312",
+      "barcode": "31154069009312",
+      "mms_id": "9998759309107876",
+      "title": "Le berceau minoen de la religion hellénique : le labyrinthe des abeilles /",
+      "authors": [
+        "Reeth, J. M. F. van, 1960- author."
+      ],
+      "publisher": "Éditions Safran",
+      "pub_date": "[2025]",
+      "pub_place": "Bruxelles :",
+      "call_number": "BL793.C7 R44 2025",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Minoans--Religion.",
+        "Labyrinths--Greece--Crete--Religious aspects.",
+        "Bees--Greece--Crete--Religious aspects.",
+        "Crete (Greece)--Religious life and customs.",
+        "Creta (island)",
+        "Minoens--Religion."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/589748"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009320",
+      "barcode": "31154069009320",
+      "mms_id": "9998785419107876",
+      "title": "Les archives d'Ilu-kân : gestion et comptabilité du grain dans le palais de Mari /",
+      "authors": [
+        "Chambon, Grégory, author."
+      ],
+      "publisher": "SEPOA",
+      "pub_date": "[2018]",
+      "pub_place": "Paris :",
+      "call_number": "PJ3721.M3 C42 2018",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Cuneiform tablets--Syria--Mari (Extinct city)",
+        "Civilization, Assyro-Babylonian",
+        "Cuneiform tablets",
+        "Syria",
+        "Syria--Mari (Extinct city)",
+        "Civilization, Assyro-Babylonian.",
+        "Cuneiform tablets--Syria.",
+        "Mari (Extinct city)",
+        "Māri.",
+        "Tablettes cunéiformes--Syrie--Mari (Ville ancienne)",
+        "Mari (Ville ancienne)",
+        "Civilisation assyro-babylonienne."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/286681704"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009338",
+      "barcode": "31154069009338",
+      "mms_id": "9998785419007876",
+      "title": "\"Écoute ma tablette!\" : l'essor de la correspondance en Mésopotamie (2004-1594 av. n.è.) /",
+      "authors": [
+        "Béranger, Marine, author."
+      ],
+      "publisher": "SEPOA",
+      "pub_date": "2024.",
+      "pub_place": "Paris :",
+      "call_number": "PJ3671 .B47 2024",
+      "acquired_at": "2026-02-26",
+      "subject_headings": [
+        "Letter writing--Iraq--History--To 1500.",
+        "Assyro-Babylonian letters--Iraq--History.",
+        "Akkadian language--Iraq--History.",
+        "Iraq--Civilization--To 634.",
+        "Mesopotamia (region)",
+        "Akkadien (Langue)--Irak--Histoire.",
+        "Irak--Civilisation--Jusqu'à 634."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/874602"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009346",
+      "barcode": "31154069009346",
+      "mms_id": "9998785524007876",
+      "title": "Hellenistik ve Roma dönemlerinde dağlık Phrygia bölgesi kaya mezarları /",
+      "authors": [
+        "Kortanoğlu, R. Eser."
+      ],
+      "publisher": "Anadolu Üniversitesi",
+      "pub_date": "2008.",
+      "pub_place": "Eskişehir :",
+      "call_number": "DS156.P5 K67 2008",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Tombs--Turkey--Phrygia.",
+        "Sepulchral monuments--Turkey--Phrygia.",
+        "Phrygia--Antiquities.",
+        "Turkey--Antiquities.",
+        "Antiquities",
+        "Sepulchral monuments",
+        "Tombs",
+        "Asia--Phrygia",
+        "Turkey",
+        "Ausgrabung",
+        "Grabmal",
+        "Phrygien",
+        "Griechenland--Altertum",
+        "Römisches Reich",
+        "Anatolien",
+        "Phrygia.",
+        "Turquie--Antiquités."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/609502"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009353",
+      "barcode": "31154069009353",
+      "mms_id": "9998785523907876",
+      "title": "Bronzul târziu dintre Carpați și Marea Azov : materialitatea din așezările Noua-Sabatinovka-Coslogeni /",
+      "authors": [
+        "Sîrbu, Mariana (Archaeologist), author."
+      ],
+      "publisher": "Muzeul Național de Istorie a Moldovei",
+      "pub_date": "2025.",
+      "pub_place": "Chișinău :",
+      "call_number": "GN778.22.M65 S57 2025",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Bronze age--Moldova.",
+        "Bronze age--Romania.",
+        "Bronze age--Ukraine, Southern.",
+        "Moldova--Antiquities.",
+        "Romania--Antiquities.",
+        "Ukraine, Southern--Antiquities.",
+        "Moldova--Antiquities--Catalogs.",
+        "Moldova.",
+        "Romania.",
+        "southern Ukraine.",
+        "Moldavie--Antiquités.",
+        "Roumanie--Antiquités.",
+        "Moldavie--Antiquités--Catalogues."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7006656",
+        "http://vocab.getty.edu/tgn/1000091"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009361",
+      "barcode": "31154069009361",
+      "mms_id": "9998785523807876",
+      "title": "Güneş Karadeniz'den doğar = Lux ex Ponto Euxino : Sümer Atasoy'a armağan yazılar = Studies presented in honour of Sümer Atasoy /",
+      "authors": [],
+      "publisher": "Hel Yayıncılık",
+      "pub_date": "[2013]",
+      "pub_place": "Emek, Ankara :",
+      "call_number": "DS155 .G86 2013",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Archaeology--Turkey.",
+        "Museums--Turkey.",
+        "Turkey--Antiquities.",
+        "Turkey--Civilization.",
+        "Antiquities",
+        "Archaeology",
+        "Civilization",
+        "Museums",
+        "Turkey",
+        "Turkey.",
+        "Turquie--Antiquités."
+      ],
+      "place_refs": [
+        "https://vocab.getty.edu/tgn/1000144"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009379",
+      "barcode": "31154069009379",
+      "mms_id": "9998785523707876",
+      "title": "I volti del potere : alle origini del ritratto nell'arte dell'Oriente antico /",
+      "authors": [
+        "Matthiae, Paolo, author."
+      ],
+      "publisher": "Giulio Einaudi editore",
+      "pub_date": "[2020]",
+      "pub_place": "Torino :",
+      "call_number": "N7580 .M36 2020",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Antiquities",
+        "Kings and rulers",
+        "Portrait sculpture, Ancient",
+        "Portraits, Ancient",
+        "Middle East",
+        "Portraits",
+        "Portraits, Ancient--Middle East.",
+        "Portrait sculpture, Ancient--Middle East.",
+        "Middle East--Kings and rulers--Portraits.",
+        "Middle East--Antiquities.",
+        "Excavations (Archaeology)--Middle East.",
+        "Sovrani--Ritratti--Oriente--Antichità.",
+        "Middle East.",
+        "Moyen-Orient--Antiquités."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7001526"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009387",
+      "barcode": "31154069009387",
+      "mms_id": "9998785523607876",
+      "title": "Ancient religiosities in dialogue : Greek, Roman, Jewish and Christian : selected essays /",
+      "authors": [
+        "Morgan, Teresa author. (Teresa Jean),"
+      ],
+      "publisher": "Mohr Siebeck",
+      "pub_date": "[2025]",
+      "pub_place": "Tübingen, Germany :",
+      "call_number": "BR162.3 .M67 2025",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Bible Criticism, interpretation, etc.",
+        "Church history--Primitive and early church, ca. 30-600.",
+        "Mediterranean Region--Religion--History.",
+        "Christianity and other religions--Greek.",
+        "Christianity and other religions--Roman.",
+        "Internum Mare.",
+        "Bible Critique, interprétation, etc.",
+        "Christianisme--Relations--Religion grecque.",
+        "Christianisme--Relations--Religion romaine.",
+        "Église--Histoire--ca 30-600 (Église primitive)"
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/1043"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069009403",
+      "barcode": "31154069009403",
+      "mms_id": "9998785523407876",
+      "title": "Excavations at Karkemish.",
+      "authors": [
+        "Bolognani, Barbara, author."
+      ],
+      "publisher": "manufacturer not identified; Ante quem",
+      "pub_date": "[2021].",
+      "pub_place": "Bologna :",
+      "call_number": "DS156.C32 E93 v.3 2021",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Pottery, Ancient--Turkey--Karkamiş.",
+        "Excavations (Archaeology)--Turkey--Karkamiş.",
+        "Excavations (Archaeology)--Turkey--Carchemish (Extinct city)",
+        "Karkamiş (Turkey)--Antiquities--Catalogs.",
+        "Carchemish (Extinct city)",
+        "Tombs--Turkey--Karkamiş.",
+        "Carchemish.",
+        "Fouilles (Archéologie)--Turquie--Karkamış.",
+        "Karkemish (Ville ancienne)",
+        "Tombeaux--Turquie--Karkamış."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/658465"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069037529",
+      "barcode": "31154069037529",
+      "mms_id": "990018258730107876",
+      "title": "Wen wu.",
+      "authors": [],
+      "publisher": "Wen wu chu ban she",
+      "pub_date": "1959-",
+      "pub_place": "Beijing :",
+      "call_number": "DS715 .W439",
+      "acquired_at": "2026-02-09",
+      "subject_headings": [
+        "Electronic journals.",
+        "Antiquities",
+        "China",
+        "Periodicals",
+        "Periodicals.",
+        "Art, Chinese--History--Periodicals.",
+        "China--Antiquities--Periodicals.",
+        "Imperial China.",
+        "China.",
+        "Ancient China.",
+        "Chine--Antiquités--Périodiques."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069037537",
+      "barcode": "31154069037537",
+      "mms_id": "9998784208807876",
+      "title": "Ancient metals : microstructure and metallurgy /",
+      "authors": [
+        "Scott, David A., 1948- author."
+      ],
+      "publisher": "Conservation Science Press",
+      "pub_date": "2012-<2013>",
+      "pub_place": "[Los Angeles] :",
+      "call_number": "TN690 .S346 2012",
+      "acquired_at": "2026-02-09",
+      "subject_headings": [
+        "Metallography.",
+        "Alloys--Metallography.",
+        "Metallographic specimens.",
+        "Art objects--Conservation and restoration.",
+        "Metallurgy in archaeology.",
+        "metallography.",
+        "archaeometallurgy.",
+        "Alloys--Metallography",
+        "Art objects--Conservation and restoration",
+        "Metallographic specimens",
+        "Metallography",
+        "Colombia.",
+        "Ecuador.",
+        "Alliages--Métallographie.",
+        "Métallographie--Éprouvettes.",
+        "Objets d'art--Conservation et restauration.",
+        "Métallographie.",
+        "Métallurgie en archéologie."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/1000050",
+        "http://vocab.getty.edu/tgn/1000051"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078580",
+      "barcode": "31154069078580",
+      "mms_id": "9998784728407876",
+      "title": "L'onomastica religiosa neo-assira : aspetti qualitativi e quantitativi, riflessi sociali e religiosi /",
+      "authors": [
+        "Nitta, Ermenegildo, author."
+      ],
+      "publisher": "Arbor sapientiae; DICAM",
+      "pub_date": "2023.",
+      "pub_place": "Messina : Roma :",
+      "call_number": "PJ3545 .N58 2023",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Names, Personal--Akkadian.",
+        "Akkadian language--Etymology--Names.",
+        "Names, Personal--Religious aspects.",
+        "Gods, Assyro-Babylonian.",
+        "Akkadian language--Etymology--Names",
+        "Gods, Assyro-Babylonian",
+        "Names, Personal--Akkadian",
+        "Names, Personal--Religious aspects",
+        "Assyria (kingdom)",
+        "Noms de personnes akkadiens.",
+        "Akkadien (Langue)--Étymologie--Noms.",
+        "Noms de personnes--Aspect religieux.",
+        "Dieux assyro-babyloniens."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/29492"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078598",
+      "barcode": "31154069078598",
+      "mms_id": "9998784626607876",
+      "title": "\"Hattuşa'da 106 yıl\" : Hitit kazılarının fotoğraflarla öyküsü = \"106 years in Hattusha\" : photographs tell the story of the excavations in the Hittite capital /",
+      "authors": [
+        "Seeher, Jürgen, author."
+      ],
+      "publisher": "DAI; Yapı Kredi Yayınları",
+      "pub_date": "2012.",
+      "pub_place": "Beyoğlu, İstanbul :",
+      "call_number": "DS156.B67 H388 2012",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Excavations (Archaeology)--Turkey--Boğazköy.",
+        "Boğazköy (Turkey)--Antiquities.",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Hittites",
+        "Turkey--Boğazköy",
+        "Ausgrabung",
+        "Boğazkale",
+        "Hatti",
+        "Fouilles (Archéologie)--Turquie--Boǧazköy.",
+        "Hittites."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069078606",
+      "barcode": "31154069078606",
+      "mms_id": "990040390660107876",
+      "title": "Bian jiang kao gu yan jiu = Research of China's frontier archaeology /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she",
+      "pub_date": "2002-",
+      "pub_place": "Beijing :",
+      "call_number": "CC79.E85 B56",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China--Antiquities--Periodicals.",
+        "China--Boundaries--Periodicals.",
+        "Excavations (Archaeology)--China--Periodicals.",
+        "Antiquities",
+        "Boundaries",
+        "Excavations (Archaeology)",
+        "China",
+        "Periodicals",
+        "Periodicals.",
+        "Imperial China.",
+        "China.",
+        "Ancient China."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078614",
+      "barcode": "31154069078614",
+      "mms_id": "990040390240107876",
+      "title": "Nan fang min zu kao gu = Southern ethnology and archaeology /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she; Sichuan da xue chu ban she",
+      "pub_date": "1987-",
+      "pub_place": "Chengdu :",
+      "call_number": "DS793.S644 N36",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Ethnology--China, Southeast.",
+        "Ethnology--Southeast Asia.",
+        "China, Southeast--Ethnic relations.",
+        "Southeast Asia--Ethnic relations.",
+        "Ethnic relations",
+        "Ethnology",
+        "Southeast China",
+        "Southeast Asia",
+        "Southeast Asia.",
+        "Southeast China."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7016821"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078622",
+      "barcode": "31154069078622",
+      "mms_id": "990041670840107876",
+      "title": "Ke ji kao gu = Science for archaeology /",
+      "authors": [],
+      "publisher": "Zhongguo she hui ke xue chu ban she",
+      "pub_date": "2005-",
+      "pub_place": "Beijing :",
+      "call_number": "CC101.C6 K4",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Archaeology--China--Periodicals.",
+        "Archaeology--China--History--Periodicals.",
+        "Archaeology--Methodology--Periodicals.",
+        "Archaeology.",
+        "Archaeology--Methodology.",
+        "China.",
+        "History.",
+        "Periodicals."
+      ],
+      "place_refs": [],
+      "places": []
+    },
+    {
+      "id": "31154069078630",
+      "barcode": "31154069078630",
+      "mms_id": "990081375870107876",
+      "title": "Chang'an xue yan jiu.",
+      "authors": [],
+      "publisher": "Zhonghua shu ju",
+      "pub_date": "2016-",
+      "pub_place": "Beijing Shi :",
+      "call_number": "DS797.68.X536 C5363",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "Xi'an Shi (China)--History--Periodicals.",
+        "China--History--Tang dynasty, 618-907--Periodicals.",
+        "Tang Dynasty (China)",
+        "China",
+        "China--Xi'an Shi",
+        "618-907",
+        "History",
+        "Periodicals",
+        "Sian.",
+        "Imperial China.",
+        "China.",
+        "Ancient China.",
+        "Chine--Histoire--618-907 (Dynastie des Tang)--Périodiques."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/7001810",
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078648",
+      "barcode": "31154069078648",
+      "mms_id": "990037156580107876",
+      "title": "Kao gu xue yan jiu /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she",
+      "pub_date": "1992-",
+      "pub_place": "Beijing :",
+      "call_number": "DS715 .K37",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China--Antiquities--Periodicals.",
+        "Archaeology--China--Periodicals.",
+        "Antiquities",
+        "Archaeology",
+        "China",
+        "Periodicals",
+        "Imperial China.",
+        "China.",
+        "Ancient China."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078655",
+      "barcode": "31154069078655",
+      "mms_id": "990037156580107876",
+      "title": "Kao gu xue yan jiu /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she",
+      "pub_date": "1992-",
+      "pub_place": "Beijing :",
+      "call_number": "DS715 .K37",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China--Antiquities--Periodicals.",
+        "Archaeology--China--Periodicals.",
+        "Antiquities",
+        "Archaeology",
+        "China",
+        "Periodicals",
+        "Imperial China.",
+        "China.",
+        "Ancient China."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078663",
+      "barcode": "31154069078663",
+      "mms_id": "990037156580107876",
+      "title": "Kao gu xue yan jiu /",
+      "authors": [],
+      "publisher": "Ke xue chu ban she; Xinhua shu dian jing xiao; Wen wu chu ban she",
+      "pub_date": "1992-",
+      "pub_place": "Beijing :",
+      "call_number": "DS715 .K37",
+      "acquired_at": "2026-02-12",
+      "subject_headings": [
+        "China--Antiquities--Periodicals.",
+        "Archaeology--China--Periodicals.",
+        "Antiquities",
+        "Archaeology",
+        "China",
+        "Periodicals",
+        "Imperial China.",
+        "China.",
+        "Ancient China."
+      ],
+      "place_refs": [
+        "http://vocab.getty.edu/tgn/8697462",
+        "http://vocab.getty.edu/tgn/1000111",
+        "http://vocab.getty.edu/tgn/8697463"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078705",
+      "barcode": "31154069078705",
+      "mms_id": "9998785440207876",
+      "title": "Berenike 1999/2000 : report on the excavations at Berenike, including excavations in Wadi Kalalat and Siket, and the survey of the Mons Smaragdus Region /",
+      "authors": [],
+      "publisher": "Cotsen Institute of Archaeology University of California Los Angeles",
+      "pub_date": "2007.",
+      "pub_place": "Los Angeles, CA :",
+      "call_number": "DT73.B375 B48 2007",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Egypt--Antiquities.",
+        "Excavations (Archaeology)--Egypt.",
+        "Antiquities",
+        "Excavations (Archaeology)",
+        "Egypt",
+        "Egypt--Barānīs",
+        "Excavations (Archaeology)--Egypt--Berenike.",
+        "Barānīs (Egypt)--Antiquities.",
+        "Red Sea Region--Antiquities.",
+        "Berenice/Berenike.",
+        "Égypte--Antiquités."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/785986"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078713",
+      "barcode": "31154069078713",
+      "mms_id": "9998785440107876",
+      "title": "At the origins of the built environment in the Horn of Africa : the case study of Adulis Eritrea /",
+      "authors": [],
+      "publisher": "\"L'Erma\" di Bretschneider",
+      "pub_date": "[2025]",
+      "pub_place": "Roma :",
+      "call_number": "DT398.A155 A82 2025",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Adulis (Extinct city)",
+        "Excavations (Archaeology)--Eritrea--Adulis (Extinct city)",
+        "Eritrea--Antiquities.",
+        "Adulis (Extinct city)--Civilization.",
+        "Adouli.",
+        "Eritrea."
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/39271",
+        "http://vocab.getty.edu/tgn/7001658"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078721",
+      "barcode": "31154069078721",
+      "mms_id": "9998785538407876",
+      "title": "Excavations at Karkemish.",
+      "authors": [
+        "Mantellini, Simone, author."
+      ],
+      "publisher": "manufacturer not identified; Ante Quem",
+      "pub_date": "[2021].",
+      "pub_place": "Bologna :",
+      "call_number": "DS156.C32 E93 v.2 2021",
+      "acquired_at": "2026-02-19",
+      "subject_headings": [
+        "Excavations (Archaeology)--Turkey--Carchemish (Extinct city)",
+        "Carchemish (Extinct city)",
+        "Carchemish.",
+        "Karkemish (Ville ancienne)"
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/658465"
+      ],
+      "places": []
+    },
+    {
+      "id": "31154069078739",
+      "barcode": "31154069078739",
+      "mms_id": "9998785523307876",
+      "title": "Excavations at Karkemish.",
+      "authors": [
+        "Marchetti, Nicolò, editor."
+      ],
+      "publisher": "Manufacturer not identified; Department of History and Cultures University of Bologna; Ante Quem",
+      "pub_date": "[2025].",
+      "pub_place": "Bologna :",
+      "call_number": "DS156.C32 E93 v.4 2025",
+      "acquired_at": "2026-02-27",
+      "subject_headings": [
+        "Assyria--Antiquities.",
+        "Excavations (Archaeology)--Turkey--Carchemish (Extinct city)",
+        "Carchemish (Extinct city)",
+        "Carchemish.",
+        "Assyrie--Antiquités.",
+        "Karkemish (Ville ancienne)"
+      ],
+      "place_refs": [
+        "https://pleiades.stoa.org/places/658465"
+      ],
+      "places": []
+    }
+  ]
+}

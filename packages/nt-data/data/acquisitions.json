@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-24T00:00:00Z",
+  "records": [
+    {
+      "id": "sample-001",
+      "title": "Sample Record — Pompeii Excavations",
+      "authors": ["Sample, A."],
+      "publisher": "Sample Press",
+      "pub_date": "2025",
+      "acquired_at": "2026-04-01",
+      "subject_headings": ["Pompeii (Extinct city)"],
+      "places": [
+        {
+          "id": "pleiades:433032",
+          "name": "Pompeii",
+          "lat": 40.7497,
+          "lon": 14.4869,
+          "source": "pleiades"
+        }
+      ]
+    },
+    {
+      "id": "sample-002",
+      "title": "Sample Record — Athens and the Agora",
+      "authors": ["Example, B."],
+      "acquired_at": "2026-04-10",
+      "subject_headings": ["Athens (Greece)"],
+      "places": [
+        {
+          "id": "pleiades:579885",
+          "name": "Athenae",
+          "lat": 37.9715,
+          "lon": 23.7257,
+          "source": "pleiades"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-24T18:29:19.385Z",
+  "source": "getty-tgn",
+  "entries": {
+    "1000003": {
+      "id": "tgn:1000003",
+      "name": "Europe",
+      "lat": 56.2,
+      "lon": 15.016,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000003"
+    },
+    "1000004": {
+      "id": "tgn:1000004",
+      "name": "Asia",
+      "lat": 43.8,
+      "lon": 87.633,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000004"
+    },
+    "1000050": {
+      "id": "tgn:1000050",
+      "name": "Colombia",
+      "lat": 4,
+      "lon": -72,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000050"
+    },
+    "1000051": {
+      "id": "tgn:1000051",
+      "name": "Ecuador",
+      "lat": -2,
+      "lon": -77.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000051"
+    },
+    "1000074": {
+      "id": "tgn:1000074",
+      "name": "Greece",
+      "lat": 39,
+      "lon": 22,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000074"
+    },
+    "1000091": {
+      "id": "tgn:1000091",
+      "name": "Romania",
+      "lat": 46,
+      "lon": 25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000091"
+    },
+    "1000111": {
+      "id": "tgn:1000111",
+      "name": "China",
+      "lat": 35,
+      "lon": 105,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000111"
+    },
+    "1000118": {
+      "id": "tgn:1000118",
+      "name": "Iraq",
+      "lat": 33,
+      "lon": 44,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000118"
+    },
+    "1000121": {
+      "id": "tgn:1000121",
+      "name": "Jordan",
+      "lat": 31,
+      "lon": 36,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000121"
+    },
+    "1000131": {
+      "id": "tgn:1000131",
+      "name": "Oman",
+      "lat": 21,
+      "lon": 57,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000131"
+    },
+    "1000133": {
+      "id": "tgn:1000133",
+      "name": "Pakistan",
+      "lat": 30,
+      "lon": 70,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000133"
+    },
+    "1000144": {
+      "id": "tgn:1000144",
+      "name": "Turkey",
+      "lat": 39,
+      "lon": 35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1000144"
+    },
+    "1001261": {
+      "id": "tgn:1001261",
+      "name": "TGN 1001261",
+      "lat": 37.75,
+      "lon": 102.75,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001261"
+    },
+    "1001574": {
+      "id": "tgn:1001574",
+      "name": "TGN 1001574",
+      "lat": 40.416667,
+      "lon": 36.583333,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001574"
+    },
+    "1001584": {
+      "id": "tgn:1001584",
+      "name": "TGN 1001584",
+      "lat": 38.5,
+      "lon": 29.416667,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001584"
+    },
+    "1001613": {
+      "id": "tgn:1001613",
+      "name": "TGN 1001613",
+      "lat": 36.5,
+      "lon": 48.333333,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1001613"
+    },
+    "1060430": {
+      "id": "tgn:1060430",
+      "name": "TGN 1060430",
+      "lat": 41.542,
+      "lon": 44.108,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1060430"
+    },
+    "1065380": {
+      "id": "tgn:1065380",
+      "name": "Bamiyan",
+      "lat": 34.821,
+      "lon": 67.827,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1065380"
+    },
+    "1103342": {
+      "id": "tgn:1103342",
+      "name": "Turfan Depression",
+      "lat": 42.75,
+      "lon": 89,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1103342"
+    },
+    "1109316": {
+      "id": "tgn:1109316",
+      "name": "Lesser Caucasus",
+      "lat": 41,
+      "lon": 44,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1109316"
+    },
+    "1122679": {
+      "id": "tgn:1122679",
+      "name": "Yangtze River",
+      "lat": 31.786667,
+      "lon": 121.141389,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/1122679"
+    },
+    "3000006": null,
+    "4003756": {
+      "id": "tgn:4003756",
+      "name": "Eastern Europe",
+      "lat": 55.083,
+      "lon": 37.85,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/4003756"
+    },
+    "6002562": null,
+    "6005268": {
+      "id": "tgn:6005268",
+      "name": "TGN 6005268",
+      "lat": 35.861733,
+      "lon": 56.839977,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/6005268"
+    },
+    "7000231": {
+      "id": "tgn:7000231",
+      "name": "Iran",
+      "lat": 32,
+      "lon": 53,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7000231"
+    },
+    "7000261": {
+      "id": "tgn:7000261",
+      "name": "Yemen",
+      "lat": 15.5,
+      "lon": 47.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7000261"
+    },
+    "7001390": {
+      "id": "tgn:7001390",
+      "name": "Gaza Strip",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001390"
+    },
+    "7001480": {
+      "id": "tgn:7001480",
+      "name": "TGN 7001480",
+      "lat": 34.757778,
+      "lon": 113.648611,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001480"
+    },
+    "7001526": {
+      "id": "tgn:7001526",
+      "name": "Middle East",
+      "lat": 30.338258,
+      "lon": 42.498942,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001526"
+    },
+    "7001658": {
+      "id": "tgn:7001658",
+      "name": "Eritrea",
+      "lat": 15,
+      "lon": 39,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001658"
+    },
+    "7001745": {
+      "id": "tgn:7001745",
+      "name": "TGN 7001745",
+      "lat": 41.5,
+      "lon": 85.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001745"
+    },
+    "7001787": {
+      "id": "tgn:7001787",
+      "name": "TGN 7001787",
+      "lat": 29.562778,
+      "lon": 106.552778,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001787"
+    },
+    "7001810": {
+      "id": "tgn:7001810",
+      "name": "Xi'an",
+      "lat": 34.258333,
+      "lon": 108.928611,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7001810"
+    },
+    "7002078": {
+      "id": "tgn:7002078",
+      "name": "TGN 7002078",
+      "lat": 31,
+      "lon": 112.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002078"
+    },
+    "7002085": {
+      "id": "tgn:7002085",
+      "name": "TGN 7002085",
+      "lat": 36.333333,
+      "lon": 118.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002085"
+    },
+    "7002435": {
+      "id": "tgn:7002435",
+      "name": "Russia",
+      "lat": 60,
+      "lon": 47,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7002435"
+    },
+    "7006413": {
+      "id": "tgn:7006413",
+      "name": "Bulgaria",
+      "lat": 42.666,
+      "lon": 25.25,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006413"
+    },
+    "7006651": {
+      "id": "tgn:7006651",
+      "name": "Armenia",
+      "lat": 40,
+      "lon": 45,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006651"
+    },
+    "7006653": {
+      "id": "tgn:7006653",
+      "name": "Georgia",
+      "lat": 42,
+      "lon": 43.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006653"
+    },
+    "7006656": {
+      "id": "tgn:7006656",
+      "name": "Moldova",
+      "lat": 47.25,
+      "lon": 28.583,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7006656"
+    },
+    "7011539": {
+      "id": "tgn:7011539",
+      "name": "Primorskiy (Maritime) Kray",
+      "lat": 45,
+      "lon": 135,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7011539"
+    },
+    "7012217": {
+      "id": "tgn:7012217",
+      "name": "Abkhazian A.S.S.R.",
+      "lat": 43,
+      "lon": 41.5,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7012217"
+    },
+    "7016612": {
+      "id": "tgn:7016612",
+      "name": "Afghanistan",
+      "lat": 33,
+      "lon": 65,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7016612"
+    },
+    "7016821": {
+      "id": "tgn:7016821",
+      "name": "Southeast Asia",
+      "lat": -0.166,
+      "lon": 115.683,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7016821"
+    },
+    "7016833": {
+      "id": "tgn:7016833",
+      "name": "Egypt",
+      "lat": 27,
+      "lon": 30,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7016833"
+    },
+    "7016886": {
+      "id": "tgn:7016886",
+      "name": "North Africa",
+      "lat": 32.95337,
+      "lon": 9.97559,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7016886"
+    },
+    "7024407": null,
+    "7025826": null,
+    "7029448": {
+      "id": "tgn:7029448",
+      "name": "TGN 7029448",
+      "lat": 31.583,
+      "lon": 35.666,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029448"
+    },
+    "7029727": null,
+    "7029798": {
+      "id": "tgn:7029798",
+      "name": "Mogao Caves",
+      "lat": 40.033542,
+      "lon": 94.919228,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7029798"
+    },
+    "7030272": null,
+    "7030347": {
+      "id": "tgn:7030347",
+      "name": "Roman Empire",
+      "lat": 41.8925,
+      "lon": 12.48499,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7030347"
+    },
+    "7031416": null,
+    "7593196": null,
+    "7594735": null,
+    "7594771": {
+      "id": "tgn:7594771",
+      "name": "TGN 7594771",
+      "lat": 41.516667,
+      "lon": 44.516667,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/7594771"
+    },
+    "8199076": {
+      "id": "tgn:8199076",
+      "name": "TGN 8199076",
+      "lat": 39.724451,
+      "lon": 115.845751,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8199076"
+    },
+    "8200752": {
+      "id": "tgn:8200752",
+      "name": "TGN 8200752",
+      "lat": 32.937181,
+      "lon": 115.707779,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8200752"
+    },
+    "8208120": {
+      "id": "tgn:8208120",
+      "name": "TGN 8208120",
+      "lat": 28.145823,
+      "lon": 113.229669,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8208120"
+    },
+    "8209961": {
+      "id": "tgn:8209961",
+      "name": "TGN 8209961",
+      "lat": 34.369445,
+      "lon": 107.136345,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8209961"
+    },
+    "8212548": {
+      "id": "tgn:8212548",
+      "name": "TGN 8212548",
+      "lat": 36.136389,
+      "lon": 114.336667,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8212548"
+    },
+    "8602708": {
+      "id": "tgn:8602708",
+      "name": "TGN 8602708",
+      "lat": 26.654444,
+      "lon": 110.909444,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8602708"
+    },
+    "8618788": {
+      "id": "tgn:8618788",
+      "name": "TGN 8618788",
+      "lat": 34.774722,
+      "lon": 111.181389,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8618788"
+    },
+    "8619223": {
+      "id": "tgn:8619223",
+      "name": "TGN 8619223",
+      "lat": 27.260119,
+      "lon": 116.958261,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8619223"
+    },
+    "8627225": {
+      "id": "tgn:8627225",
+      "name": "TGN 8627225",
+      "lat": 34.358056,
+      "lon": 112.0625,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8627225"
+    },
+    "8630755": {
+      "id": "tgn:8630755",
+      "name": "TGN 8630755",
+      "lat": 27.509895,
+      "lon": 116.695984,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8630755"
+    },
+    "8677045": {
+      "id": "tgn:8677045",
+      "name": "TGN 8677045",
+      "lat": 29.7723,
+      "lon": 121.35,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8677045"
+    },
+    "8686894": {
+      "id": "tgn:8686894",
+      "name": "TGN 8686894",
+      "lat": 33.938816,
+      "lon": 117.858766,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8686894"
+    },
+    "8697462": null,
+    "8697463": null,
+    "8697475": {
+      "id": "tgn:8697475",
+      "name": "Central Asia",
+      "lat": 46.433,
+      "lon": 68.466,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8697475"
+    },
+    "8712371": {
+      "id": "tgn:8712371",
+      "name": "TGN 8712371",
+      "lat": 31.000008,
+      "lon": 104.223773,
+      "source": "getty-tgn",
+      "uri": "http://vocab.getty.edu/tgn/8712371"
+    }
+  }
+}

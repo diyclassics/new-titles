@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-04-24T18:29:19.385Z",
+  "source": "pleiades",
+  "entries": {
+    "766": {
+      "id": "pleiades:766",
+      "name": "Aegyptus (Roman imperial province)",
+      "lat": 31.201435,
+      "lon": 29.909773,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/766"
+    },
+    "775": {
+      "id": "pleiades:775",
+      "name": "Africa (region)",
+      "lat": 32.5,
+      "lon": 7.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/775"
+    },
+    "837": {
+      "id": "pleiades:837",
+      "name": "Asia Minor",
+      "lat": 37.910339750000006,
+      "lon": 27.278502749999998,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/837"
+    },
+    "1043": {
+      "id": "pleiades:1043",
+      "name": "Internum Mare",
+      "lat": 34.655205690792464,
+      "lon": 14.449366695083585,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1043"
+    },
+    "1224": {
+      "id": "pleiades:1224",
+      "name": "Pontus Euxinus",
+      "lat": 43.0786852,
+      "lon": 34.7425505,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1224"
+    },
+    "1306": {
+      "id": "pleiades:1306",
+      "name": "Syria",
+      "lat": 37.5,
+      "lon": 37.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/1306"
+    },
+    "29475": {
+      "id": "pleiades:29475",
+      "name": "Arabia (region)",
+      "lat": 24.149005298567015,
+      "lon": 46.55153598369672,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/29475"
+    },
+    "29492": {
+      "id": "pleiades:29492",
+      "name": "Assyria (kingdom)",
+      "lat": 36.20599290715759,
+      "lon": 43.27050157283143,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/29492"
+    },
+    "39271": {
+      "id": "pleiades:39271",
+      "name": "Adouli",
+      "lat": 15.2616612,
+      "lon": 39.6591296,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/39271"
+    },
+    "59983": {
+      "id": "pleiades:59983",
+      "name": "Hindu Kush (mountains)",
+      "lat": 35.13908351400499,
+      "lon": 68.58863289675574,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/59983"
+    },
+    "60058": {
+      "id": "pleiades:60058",
+      "name": "Sogdiana",
+      "lat": 38.957105573714095,
+      "lon": 66.80773721321128,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/60058"
+    },
+    "60676": null,
+    "108765": {
+      "id": "pleiades:108765",
+      "name": "Atuatuca",
+      "lat": 50.7806267,
+      "lon": 5.4639172,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/108765"
+    },
+    "197210": {
+      "id": "pleiades:197210",
+      "name": "Cissa",
+      "lat": 44.550965,
+      "lon": 14.918037,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/197210"
+    },
+    "197240": {
+      "id": "pleiades:197240",
+      "name": "Dalmatia (region)",
+      "lat": 43.539561,
+      "lon": 16.483426,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/197240"
+    },
+    "197304": {
+      "id": "pleiades:197304",
+      "name": "Histria",
+      "lat": 45.30463777165673,
+      "lon": 14.079180410655974,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/197304"
+    },
+    "207065": {
+      "id": "pleiades:207065",
+      "name": "Dacia",
+      "lat": 47.258956111593236,
+      "lon": 23.27518305149592,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207065"
+    },
+    "207361": {
+      "id": "pleiades:207361",
+      "name": "Porolissum",
+      "lat": 47.179235620228425,
+      "lon": 23.156979754749138,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207361"
+    },
+    "207564": {
+      "id": "pleiades:207564",
+      "name": "Vratsa",
+      "lat": 43.203751,
+      "lon": 23.54868,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/207564"
+    },
+    "226752": {
+      "id": "pleiades:226752",
+      "name": "Sarmatae",
+      "lat": 47.270778303802636,
+      "lon": 29.388196756576495,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/226752"
+    },
+    "265849": {
+      "id": "pleiades:265849",
+      "name": "Carthago Nova/Col. Urbs Iulia",
+      "lat": 37.602787,
+      "lon": -0.9879534999999999,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/265849"
+    },
+    "324700": {
+      "id": "pleiades:324700",
+      "name": "Djilma",
+      "lat": 35.2700015,
+      "lon": 9.420438,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/324700"
+    },
+    "324723": {
+      "id": "pleiades:324723",
+      "name": "Henchir-el-Guellal",
+      "lat": 34.704969,
+      "lon": 9.366159,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/324723"
+    },
+    "472032": {
+      "id": "pleiades:472032",
+      "name": "Tharros",
+      "lat": 39.87486450588456,
+      "lon": 8.441009486413876,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/472032"
+    },
+    "550434": {
+      "id": "pleiades:550434",
+      "name": "Antigoneia/(Col. Augusta) Alexandria Troas",
+      "lat": 39.751699149014044,
+      "lon": 26.1575573012968,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/550434"
+    },
+    "550793": {
+      "id": "pleiades:550793",
+      "name": "Allianoi",
+      "lat": 39.23235202187888,
+      "lon": 27.304613191834783,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/550793"
+    },
+    "550944": {
+      "id": "pleiades:550944",
+      "name": "Troas (region)",
+      "lat": 39.8904865420562,
+      "lon": 26.297696130336995,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/550944"
+    },
+    "560221": {
+      "id": "pleiades:560221",
+      "name": "Aegaeum Mare",
+      "lat": 38.91395706742166,
+      "lon": 24.91724075272824,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/560221"
+    },
+    "570491": {
+      "id": "pleiades:570491",
+      "name": "Mycenae",
+      "lat": 37.7275368027941,
+      "lon": 22.753833876518886,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/570491"
+    },
+    "579885": {
+      "id": "pleiades:579885",
+      "name": "Athenae",
+      "lat": 37.97158606761233,
+      "lon": 23.723824697002378,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/579885"
+    },
+    "589748": {
+      "id": "pleiades:589748",
+      "name": "Creta (island)",
+      "lat": 35.2148470630119,
+      "lon": 25.074079692118698,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/589748"
+    },
+    "609502": {
+      "id": "pleiades:609502",
+      "name": "Phrygia",
+      "lat": 38.783040100503996,
+      "lon": 30.473011418973215,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/609502"
+    },
+    "639048": {
+      "id": "pleiades:639048",
+      "name": "Perge",
+      "lat": 36.964465605287096,
+      "lon": 30.853258601264926,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/639048"
+    },
+    "648789": {
+      "id": "pleiades:648789",
+      "name": "Tarsus/Antiochia ad Cydnum",
+      "lat": 36.91232970122376,
+      "lon": 34.89579498841108,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/648789"
+    },
+    "658440": {
+      "id": "pleiades:658440",
+      "name": "Cilicia (region)",
+      "lat": 36.58645514246619,
+      "lon": 33.910580483222674,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/658440"
+    },
+    "658465": {
+      "id": "pleiades:658465",
+      "name": "Carchemish",
+      "lat": 36.829422953272655,
+      "lon": 38.014920519720285,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/658465"
+    },
+    "668295": {
+      "id": "pleiades:668295",
+      "name": "Leukos Limen",
+      "lat": 35.6078548,
+      "lon": 35.7764238,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/668295"
+    },
+    "668331": {
+      "id": "pleiades:668331",
+      "name": "Palmyra",
+      "lat": 34.552809393769074,
+      "lon": 38.264867215601384,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/668331"
+    },
+    "678272": {
+      "id": "pleiades:678272",
+      "name": "Magdala/Taricheai",
+      "lat": 32.81449,
+      "lon": 35.520579,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/678272"
+    },
+    "678334": {
+      "id": "pleiades:678334",
+      "name": "Phoenice (region)",
+      "lat": 33.25,
+      "lon": 35.25,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/678334"
+    },
+    "687934": {
+      "id": "pleiades:687934",
+      "name": "Iudaea (region)",
+      "lat": 31.73416715,
+      "lon": 35.001720299999995,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/687934"
+    },
+    "697662": {
+      "id": "pleiades:697662",
+      "name": "Esbous",
+      "lat": 31.800741182087545,
+      "lon": 35.80901429162764,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/697662"
+    },
+    "697725": {
+      "id": "pleiades:697725",
+      "name": "Petra",
+      "lat": 30.34503662467785,
+      "lon": 35.38268480053833,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/697725"
+    },
+    "727070": {
+      "id": "pleiades:727070",
+      "name": "Alexandria",
+      "lat": 31.201435,
+      "lon": 29.909773,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/727070"
+    },
+    "727085": {
+      "id": "pleiades:727085",
+      "name": "Bolbitine",
+      "lat": 31.400949,
+      "lon": 30.414682,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/727085"
+    },
+    "727197": {
+      "id": "pleiades:727197",
+      "name": "Pharos",
+      "lat": 31.214039,
+      "lon": 29.885368,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/727197"
+    },
+    "737010": {
+      "id": "pleiades:737010",
+      "name": "Philoteris",
+      "lat": 29.383026,
+      "lon": 30.467953,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/737010"
+    },
+    "746796": {
+      "id": "pleiades:746796",
+      "name": "‘Praesidio’",
+      "lat": 29.656717246422804,
+      "lon": 35.2306823390559,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/746796"
+    },
+    "776156": {
+      "id": "pleiades:776156",
+      "name": "Bagawat",
+      "lat": 25.48230330412831,
+      "lon": 30.553873530924612,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/776156"
+    },
+    "785986": {
+      "id": "pleiades:785986",
+      "name": "Berenice/Berenike",
+      "lat": 23.91062525,
+      "lon": 35.474818850000005,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/785986"
+    },
+    "805635": {
+      "id": "pleiades:805635",
+      "name": "Naqa",
+      "lat": 16.2695085,
+      "lon": 33.2746437,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/805635"
+    },
+    "857024": {
+      "id": "pleiades:857024",
+      "name": "Amisus/Peiraieus",
+      "lat": 41.292721,
+      "lon": 36.3313,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/857024"
+    },
+    "857287": {
+      "id": "pleiades:857287",
+      "name": "Pontus",
+      "lat": 40.221356696658404,
+      "lon": 37.92341619989857,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/857287"
+    },
+    "863739": {
+      "id": "pleiades:863739",
+      "name": "Ani",
+      "lat": 40.506295,
+      "lon": 43.570558,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863739"
+    },
+    "863766": {
+      "id": "pleiades:863766",
+      "name": "Caucasus (mountain range)",
+      "lat": 42.38980356096515,
+      "lon": 44.79413803961139,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863766"
+    },
+    "863770": {
+      "id": "pleiades:863770",
+      "name": "Colchis/Lazike (region)",
+      "lat": 42.20175520293256,
+      "lon": 42.45406542571021,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863770"
+    },
+    "863780": {
+      "id": "pleiades:863780",
+      "name": "Doubios",
+      "lat": 40.01185995,
+      "lon": 44.58079045,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863780"
+    },
+    "863795": {
+      "id": "pleiades:863795",
+      "name": "Gorneae",
+      "lat": 40.11285737382658,
+      "lon": 44.72964935789964,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863795"
+    },
+    "863903": {
+      "id": "pleiades:863903",
+      "name": "Tbilisi",
+      "lat": 41.717722,
+      "lon": 44.78057,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863903"
+    },
+    "863914": {
+      "id": "pleiades:863914",
+      "name": "Urbnisi",
+      "lat": 42.0125,
+      "lon": 43.980833,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863914"
+    },
+    "863918": {
+      "id": "pleiades:863918",
+      "name": "Vani",
+      "lat": 42.083776,
+      "lon": 42.5014885,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863918"
+    },
+    "863922": {
+      "id": "pleiades:863922",
+      "name": "Yerevan",
+      "lat": 40.185208,
+      "lon": 44.51676,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/863922"
+    },
+    "874350": {
+      "id": "pleiades:874350",
+      "name": "Armenia (region)",
+      "lat": 38.74014368189581,
+      "lon": 42.1670167182228,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874350"
+    },
+    "874602": {
+      "id": "pleiades:874602",
+      "name": "Mesopotamia (region)",
+      "lat": 37.69893640060892,
+      "lon": 40.65169471254212,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/874602"
+    },
+    "884213": {
+      "id": "pleiades:884213",
+      "name": "Siwnik",
+      "lat": 39.5,
+      "lon": 46.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/884213"
+    },
+    "893945": {
+      "id": "pleiades:893945",
+      "name": "Ashur/‘Lamban’?/‘Liba(nai)’?",
+      "lat": 35.45557316179846,
+      "lon": 43.261301287562404,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893945"
+    },
+    "893951": {
+      "id": "pleiades:893951",
+      "name": "Babylon",
+      "lat": 32.53729695,
+      "lon": 44.42497815,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893951"
+    },
+    "893990": {
+      "id": "pleiades:893990",
+      "name": "D(o)ura/Europos",
+      "lat": 34.74788661902097,
+      "lon": 40.72987036045224,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/893990"
+    },
+    "894028": {
+      "id": "pleiades:894028",
+      "name": "Kish",
+      "lat": 32.5460878,
+      "lon": 44.59316393333333,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/894028"
+    },
+    "912816": {
+      "id": "pleiades:912816",
+      "name": "Babylonia",
+      "lat": 31.62834430831229,
+      "lon": 45.49540677142205,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912816"
+    },
+    "912950": {
+      "id": "pleiades:912950",
+      "name": "Tell Abu Salabikh",
+      "lat": 32.252627117287986,
+      "lon": 45.0544472140175,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/912950"
+    },
+    "981503": {
+      "id": "pleiades:981503",
+      "name": "Ancient Egypt (region)",
+      "lat": 16.101082933237464,
+      "lon": 31.459148244506146,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981503"
+    },
+    "981538": {
+      "id": "pleiades:981538",
+      "name": "Noricum (province)",
+      "lat": 47.5,
+      "lon": 12.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/981538"
+    },
+    "991396": {
+      "id": "pleiades:991396",
+      "name": "Palaestina (province)",
+      "lat": 32.5,
+      "lon": 32.5,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/991396"
+    },
+    "4629903": {
+      "id": "pleiades:4629903",
+      "name": "Tall al-Umayri",
+      "lat": 31.868685641594762,
+      "lon": 35.88798199771124,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/4629903"
+    },
+    "43240983": {
+      "id": "pleiades:43240983",
+      "name": "Stena 1",
+      "lat": 44.67501878349738,
+      "lon": 33.724231689860424,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/43240983"
+    },
+    "44626252": {
+      "id": "pleiades:44626252",
+      "name": "Umma",
+      "lat": 31.66795525840427,
+      "lon": 45.886785911813035,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/44626252"
+    },
+    "97875559": {
+      "id": "pleiades:97875559",
+      "name": "Atlit Yam",
+      "lat": 32.710828,
+      "lon": 34.93515,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/97875559"
+    },
+    "133411593": {
+      "id": "pleiades:133411593",
+      "name": "Maşat Höyük",
+      "lat": 40.148146549611745,
+      "lon": 35.762468785954674,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/133411593"
+    },
+    "202833934": {
+      "id": "pleiades:202833934",
+      "name": "Sumer",
+      "lat": 31.435273,
+      "lon": 45.973967,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/202833934"
+    },
+    "246986521": null,
+    "248570175": {
+      "id": "pleiades:248570175",
+      "name": "Hovhannavank",
+      "lat": 40.33953641707415,
+      "lon": 44.38866611348489,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/248570175"
+    },
+    "285923206": {
+      "id": "pleiades:285923206",
+      "name": "Sanahin Monastery",
+      "lat": 41.08714460177966,
+      "lon": 44.66625582663448,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/285923206"
+    },
+    "286681704": {
+      "id": "pleiades:286681704",
+      "name": "Māri",
+      "lat": 34.55033901027138,
+      "lon": 40.88862038208488,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/286681704"
+    },
+    "327730568": {
+      "id": "pleiades:327730568",
+      "name": "Etchmiadzin Cathedral",
+      "lat": 40.16183815976076,
+      "lon": 44.29110114363116,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/327730568"
+    },
+    "379400932": {
+      "id": "pleiades:379400932",
+      "name": "Kabnak",
+      "lat": 32.08053743586022,
+      "lon": 48.328283158073475,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/379400932"
+    },
+    "403031321": {
+      "id": "pleiades:403031321",
+      "name": "Odzun",
+      "lat": 41.05089619227757,
+      "lon": 44.6165051803184,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/403031321"
+    },
+    "463803480": {
+      "id": "pleiades:463803480",
+      "name": "Ptolemaic Kingdom",
+      "lat": 33.697679091853935,
+      "lon": 26.69407651412198,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/463803480"
+    },
+    "477179882": {
+      "id": "pleiades:477179882",
+      "name": "Gelati Monastery",
+      "lat": 42.29456112196091,
+      "lon": 42.7680822958053,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/477179882"
+    },
+    "541602250": {
+      "id": "pleiades:541602250",
+      "name": "Palace of Nebuchadnezzar II",
+      "lat": 32.54221837909117,
+      "lon": 44.421321896047196,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/541602250"
+    },
+    "559227570": {
+      "id": "pleiades:559227570",
+      "name": "Babunja",
+      "lat": 40.88093752822058,
+      "lon": 19.551720495625307,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/559227570"
+    },
+    "569131178": {
+      "id": "pleiades:569131178",
+      "name": "(As)Syria (region) ",
+      "lat": 36.1051141008,
+      "lon": 43.2451891492,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/569131178"
+    },
+    "581020757": {
+      "id": "pleiades:581020757",
+      "name": "Bozköy-Hanaytepe",
+      "lat": 39.90868390172034,
+      "lon": 26.293195219251732,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/581020757"
+    },
+    "583980739": {
+      "id": "pleiades:583980739",
+      "name": "Western gate of Serdica",
+      "lat": 42.69886682805834,
+      "lon": 23.320210934959125,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/583980739"
+    },
+    "586301784": {
+      "id": "pleiades:586301784",
+      "name": "Palace G at Ebla",
+      "lat": 35.79794376865197,
+      "lon": 36.79801081064363,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/586301784"
+    },
+    "696690497": {
+      "id": "pleiades:696690497",
+      "name": "Temple of Hercules at Amman/Philadelpheia",
+      "lat": 31.9537465187171,
+      "lon": 35.93486379005065,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/696690497"
+    },
+    "714353568": {
+      "id": "pleiades:714353568",
+      "name": "Pottenbrunn burial ground",
+      "lat": 48.23056356591113,
+      "lon": 15.696532448502658,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/714353568"
+    },
+    "726944834": {
+      "id": "pleiades:726944834",
+      "name": "Kisuatni",
+      "lat": 36.98053,
+      "lon": 36.046606,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/726944834"
+    },
+    "777218560": {
+      "id": "pleiades:777218560",
+      "name": "Temple of the Winged Lions",
+      "lat": 30.3292494,
+      "lon": 35.4424763,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/777218560"
+    },
+    "818747000": {
+      "id": "pleiades:818747000",
+      "name": "Ballicaoluk",
+      "lat": 38.3366714,
+      "lon": 27.3754484,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/818747000"
+    },
+    "860488303": {
+      "id": "pleiades:860488303",
+      "name": "Mineralovodsky burial ground",
+      "lat": 44.2589935,
+      "lon": 43.1005932,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/860488303"
+    },
+    "869702586": {
+      "id": "pleiades:869702586",
+      "name": "Ebla",
+      "lat": 35.79902233935611,
+      "lon": 36.79833290135371,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/869702586"
+    },
+    "875303419": {
+      "id": "pleiades:875303419",
+      "name": "Tell al-Mashhad",
+      "lat": 31.77672,
+      "lon": 35.73796,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/875303419"
+    },
+    "891702684": {
+      "id": "pleiades:891702684",
+      "name": "Ateni Sioni",
+      "lat": 41.9039179,
+      "lon": 44.0959441,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/891702684"
+    },
+    "929634889": {
+      "id": "pleiades:929634889",
+      "name": "Zvartnots Cathedral",
+      "lat": 40.159792524547264,
+      "lon": 44.33656563850031,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/929634889"
+    },
+    "930907033": {
+      "id": "pleiades:930907033",
+      "name": "Levant (region)",
+      "lat": 34.31153876501962,
+      "lon": 35.65166262500035,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/930907033"
+    },
+    "969121824": {
+      "id": "pleiades:969121824",
+      "name": "Cathedral of St. James, Jerusalem",
+      "lat": 31.77452680007921,
+      "lon": 35.22914405561013,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/969121824"
+    },
+    "992770797": {
+      "id": "pleiades:992770797",
+      "name": "Phaleron cemetery (Attica)",
+      "lat": 37.93987062145432,
+      "lon": 23.69402266702624,
+      "source": "pleiades",
+      "uri": "https://pleiades.stoa.org/places/992770797"
+    }
+  }
+}

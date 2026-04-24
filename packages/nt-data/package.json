@@ -1,0 +1,37 @@
+{
+  "name": "@nt/data",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts",
+    "./acquisitions.json": "./data/acquisitions.json",
+    "./acquisitions-2026-01.json": "./data/acquisitions-2026-01.json",
+    "./acquisitions-2026-02.json": "./data/acquisitions-2026-02.json",
+    "./acquisitions-2026-03.json": "./data/acquisitions-2026-03.json",
+    "./places-2026-01.json": "./data/places-2026-01.json",
+    "./places-2026-02.json": "./data/places-2026-02.json",
+    "./places-2026-03.json": "./data/places-2026-03.json",
+    "./classifications-2026-01.json": "./data/classifications-2026-01.json",
+    "./classifications-2026-02.json": "./data/classifications-2026-02.json",
+    "./classifications-2026-03.json": "./data/classifications-2026-03.json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "validate": "tsx src/validate.ts",
+    "ingest": "tsx src/ingest.ts",
+    "refresh-gazetteer": "tsx src/refresh-gazetteer.ts",
+    "resolve-places": "tsx src/resolve-places.ts",
+    "test": "echo 'no tests yet' && exit 0"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
