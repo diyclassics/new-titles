@@ -28,4 +28,4 @@ packages/nt-data/data/exports/*
 !packages/nt-data/data/exports/README.md
 
 # Session/handoff notes — local reference only, not committed.
-.claude/notes/
+.claude/
