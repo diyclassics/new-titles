@@ -1,5 +1,5 @@
 import type { Acquisition } from '@nt/data/schema';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import { MapView } from './Map.tsx';
 import { Sidebar } from './Sidebar.tsx';
@@ -55,15 +55,18 @@ export function App() {
     setResetSignal((v) => v + 1);
   }
 
-  function selectFromSidebar(id: string) {
+  // Stable references — the map's marker layer hashes these in its effect
+  // deps, so any reference change clears and rebuilds all markers (which
+  // also closes a just-opened popup). Keep them with empty deps.
+  const selectFromSidebar = useCallback((id: string) => {
     lastSelectionSource.current = 'sidebar';
     setSelectedId(id);
     setFlySignal((v) => v + 1);
-  }
-  function selectFromMarker(id: string) {
+  }, []);
+  const selectFromMarker = useCallback((id: string) => {
     lastSelectionSource.current = 'marker';
     setSelectedId(id);
-  }
+  }, []);
 
   const visibleByCategory = useMemo(() => {
     return month.records.filter((r) => {
