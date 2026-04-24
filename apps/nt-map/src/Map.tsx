@@ -142,11 +142,14 @@ function ClusterLayer({
         : '';
       const placeLabel = `<a href="${escapeHtml(place.uri)}" target="_blank" rel="noreferrer">${escapeHtml(place.name)}</a>`;
       const sourceTag = `<span class="source-tag">${place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span>`;
+      const title = cleanTitle(r.title);
+      const authorsLine = r.authors.map(cleanAuthor).filter(Boolean).join(', ');
+      const pubLine = [r.publisher, r.pub_date].filter(Boolean).join(', ');
       marker.bindPopup(
         `<div class="popup">
-          <strong>${escapeHtml(r.title)}</strong>
-          ${r.authors.length > 0 ? `<div>${escapeHtml(r.authors.join(', '))}</div>` : ''}
-          ${r.publisher ? `<div class="muted">${escapeHtml(r.publisher)}</div>` : ''}
+          <strong>${escapeHtml(title)}</strong>
+          ${authorsLine ? `<div>${escapeHtml(authorsLine)}</div>` : ''}
+          ${pubLine ? `<div class="muted">${escapeHtml(pubLine)}</div>` : ''}
           ${r.call_number ? `<div class="callno">${escapeHtml(r.call_number)}</div>` : ''}
           <div class="muted">📍 ${placeLabel} ${sourceTag}</div>
           ${category ? `<div class="muted" style="color:${color}"><strong>${escapeHtml(category)}</strong></div>` : ''}
@@ -212,4 +215,17 @@ function escapeHtml(s: string): string {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+// Strip MARC 245 $c trailing slash: "A title about Pompeii /" → "A title about Pompeii".
+function cleanTitle(s: string): string {
+  return s.replace(/\s*\/\s*$/, '').trim();
+}
+
+// Strip MARC relator-term suffixes: "Doe, Jane, author." → "Doe, Jane".
+// Handles "author", "editor", "translator", "creator", etc., with optional
+// trailing period and preceding comma.
+const RELATOR_RE = /,?\s*(author|editor|translator|creator|compiler|contributor|illustrator|narrator|photographer|director|producer)s?\.?\s*$/i;
+function cleanAuthor(s: string): string {
+  return s.replace(RELATOR_RE, '').replace(/[.,\s]+$/, '').trim();
 }
