@@ -83,11 +83,12 @@ function ClusterLayer({
           if (cat) categories.add(cat);
         }
         const count = cluster.getChildCount();
+        // Mixed-category clusters render flat black — visually distinct from
+        // any single-region color in the palette.
         const color =
-          categories.size === 1 ? CATEGORY_COLOR[[...categories][0] as Category] : '#4a5568';
-        const mixed = categories.size > 1 ? ' mixed' : '';
+          categories.size === 1 ? CATEGORY_COLOR[[...categories][0] as Category] : '#111';
         return L.divIcon({
-          html: `<div class="cluster-dot${mixed}" style="background:${color}"><span>${count}</span></div>`,
+          html: `<div class="cluster-dot" style="background:${color}"><span>${count}</span></div>`,
           className: 'nt-cluster',
           iconSize: [36, 36],
         });

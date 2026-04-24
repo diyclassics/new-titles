@@ -92,20 +92,15 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-main">
-          <h1
-            className="clickable-title"
-            onClick={resetView}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                resetView();
-              }
-            }}
-            role="button"
-            tabIndex={0}
-            title="Reset map view"
-          >
-            ISAW Library New Titles
+          <h1>
+            <button
+              type="button"
+              className="clickable-title"
+              onClick={resetView}
+              title="Reset map view"
+            >
+              ISAW Library New Titles
+            </button>
           </h1>
           <p className="subtle">
             {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar ·{' '}
