@@ -174,19 +174,50 @@ body {
   top: 0;
   z-index: 1;
 }
+.sidebar-search {
+  position: sticky;
+}
 .sidebar-search input {
   width: 100%;
-  padding: 6px 10px;
+  padding: 6px 28px 6px 10px;
   border: 1px solid #d0d0d0;
   border-radius: 4px;
   font-size: 0.88rem;
   font-family: inherit;
   box-sizing: border-box;
+  /* Hide the native webkit clear X so we get a single, styled control. */
+  -webkit-appearance: none;
+  appearance: none;
+}
+.sidebar-search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 .sidebar-search input:focus {
   outline: none;
   border-color: #0066cc;
   box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.15);
+}
+.sidebar-search-clear {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  font-family: inherit;
+}
+.sidebar-search-clear:hover {
+  background: #e0e0e0;
+  color: #333;
 }
 .sidebar-empty {
   padding: 20px 14px;

@@ -35,6 +35,17 @@ export function Sidebar({
           placeholder="Search title, author, call #…"
           aria-label="Search records"
         />
+        {searchQuery ? (
+          <button
+            type="button"
+            className="sidebar-search-clear"
+            onClick={() => onSearchChange('')}
+            aria-label="Clear search"
+            title="Clear search"
+          >
+            ×
+          </button>
+        ) : null}
       </div>
       {records.length === 0 ? (
         <div className="sidebar-empty">
