@@ -20,12 +20,13 @@ type Props = {
 const DEFAULT_CENTER: [number, number] = [36, 40];
 const DEFAULT_ZOOM = 4;
 
-// Tile layer — swappable via .env.local. Default is the DARE/AWMC Roman-empire
-// basemap, which is the same AWMC cartography Pleiades uses.
-const TILE_URL = import.meta.env.VITE_TILE_URL ?? 'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png';
+// Tile layer — swappable via .env.local. Default is the AWMC / CAWM basemap
+// (Consortium of Ancient World Mappers, hosted at the University of Iowa).
+const TILE_URL =
+  import.meta.env.VITE_TILE_URL ?? 'https://cawm.lib.uiowa.edu/tiles/{z}/{x}/{y}.png';
 const TILE_ATTRIBUTION =
   import.meta.env.VITE_TILE_ATTRIBUTION ??
-  'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://dh.gu.se/dare/" target="_blank" rel="noreferrer">DARE</a>';
+  'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://cawm.lib.uiowa.edu/" target="_blank" rel="noreferrer">CAWM / Iowa</a>';
 
 export function MapView({
   records,
@@ -90,8 +91,8 @@ function ClusterLayer({
         fillOpacity: 0.85,
       });
 
-      const bobcat = r.barcode
-        ? `<a href="https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,${r.barcode}&vid=NYU" target="_blank" rel="noreferrer">View in Bobcat →</a>`
+      const bobcat = r.mms_id
+        ? `<a href="${bobcatUrl(r.mms_id)}" target="_blank" rel="noreferrer">View in Bobcat →</a>`
         : '';
       const placeLabel = `<a href="${escapeHtml(place.uri)}" target="_blank" rel="noreferrer">${escapeHtml(place.name)}</a>`;
       const sourceTag = `<span class="source-tag">${place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span>`;
@@ -106,7 +107,11 @@ function ClusterLayer({
           ${bobcat}
         </div>`,
       );
-      marker.on('click', () => onSelect(r.id));
+      // Use popupopen (not click) so syncing the sidebar doesn't race with
+      // Leaflet's own popup-opening. When a cluster spiderfies and the user
+      // clicks a spiderfied marker, `click` + a state-driven map.flyTo would
+      // sometimes close the popup before it settled.
+      marker.on('popupopen', () => onSelect(r.id));
       group.addLayer(marker);
     }
   }, [records, placesById, classificationsById, onSelect]);
@@ -123,11 +128,29 @@ function FlyToSelected({
 }) {
   const map = useMap();
   useEffect(() => {
-    if (place && record) {
-      map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 });
+    if (!place || !record) return;
+    // Only fly if the target isn't already roughly visible — avoids
+    // interrupting a popup that just opened on a marker the user clicked.
+    const target = L.latLng(place.lat, place.lon);
+    if (!map.getBounds().pad(-0.15).contains(target)) {
+      map.flyTo(target, Math.max(map.getZoom(), 6), { duration: 0.6 });
     }
   }, [place, record, map]);
   return null;
+}
+
+function bobcatUrl(mmsId: string): string {
+  const params = new URLSearchParams({
+    docid: `alma${mmsId}`,
+    context: 'L',
+    vid: '01NYU_INST:NYU',
+    lang: 'en',
+    search_scope: 'CI_NYU_CONSORTIA',
+    adaptor: 'Local Search Engine',
+    tab: 'Unified_Slot',
+    offset: '0',
+  });
+  return `https://search.library.nyu.edu/discovery/fulldisplay?${params.toString()}`;
 }
 
 function escapeHtml(s: string): string {

@@ -14,15 +14,26 @@ export function App() {
 
   const month = useMemo(() => loadMonth(monthKey), [monthKey]);
 
-  const mappable = useMemo(() => {
-    return month.records
-      .filter((r) => month.placesById[r.id])
-      .filter((r) => {
-        const cat = month.classificationsById[r.id];
-        return cat ? filter.has(cat) : true;
-      })
-      .sort(byCallNumber);
+  const visibleByCategory = useMemo(() => {
+    return month.records.filter((r) => {
+      const cat = month.classificationsById[r.id];
+      return cat ? filter.has(cat) : true;
+    });
   }, [month, filter]);
+
+  // For the map: only records with a resolved place.
+  const mappable = useMemo(
+    () => visibleByCategory.filter((r) => month.placesById[r.id]).sort(byCallNumber),
+    [visibleByCategory, month.placesById],
+  );
+
+  // For the sidebar: mappable first (by call number), then unmapped (also by call number).
+  const sidebarRecords = useMemo(() => {
+    const unmapped = visibleByCategory
+      .filter((r) => !month.placesById[r.id])
+      .sort(byCallNumber);
+    return [...mappable, ...unmapped];
+  }, [visibleByCategory, mappable, month.placesById]);
 
   const selectedRecord = selectedId
     ? (month.records.find((r) => r.id === selectedId) ?? null)
@@ -50,6 +61,7 @@ export function App() {
   }
 
   const resolvedTotal = month.records.filter((r) => month.placesById[r.id]).length;
+  const unmappedCount = sidebarRecords.length - mappable.length;
 
   return (
     <div className="app">
@@ -57,7 +69,8 @@ export function App() {
         <div className="header-main">
           <h1>ISAW Library New Titles</h1>
           <p className="subtle">
-            {mappable.length} of {resolvedTotal} mapped records ({month.records.length} total)
+            {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar
+            {' '}· {month.records.length} total
           </p>
         </div>
         <div className="month-picker">
@@ -87,11 +100,12 @@ export function App() {
 
       <div className="app-body">
         <Sidebar
-          records={mappable}
+          records={sidebarRecords}
           placesById={month.placesById}
           classificationsById={month.classificationsById}
           selectedId={selectedId}
           onSelect={setSelectedId}
+          firstUnmappedIndex={mappable.length}
         />
         <MapView
           key={monthKey}

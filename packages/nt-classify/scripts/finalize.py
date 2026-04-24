@@ -21,9 +21,26 @@ import re
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlencode
 
 import pandas as pd
 from corrections_ledger import entries_for_month
+
+
+def bobcat_url(mms_id: str) -> str:
+    """Generate a Bobcat / Primo VE deep link for an NYU MMS ID."""
+    params = {
+        "docid": f"alma{mms_id}",
+        "context": "L",
+        "vid": "01NYU_INST:NYU",
+        "lang": "en",
+        "search_scope": "CI_NYU_CONSORTIA",
+        "adaptor": "Local Search Engine",
+        "tab": "Unified_Slot",
+        "offset": "0",
+    }
+    return f"https://search.library.nyu.edu/discovery/fulldisplay?{urlencode(params)}"
+
 
 # (Display label, anchor id) in the order they appear in the TOC.
 PUBLICATION_CATEGORIES = [
@@ -79,7 +96,7 @@ def render_record(row: pd.Series) -> str:
     publisher = _clean(row.get("Publisher"))
     pub_date = _clean(row.get("Publication Date"))
     call = _clean(row.get("call_number"))
-    barcode = _clean(row.get("id"))
+    mms_id = _clean(row.get("mms_id"))
 
     lines = [f"<strong><em>{title}</em></strong><br>"]
     if author:
@@ -89,9 +106,8 @@ def render_record(row: pd.Series) -> str:
         lines.append(f"{html.escape(', '.join(pub_bits))}.<br>")
     if call:
         lines.append(f"{html.escape(call)}.<br>")
-    if barcode:
-        url = f"https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,{barcode}&vid=NYU"
-        lines.append(f'<a href="{url}">View item in Bobcat</a>.')
+    if mms_id:
+        lines.append(f'<a href="{html.escape(bobcat_url(mms_id))}">View item in Bobcat</a>.')
     return "<p>\n" + "\n".join(lines) + "\n</p>"
 
 

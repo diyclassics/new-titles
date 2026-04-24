@@ -21,9 +21,25 @@ import json
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlencode
 
 import joblib
 import pandas as pd
+
+
+def bobcat_url(mms_id: str) -> str:
+    """Generate a Bobcat / Primo VE deep link for an NYU MMS ID."""
+    params = {
+        "docid": f"alma{mms_id}",
+        "context": "L",
+        "vid": "01NYU_INST:NYU",
+        "lang": "en",
+        "search_scope": "CI_NYU_CONSORTIA",
+        "adaptor": "Local Search Engine",
+        "tab": "Unified_Slot",
+        "offset": "0",
+    }
+    return f"https://search.library.nyu.edu/discovery/fulldisplay?{urlencode(params)}"
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -86,6 +102,7 @@ def render_html(predictions: pd.DataFrame, month: int, year: int, output: Path) 
     records = []
     for _, row in predictions.iterrows():
         barcode = clean_str(row.get("id")) or ""
+        mms_id_raw = clean_str(row.get("mms_id"))
         publisher = clean_str(row.get("Publisher"))
         pub_date = clean_str(row.get("Publication Date"))
         publisher_line = None
@@ -95,20 +112,16 @@ def render_html(predictions: pd.DataFrame, month: int, year: int, output: Path) 
             publisher_line = publisher
         elif pub_date:
             publisher_line = pub_date
-        bobcat_url = (
-            f"https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,{barcode}&vid=NYU"
-            if barcode
-            else None
-        )
+        bobcat = bobcat_url(mms_id_raw) if mms_id_raw else None
         date_acquired = (clean_str(row.get("date_acquired")) or "").split(" ")[0]
         records.append({
             "id": barcode,
             "barcode": barcode,
-            "mms_id": clean_str(row.get("mms_id")),
+            "mms_id": mms_id_raw,
             "title": clean_str(row.get("title")) or "",
             "author": clean_str(row.get("Author")),
             "publisher_line": publisher_line,
-            "bobcat_url": bobcat_url,
+            "bobcat_url": bobcat,
             "call_number": clean_str(row.get("call_number")) or "",
             "date_acquired": date_acquired,
             "predicted_category": clean_str(row.get("predicted_category")) or "",
