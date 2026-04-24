@@ -14,6 +14,8 @@ type Props = {
   classificationsById: Record<string, Category>;
   selectedRecord: Acquisition | null;
   selectedPlace: ResolvedPlace | null;
+  /** Monotonically-increasing counter from the sidebar that requests a fly. */
+  flySignal: number;
   onSelect: (id: string) => void;
 };
 
@@ -34,6 +36,7 @@ export function MapView({
   classificationsById,
   selectedRecord,
   selectedPlace,
+  flySignal,
   onSelect,
 }: Props) {
   return (
@@ -45,7 +48,7 @@ export function MapView({
         classificationsById={classificationsById}
         onSelect={onSelect}
       />
-      <FlyToSelected place={selectedPlace} record={selectedRecord} />
+      <FlyToSelected place={selectedPlace} record={selectedRecord} signal={flySignal} />
     </MapContainer>
   );
 }
@@ -64,6 +67,26 @@ function ClusterLayer({
       showCoverageOnHover: false,
       spiderfyOnMaxZoom: true,
       maxClusterRadius: 40,
+      // Category-aware cluster color: solid category color if all children
+      // share one region, neutral dark gray if mixed. Replaces markercluster's
+      // default count-based green/yellow/red palette, which collides with
+      // our per-category marker colors.
+      iconCreateFunction: (cluster) => {
+        const categories = new Set<Category>();
+        for (const m of cluster.getAllChildMarkers()) {
+          const cat = (m.options as { _category?: Category })._category;
+          if (cat) categories.add(cat);
+        }
+        const count = cluster.getChildCount();
+        const color =
+          categories.size === 1 ? CATEGORY_COLOR[[...categories][0] as Category] : '#4a5568';
+        const mixed = categories.size > 1 ? ' mixed' : '';
+        return L.divIcon({
+          html: `<div class="cluster-dot${mixed}" style="background:${color}"><span>${count}</span></div>`,
+          className: 'nt-cluster',
+          iconSize: [36, 36],
+        });
+      },
     });
     map.addLayer(group);
     clusterGroupRef.current = group;
@@ -89,7 +112,9 @@ function ClusterLayer({
         weight: 1,
         fillColor: color,
         fillOpacity: 0.85,
-      });
+        // Stamped on the marker so the cluster iconCreateFunction can see it.
+        _category: category,
+      } as L.CircleMarkerOptions & { _category?: Category });
 
       const bobcat = r.mms_id
         ? `<a href="${bobcatUrl(r.mms_id)}" target="_blank" rel="noreferrer">View in Bobcat →</a>`
@@ -122,20 +147,20 @@ function ClusterLayer({
 function FlyToSelected({
   place,
   record,
+  signal,
 }: {
   place: ResolvedPlace | null;
   record: Acquisition | null;
+  /** Only flies when signal increments — so sidebar clicks fly,
+   *  marker clicks (which don't bump signal) don't interrupt the popup. */
+  signal: number;
 }) {
   const map = useMap();
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only fly when `signal` changes.
   useEffect(() => {
     if (!place || !record) return;
-    // Only fly if the target isn't already roughly visible — avoids
-    // interrupting a popup that just opened on a marker the user clicked.
-    const target = L.latLng(place.lat, place.lon);
-    if (!map.getBounds().pad(-0.15).contains(target)) {
-      map.flyTo(target, Math.max(map.getZoom(), 6), { duration: 0.6 });
-    }
-  }, [place, record, map]);
+    map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 });
+  }, [signal]);
   return null;
 }
 

@@ -1,5 +1,5 @@
 import type { Acquisition } from '@nt/data/schema';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import { MapView } from './Map.tsx';
 import { Sidebar } from './Sidebar.tsx';
@@ -18,6 +18,21 @@ export function App() {
   const [monthKey, setMonthKey] = useState<MonthKey>('2026-03');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
+  // Incremented when a sidebar click wants the map to fly; marker clicks
+  // update selection via Leaflet's popupopen without bumping this, so the
+  // popup opens without being interrupted by an automatic fly.
+  const [flySignal, setFlySignal] = useState(0);
+  const lastSelectionSource = useRef<'sidebar' | 'marker' | null>(null);
+
+  function selectFromSidebar(id: string) {
+    lastSelectionSource.current = 'sidebar';
+    setSelectedId(id);
+    setFlySignal((v) => v + 1);
+  }
+  function selectFromMarker(id: string) {
+    lastSelectionSource.current = 'marker';
+    setSelectedId(id);
+  }
 
   const month = useMemo(() => loadMonth(monthKey), [monthKey]);
 
@@ -101,7 +116,7 @@ export function App() {
           placesById={month.placesById}
           classificationsById={month.classificationsById}
           selectedId={selectedId}
-          onSelect={setSelectedId}
+          onSelect={selectFromSidebar}
           firstUnmappedIndex={mappable.length}
         />
         <MapView
@@ -111,7 +126,8 @@ export function App() {
           classificationsById={month.classificationsById}
           selectedRecord={selectedRecord}
           selectedPlace={selectedPlace}
-          onSelect={setSelectedId}
+          flySignal={flySignal}
+          onSelect={selectFromMarker}
         />
       </div>
     </div>
