@@ -239,10 +239,9 @@ body {
 .record-row.selected {
   background: #e3f2fd;
   border: 1px solid #0066cc;
-  border-left-width: 4px;
-  border-radius: 4px;
-  margin: 4px 6px;
-  box-shadow: 0 2px 6px rgba(0, 102, 204, 0.12);
+  /* No margin, no rounding — the bordered card spans the sidebar
+     at the same width as neighboring rows, and all four sides share
+     the same 1px stroke. */
 }
 .record-row-button {
   display: block;
