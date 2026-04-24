@@ -4,9 +4,11 @@ type Props = {
   counts: Record<Category, number>;
   filter: Set<Category>;
   onToggle: (cat: Category) => void;
+  onReset: () => void;
+  allActive: boolean;
 };
 
-export function Legend({ counts, filter, onToggle }: Props) {
+export function Legend({ counts, filter, onToggle, onReset, allActive }: Props) {
   return (
     <div className="legend">
       {CATEGORIES.map((cat) => {
@@ -18,7 +20,13 @@ export function Legend({ counts, filter, onToggle }: Props) {
             type="button"
             className={`legend-item ${active ? '' : 'muted'}`}
             onClick={() => onToggle(cat)}
-            title={active ? 'Click to hide' : 'Click to show'}
+            title={
+              allActive
+                ? `Click to show only "${cat}"`
+                : active
+                  ? 'Click to hide'
+                  : 'Click to also show'
+            }
           >
             <span
               className="swatch"
@@ -29,6 +37,15 @@ export function Legend({ counts, filter, onToggle }: Props) {
           </button>
         );
       })}
+      <button
+        type="button"
+        className="legend-reset"
+        onClick={onReset}
+        disabled={allActive}
+        title="Show all categories"
+      >
+        Reset
+      </button>
     </div>
   );
 }

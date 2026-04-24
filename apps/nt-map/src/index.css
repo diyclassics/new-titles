@@ -100,6 +100,25 @@ body {
   font-size: 0.75rem;
   margin-left: 2px;
 }
+.legend-reset {
+  margin-left: auto;
+  padding: 3px 10px;
+  background: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: #555;
+}
+.legend-reset:hover:not(:disabled) {
+  border-color: #0066cc;
+  color: #0066cc;
+}
+.legend-reset:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 
 .app-body {
   display: flex;

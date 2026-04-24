@@ -31,12 +31,22 @@ export function App() {
 
   function toggleCategory(cat: Category) {
     setFilter((prev) => {
+      // Click from "all active" → collapse to just the clicked category.
+      // (Clicking one from the default state should isolate it, not remove it.)
+      if (prev.size === CATEGORIES.length) {
+        return new Set([cat]);
+      }
       const next = new Set(prev);
       if (next.has(cat)) next.delete(cat);
       else next.add(cat);
-      if (next.size === 0) return new Set(CATEGORIES); // never empty
+      // Never go empty — use the Reset button to restore all.
+      if (next.size === 0) return prev;
       return next;
     });
+  }
+
+  function resetFilter() {
+    setFilter(new Set(CATEGORIES));
   }
 
   const resolvedTotal = month.records.filter((r) => month.placesById[r.id]).length;
@@ -71,6 +81,8 @@ export function App() {
         counts={categoryCounts(month.records, month.classificationsById)}
         filter={filter}
         onToggle={toggleCategory}
+        onReset={resetFilter}
+        allActive={filter.size === CATEGORIES.length}
       />
 
       <div className="app-body">

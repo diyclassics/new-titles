@@ -22,9 +22,7 @@ const DEFAULT_ZOOM = 4;
 
 // Tile layer — swappable via .env.local. Default is the DARE/AWMC Roman-empire
 // basemap, which is the same AWMC cartography Pleiades uses.
-const TILE_URL =
-  import.meta.env.VITE_TILE_URL ??
-  'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png';
+const TILE_URL = import.meta.env.VITE_TILE_URL ?? 'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png';
 const TILE_ATTRIBUTION =
   import.meta.env.VITE_TILE_ATTRIBUTION ??
   'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://dh.gu.se/dare/" target="_blank" rel="noreferrer">DARE</a>';
@@ -95,13 +93,15 @@ function ClusterLayer({
       const bobcat = r.barcode
         ? `<a href="https://bobcat.library.nyu.edu/primo-explore/search?query=any,contains,${r.barcode}&vid=NYU" target="_blank" rel="noreferrer">View in Bobcat →</a>`
         : '';
+      const placeLabel = `<a href="${escapeHtml(place.uri)}" target="_blank" rel="noreferrer">${escapeHtml(place.name)}</a>`;
+      const sourceTag = `<span class="source-tag">${place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span>`;
       marker.bindPopup(
         `<div class="popup">
           <strong>${escapeHtml(r.title)}</strong>
           ${r.authors.length > 0 ? `<div>${escapeHtml(r.authors.join(', '))}</div>` : ''}
           ${r.publisher ? `<div class="muted">${escapeHtml(r.publisher)}</div>` : ''}
           ${r.call_number ? `<div class="callno">${escapeHtml(r.call_number)}</div>` : ''}
-          <div class="muted">📍 ${escapeHtml(place.name)} <span class="source-tag">${place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span></div>
+          <div class="muted">📍 ${placeLabel} ${sourceTag}</div>
           ${category ? `<div class="muted" style="color:${color}"><strong>${escapeHtml(category)}</strong></div>` : ''}
           ${bobcat}
         </div>`,
