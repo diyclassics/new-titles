@@ -22,7 +22,12 @@ export function App() {
   // update selection via Leaflet's popupopen without bumping this, so the
   // popup opens without being interrupted by an automatic fly.
   const [flySignal, setFlySignal] = useState(0);
+  const [resetSignal, setResetSignal] = useState(0);
   const lastSelectionSource = useRef<'sidebar' | 'marker' | null>(null);
+
+  function resetView() {
+    setResetSignal((v) => v + 1);
+  }
 
   function selectFromSidebar(id: string) {
     lastSelectionSource.current = 'sidebar';
@@ -87,7 +92,21 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-main">
-          <h1>ISAW Library New Titles</h1>
+          <h1
+            className="clickable-title"
+            onClick={resetView}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                resetView();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            title="Reset map view"
+          >
+            ISAW Library New Titles
+          </h1>
           <p className="subtle">
             {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar ·{' '}
             {month.records.length} total
@@ -127,6 +146,7 @@ export function App() {
           selectedRecord={selectedRecord}
           selectedPlace={selectedPlace}
           flySignal={flySignal}
+          resetSignal={resetSignal}
           onSelect={selectFromMarker}
         />
       </div>

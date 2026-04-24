@@ -31,6 +31,18 @@ body {
   margin: 0;
   font-size: 1.2rem;
 }
+.clickable-title {
+  cursor: pointer;
+  display: inline-block;
+}
+.clickable-title:hover {
+  color: #0066cc;
+}
+.clickable-title:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 .header-main .subtle {
   margin: 0.2rem 0 0;
   font-size: 0.82rem;

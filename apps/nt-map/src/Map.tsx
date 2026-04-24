@@ -16,6 +16,8 @@ type Props = {
   selectedPlace: ResolvedPlace | null;
   /** Monotonically-increasing counter from the sidebar that requests a fly. */
   flySignal: number;
+  /** Monotonically-increasing counter that requests a map reset to default view. */
+  resetSignal: number;
   onSelect: (id: string) => void;
 };
 
@@ -37,6 +39,7 @@ export function MapView({
   selectedRecord,
   selectedPlace,
   flySignal,
+  resetSignal,
   onSelect,
 }: Props) {
   return (
@@ -49,6 +52,7 @@ export function MapView({
         onSelect={onSelect}
       />
       <FlyToSelected place={selectedPlace} record={selectedRecord} signal={flySignal} />
+      <ResetOnSignal signal={resetSignal} />
       <HomeControl />
     </MapContainer>
   );
@@ -142,6 +146,15 @@ function ClusterLayer({
     }
   }, [records, placesById, classificationsById, onSelect]);
 
+  return null;
+}
+
+function ResetOnSignal({ signal }: { signal: number }) {
+  const map = useMap();
+  // biome-ignore lint/correctness/useExhaustiveDependencies: only react to signal bumps.
+  useEffect(() => {
+    if (signal > 0) map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+  }, [signal]);
   return null;
 }
 
