@@ -163,6 +163,36 @@ body {
   overflow-y: auto;
   border-right: 1px solid #e5e5e5;
   background: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-search {
+  padding: 8px 10px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.sidebar-search input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.sidebar-search input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.15);
+}
+.sidebar-empty {
+  padding: 20px 14px;
+  color: #888;
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 .record-list {

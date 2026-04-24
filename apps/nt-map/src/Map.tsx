@@ -77,18 +77,27 @@ function ClusterLayer({
       // default count-based green/yellow/red palette, which collides with
       // our per-category marker colors.
       iconCreateFunction: (cluster) => {
-        const categories = new Set<Category>();
+        // Per-category counts within this cluster.
+        const counts = new Map<Category, number>();
         for (const m of cluster.getAllChildMarkers()) {
           const cat = (m.options as { _category?: Category })._category;
-          if (cat) categories.add(cat);
+          if (cat) counts.set(cat, (counts.get(cat) ?? 0) + 1);
         }
-        const count = cluster.getChildCount();
-        // Mixed-category clusters render flat black — visually distinct from
-        // any single-region color in the palette.
-        const color =
-          categories.size === 1 ? CATEGORY_COLOR[[...categories][0] as Category] : '#111';
+        const total = cluster.getChildCount();
+        let maxCount = 0;
+        let winners: Category[] = [];
+        for (const [cat, n] of counts) {
+          if (n > maxCount) {
+            maxCount = n;
+            winners = [cat];
+          } else if (n === maxCount) {
+            winners.push(cat);
+          }
+        }
+        // Black only breaks genuine ties; otherwise take the dominant color.
+        const color = winners.length === 1 ? CATEGORY_COLOR[winners[0] as Category] : '#111';
         return L.divIcon({
-          html: `<div class="cluster-dot" style="background:${color}"><span>${count}</span></div>`,
+          html: `<div class="cluster-dot" style="background:${color}"><span>${total}</span></div>`,
           className: 'nt-cluster',
           iconSize: [36, 36],
         });

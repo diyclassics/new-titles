@@ -1,15 +1,4 @@
 import { type Acquisition, AcquisitionsFileSchema } from '@nt/data/schema';
-
-import acq01 from '@nt/data/acquisitions-2026-01.json';
-import acq02 from '@nt/data/acquisitions-2026-02.json';
-import acq03 from '@nt/data/acquisitions-2026-03.json';
-import class01 from '@nt/data/classifications-2026-01.json';
-import class02 from '@nt/data/classifications-2026-02.json';
-import class03 from '@nt/data/classifications-2026-03.json';
-import places01 from '@nt/data/places-2026-01.json';
-import places02 from '@nt/data/places-2026-02.json';
-import places03 from '@nt/data/places-2026-03.json';
-
 import type { ResolvedPlace } from './types.ts';
 
 export const MONTH_KEYS = ['2026-01', '2026-02', '2026-03'] as const;
@@ -59,39 +48,59 @@ export interface MonthData {
   classificationsById: Record<string, Category>;
 }
 
-const rawByMonth: Record<
-  MonthKey,
-  {
-    acquisitions: unknown;
-    places: PlacesFile;
-    classifications: ClassificationsFile;
-  }
-> = {
-  '2026-01': {
-    acquisitions: acq01,
-    places: places01 as PlacesFile,
-    classifications: class01 as ClassificationsFile,
+// Each month is loaded via dynamic import — Vite emits a separate chunk per
+// JSON file, so only the active month's data ships on first paint. Additional
+// months fetch on demand (and cache in the browser thereafter).
+const MONTH_LOADERS: Record<MonthKey, () => Promise<MonthData>> = {
+  '2026-01': async () => {
+    const [acq, places, cls] = await Promise.all([
+      import('@nt/data/acquisitions-2026-01.json'),
+      import('@nt/data/places-2026-01.json'),
+      import('@nt/data/classifications-2026-01.json'),
+    ]);
+    return assemble('2026-01', acq.default, places.default, cls.default);
   },
-  '2026-02': {
-    acquisitions: acq02,
-    places: places02 as PlacesFile,
-    classifications: class02 as ClassificationsFile,
+  '2026-02': async () => {
+    const [acq, places, cls] = await Promise.all([
+      import('@nt/data/acquisitions-2026-02.json'),
+      import('@nt/data/places-2026-02.json'),
+      import('@nt/data/classifications-2026-02.json'),
+    ]);
+    return assemble('2026-02', acq.default, places.default, cls.default);
   },
-  '2026-03': {
-    acquisitions: acq03,
-    places: places03 as PlacesFile,
-    classifications: class03 as ClassificationsFile,
+  '2026-03': async () => {
+    const [acq, places, cls] = await Promise.all([
+      import('@nt/data/acquisitions-2026-03.json'),
+      import('@nt/data/places-2026-03.json'),
+      import('@nt/data/classifications-2026-03.json'),
+    ]);
+    return assemble('2026-03', acq.default, places.default, cls.default);
   },
 };
 
-export function loadMonth(key: MonthKey): MonthData {
-  const raw = rawByMonth[key];
-  const records = AcquisitionsFileSchema.parse(raw.acquisitions).records;
+function assemble(
+  key: MonthKey,
+  acquisitions: unknown,
+  places: unknown,
+  classifications: unknown,
+): MonthData {
+  const records = AcquisitionsFileSchema.parse(acquisitions).records;
   return {
     key,
     label: MONTH_LABEL[key],
     records,
-    placesById: raw.places.places,
-    classificationsById: raw.classifications.by_id,
+    placesById: (places as PlacesFile).places,
+    classificationsById: (classifications as ClassificationsFile).by_id,
   };
+}
+
+// In-memory cache so re-selecting a month after its first load is instant.
+const cache = new Map<MonthKey, MonthData>();
+
+export async function loadMonth(key: MonthKey): Promise<MonthData> {
+  const cached = cache.get(key);
+  if (cached) return cached;
+  const data = await MONTH_LOADERS[key]();
+  cache.set(key, data);
+  return data;
 }

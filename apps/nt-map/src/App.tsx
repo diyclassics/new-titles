@@ -1,5 +1,5 @@
 import type { Acquisition } from '@nt/data/schema';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import { MapView } from './Map.tsx';
 import { Sidebar } from './Sidebar.tsx';
@@ -8,22 +8,48 @@ import {
   type Category,
   MONTH_KEYS,
   MONTH_LABEL,
+  type MonthData,
   type MonthKey,
   loadMonth,
 } from './data.ts';
 
 type Filter = Set<Category>;
 
+const EMPTY_MONTH: MonthData = {
+  key: '2026-03',
+  label: '',
+  records: [],
+  placesById: {},
+  classificationsById: {},
+};
+
 export function App() {
   const [monthKey, setMonthKey] = useState<MonthKey>('2026-03');
+  const [month, setMonth] = useState<MonthData>(EMPTY_MONTH);
+  const [loading, setLoading] = useState(true);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
+  const [searchQuery, setSearchQuery] = useState('');
   // Incremented when a sidebar click wants the map to fly; marker clicks
   // update selection via Leaflet's popupopen without bumping this, so the
   // popup opens without being interrupted by an automatic fly.
   const [flySignal, setFlySignal] = useState(0);
   const [resetSignal, setResetSignal] = useState(0);
   const lastSelectionSource = useRef<'sidebar' | 'marker' | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    loadMonth(monthKey).then((m) => {
+      if (!cancelled) {
+        setMonth(m);
+        setLoading(false);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [monthKey]);
 
   function resetView() {
     setResetSignal((v) => v + 1);
@@ -39,8 +65,6 @@ export function App() {
     setSelectedId(id);
   }
 
-  const month = useMemo(() => loadMonth(monthKey), [monthKey]);
-
   const visibleByCategory = useMemo(() => {
     return month.records.filter((r) => {
       const cat = month.classificationsById[r.id];
@@ -55,10 +79,25 @@ export function App() {
   );
 
   // For the sidebar: mappable first (by call number), then unmapped (also by call number).
-  const sidebarRecords = useMemo(() => {
+  const sidebarBase = useMemo(() => {
     const unmapped = visibleByCategory.filter((r) => !month.placesById[r.id]).sort(byCallNumber);
-    return [...mappable, ...unmapped];
+    return { mapped: mappable, unmapped };
   }, [visibleByCategory, mappable, month.placesById]);
+
+  const { sidebarRecords, firstUnmappedIndex } = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    const match = (r: Acquisition) =>
+      !q ||
+      r.title.toLowerCase().includes(q) ||
+      (r.call_number ?? '').toLowerCase().includes(q) ||
+      r.authors.some((a) => a.toLowerCase().includes(q));
+    const mapped = sidebarBase.mapped.filter(match);
+    const unmapped = sidebarBase.unmapped.filter(match);
+    return {
+      sidebarRecords: [...mapped, ...unmapped],
+      firstUnmappedIndex: mapped.length,
+    };
+  }, [sidebarBase, searchQuery]);
 
   const selectedRecord = selectedId
     ? (month.records.find((r) => r.id === selectedId) ?? null)
@@ -86,7 +125,7 @@ export function App() {
   }
 
   const resolvedTotal = month.records.filter((r) => month.placesById[r.id]).length;
-  const unmappedCount = sidebarRecords.length - mappable.length;
+  const unmappedCount = sidebarBase.unmapped.length;
 
   return (
     <div className="app">
@@ -103,8 +142,14 @@ export function App() {
             </button>
           </h1>
           <p className="subtle">
-            {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar ·{' '}
-            {month.records.length} total
+            {loading ? (
+              <span>Loading {MONTH_LABEL[monthKey]}…</span>
+            ) : (
+              <>
+                {mappable.length} mapped (of {resolvedTotal}) · {unmappedCount} unmapped in sidebar
+                · {month.records.length} total
+              </>
+            )}
           </p>
         </div>
         <MonthNav
@@ -112,6 +157,7 @@ export function App() {
           onChange={(k) => {
             setMonthKey(k);
             setSelectedId(null);
+            setSearchQuery('');
           }}
         />
       </header>
@@ -131,7 +177,9 @@ export function App() {
           classificationsById={month.classificationsById}
           selectedId={selectedId}
           onSelect={selectFromSidebar}
-          firstUnmappedIndex={mappable.length}
+          firstUnmappedIndex={firstUnmappedIndex}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
         />
         <MapView
           key={monthKey}

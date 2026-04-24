@@ -9,5 +9,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    // Vendor chunks keep their own hash so repeat visits don't re-download
+    // React or Leaflet when only our code changes.
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          leaflet: ['leaflet', 'leaflet.markercluster', 'react-leaflet'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
   },
 });
