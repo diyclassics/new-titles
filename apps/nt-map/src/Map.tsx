@@ -49,6 +49,7 @@ export function MapView({
         onSelect={onSelect}
       />
       <FlyToSelected place={selectedPlace} record={selectedRecord} signal={flySignal} />
+      <HomeControl />
     </MapContainer>
   );
 }
@@ -141,6 +142,35 @@ function ClusterLayer({
     }
   }, [records, placesById, classificationsById, onSelect]);
 
+  return null;
+}
+
+function HomeControl() {
+  const map = useMap();
+  useEffect(() => {
+    const HomeBtn = L.Control.extend({
+      options: { position: 'topleft' as const },
+      onAdd: () => {
+        const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control home-control');
+        const link = L.DomUtil.create('a', 'home-control-link', container);
+        link.href = '#';
+        link.title = 'Reset view';
+        link.setAttribute('role', 'button');
+        link.setAttribute('aria-label', 'Reset map view');
+        link.innerHTML = '⌂';
+        L.DomEvent.on(link, 'click', (e) => {
+          L.DomEvent.stop(e);
+          map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+        });
+        return container;
+      },
+    });
+    const ctrl = new HomeBtn();
+    ctrl.addTo(map);
+    return () => {
+      ctrl.remove();
+    };
+  }, [map]);
   return null;
 }
 

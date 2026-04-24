@@ -269,3 +269,19 @@ body {
     transparent 8px
   );
 }
+
+/* Home control — sits with the zoom buttons in the top-left stack. */
+.home-control-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333 !important;
+  text-decoration: none !important;
+  background: white;
+}
+.home-control-link:hover {
+  background: #f0f0f0;
+}
