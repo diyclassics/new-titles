@@ -49,6 +49,21 @@ export async function fetchTgnPlace(id: string): Promise<ResolvedPlace | null> {
     lat,
     lon,
     source: 'getty-tgn',
-    uri: `http://vocab.getty.edu/tgn/${id}`,
+    // Getty's Vocabulary Online (VoW) full-display page — reliable public
+    // landing page for a TGN subject, unlike the RDF endpoint.
+    uri: tgnVowUrl(id),
   };
+}
+
+/** Getty Vocabulary Online full-display URL for a TGN id. */
+export function tgnVowUrl(id: string): string {
+  const params = new URLSearchParams({
+    find: id,
+    place: '',
+    nation: '',
+    prev_page: '1',
+    english: 'Y',
+    subjectid: id,
+  });
+  return `https://www.getty.edu/vow/TGNFullDisplay?${params.toString()}`;
 }
