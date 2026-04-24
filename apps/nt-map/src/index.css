@@ -268,6 +268,72 @@ body {
   background: #f5f5f5;
 }
 
+/* ---------- Mobile / narrow-screen layout ---------- */
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 8px 12px;
+  }
+  .header-main h1 {
+    font-size: 1.05rem;
+  }
+  .header-main .subtle {
+    font-size: 0.75rem;
+  }
+  .legend {
+    padding: 4px 8px;
+    gap: 3px;
+  }
+  .legend-item {
+    font-size: 0.72rem;
+    padding: 2px 6px;
+  }
+  .legend-item .swatch {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Stack the body vertically: map on top, list beneath. */
+  .app-body {
+    flex-direction: column;
+  }
+  .map {
+    order: 1;
+    flex: 1 1 55vh;
+    min-height: 55vh;
+  }
+  .sidebar {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: 45vh;
+    border-right: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Very narrow: collapse the sidebar by default behind a toggle. */
+  .header-main h1 {
+    font-size: 0.95rem;
+  }
+  .map {
+    flex: 1 1 60vh;
+    min-height: 60vh;
+  }
+  .sidebar {
+    max-height: 40vh;
+  }
+  .legend-item .legend-text {
+    /* Truncate long names to keep chips readable. */
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 .popup {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.88rem;
