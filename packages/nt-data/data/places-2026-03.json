@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "month": "2026-03",
-  "generated_at": "2026-04-24T18:15:06.740Z",
+  "generated_at": "2026-04-24T21:51:38.492Z",
   "total_records": 357,
   "records_with_refs": 311,
   "records_resolved": 264,
@@ -13,7 +13,7 @@
       "lat": 34.821,
       "lon": 67.827,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1065380"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1065380&place=&nation=&prev_page=1&english=Y&subjectid=1065380"
     },
     "31154068978384": {
       "id": "tgn:7001526",
@@ -21,7 +21,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154068978392": {
       "id": "tgn:8199076",
@@ -29,7 +29,7 @@
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8199076"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8199076&place=&nation=&prev_page=1&english=Y&subjectid=8199076"
     },
     "31154068978400": {
       "id": "tgn:8199076",
@@ -37,7 +37,7 @@
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8199076"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8199076&place=&nation=&prev_page=1&english=Y&subjectid=8199076"
     },
     "31154068978418": {
       "id": "tgn:8199076",
@@ -45,7 +45,7 @@
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8199076"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8199076&place=&nation=&prev_page=1&english=Y&subjectid=8199076"
     },
     "31154068978442": {
       "id": "pleiades:559227570",
@@ -85,7 +85,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154068978509": {
       "id": "tgn:7001526",
@@ -93,7 +93,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154068978517": {
       "id": "tgn:7006651",
@@ -101,7 +101,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154068978525": {
       "id": "tgn:1000003",
@@ -109,7 +109,7 @@
       "lat": 56.2,
       "lon": 15.016,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000003"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000003&place=&nation=&prev_page=1&english=Y&subjectid=1000003"
     },
     "31154068978533": {
       "id": "pleiades:60058",
@@ -133,7 +133,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069008736": {
       "id": "tgn:8618788",
@@ -141,7 +141,7 @@
       "lat": 34.774722,
       "lon": 111.181389,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8618788"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8618788&place=&nation=&prev_page=1&english=Y&subjectid=8618788"
     },
     "31154069008785": {
       "id": "tgn:1001261",
@@ -149,7 +149,7 @@
       "lat": 37.75,
       "lon": 102.75,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1001261"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1001261&place=&nation=&prev_page=1&english=Y&subjectid=1001261"
     },
     "31154069008801": {
       "id": "tgn:7001787",
@@ -157,7 +157,7 @@
       "lat": 29.562778,
       "lon": 106.552778,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001787"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001787&place=&nation=&prev_page=1&english=Y&subjectid=7001787"
     },
     "31154069008819": {
       "id": "tgn:7001787",
@@ -165,7 +165,7 @@
       "lat": 29.562778,
       "lon": 106.552778,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001787"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001787&place=&nation=&prev_page=1&english=Y&subjectid=7001787"
     },
     "31154069008850": {
       "id": "tgn:8209961",
@@ -173,7 +173,7 @@
       "lat": 34.369445,
       "lon": 107.136345,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8209961"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8209961&place=&nation=&prev_page=1&english=Y&subjectid=8209961"
     },
     "31154069008868": {
       "id": "tgn:8212548",
@@ -181,7 +181,7 @@
       "lat": 36.136389,
       "lon": 114.336667,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8212548"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8212548&place=&nation=&prev_page=1&english=Y&subjectid=8212548"
     },
     "31154069008942": {
       "id": "tgn:8627225",
@@ -189,7 +189,7 @@
       "lat": 34.358056,
       "lon": 112.0625,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8627225"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8627225&place=&nation=&prev_page=1&english=Y&subjectid=8627225"
     },
     "31154069008959": {
       "id": "tgn:7001745",
@@ -197,7 +197,7 @@
       "lat": 41.5,
       "lon": 85.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001745"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001745&place=&nation=&prev_page=1&english=Y&subjectid=7001745"
     },
     "31154069009007": {
       "id": "tgn:7029798",
@@ -205,7 +205,7 @@
       "lat": 40.033542,
       "lon": 94.919228,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7029798"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
     },
     "31154069009148": {
       "id": "tgn:8630755",
@@ -213,7 +213,7 @@
       "lat": 27.509895,
       "lon": 116.695984,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8630755"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8630755&place=&nation=&prev_page=1&english=Y&subjectid=8630755"
     },
     "31154069009155": {
       "id": "tgn:8677045",
@@ -221,7 +221,7 @@
       "lat": 29.7723,
       "lon": 121.35,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8677045"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8677045&place=&nation=&prev_page=1&english=Y&subjectid=8677045"
     },
     "31154069009411": {
       "id": "tgn:7001480",
@@ -229,7 +229,7 @@
       "lat": 34.757778,
       "lon": 113.648611,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001480"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001480&place=&nation=&prev_page=1&english=Y&subjectid=7001480"
     },
     "31154069009429": {
       "id": "tgn:7029798",
@@ -237,7 +237,7 @@
       "lat": 40.033542,
       "lon": 94.919228,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7029798"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
     },
     "31154069009452": {
       "id": "pleiades:912816",
@@ -317,7 +317,7 @@
       "lat": 39,
       "lon": 35,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000144"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000144&place=&nation=&prev_page=1&english=Y&subjectid=1000144"
     },
     "31154069009551": {
       "id": "pleiades:133411593",
@@ -341,7 +341,7 @@
       "lat": 42.666,
       "lon": 25.25,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006413"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006413&place=&nation=&prev_page=1&english=Y&subjectid=7006413"
     },
     "31154069009593": {
       "id": "pleiades:874350",
@@ -365,7 +365,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069009627": {
       "id": "pleiades:874350",
@@ -397,7 +397,7 @@
       "lat": 41.5,
       "lon": 85.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001745"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001745&place=&nation=&prev_page=1&english=Y&subjectid=7001745"
     },
     "31154069009809": {
       "id": "tgn:7001810",
@@ -405,7 +405,7 @@
       "lat": 34.258333,
       "lon": 108.928611,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001810"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001810&place=&nation=&prev_page=1&english=Y&subjectid=7001810"
     },
     "31154069009817": {
       "id": "tgn:1000111",
@@ -413,7 +413,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069009833": {
       "id": "pleiades:43240983",
@@ -485,7 +485,7 @@
       "lat": 56.2,
       "lon": 15.016,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000003"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000003&place=&nation=&prev_page=1&english=Y&subjectid=1000003"
     },
     "31154069009940": {
       "id": "tgn:7001526",
@@ -493,7 +493,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154069009957": {
       "id": "pleiades:1043",
@@ -517,7 +517,7 @@
       "lat": 39,
       "lon": 35,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000144"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000144&place=&nation=&prev_page=1&english=Y&subjectid=1000144"
     },
     "31154069009981": {
       "id": "pleiades:202833934",
@@ -621,7 +621,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010187": {
       "id": "tgn:1000111",
@@ -629,7 +629,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010195": {
       "id": "tgn:1000111",
@@ -637,7 +637,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010203": {
       "id": "tgn:7006651",
@@ -645,7 +645,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010211": {
       "id": "pleiades:863922",
@@ -717,7 +717,7 @@
       "lat": 41.542,
       "lon": 44.108,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1060430"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1060430&place=&nation=&prev_page=1&english=Y&subjectid=1060430"
     },
     "31154069010302": {
       "id": "pleiades:874350",
@@ -765,7 +765,7 @@
       "lat": 31.4167,
       "lon": 34.3333,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001390"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001390&place=&nation=&prev_page=1&english=Y&subjectid=7001390"
     },
     "31154069010385": {
       "id": "tgn:7006653",
@@ -773,7 +773,7 @@
       "lat": 42,
       "lon": 43.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006653"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006653&place=&nation=&prev_page=1&english=Y&subjectid=7006653"
     },
     "31154069010393": {
       "id": "tgn:7006651",
@@ -781,7 +781,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010401": {
       "id": "pleiades:874602",
@@ -797,7 +797,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010427": {
       "id": "tgn:1000111",
@@ -805,7 +805,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010435": {
       "id": "tgn:1000111",
@@ -813,7 +813,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010443": {
       "id": "tgn:1000111",
@@ -821,7 +821,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069010450": {
       "id": "tgn:7006651",
@@ -829,7 +829,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010476": {
       "id": "pleiades:874350",
@@ -877,7 +877,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010542": {
       "id": "pleiades:874350",
@@ -893,7 +893,7 @@
       "lat": 42,
       "lon": 43.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006653"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006653&place=&nation=&prev_page=1&english=Y&subjectid=7006653"
     },
     "31154069010567": {
       "id": "tgn:7006651",
@@ -901,7 +901,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010583": {
       "id": "pleiades:639048",
@@ -917,7 +917,7 @@
       "lat": 41.8925,
       "lon": 12.48499,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7030347"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7030347&place=&nation=&prev_page=1&english=Y&subjectid=7030347"
     },
     "31154069010609": {
       "id": "tgn:7001526",
@@ -925,7 +925,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154069010617": {
       "id": "tgn:7006651",
@@ -933,7 +933,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069010740": {
       "id": "pleiades:668295",
@@ -949,7 +949,7 @@
       "lat": 55.083,
       "lon": 37.85,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/4003756"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=4003756&place=&nation=&prev_page=1&english=Y&subjectid=4003756"
     },
     "31154069010773": {
       "id": "pleiades:874350",
@@ -1005,7 +1005,7 @@
       "lat": 42,
       "lon": 43.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006653"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006653&place=&nation=&prev_page=1&english=Y&subjectid=7006653"
     },
     "31154069010849": {
       "id": "pleiades:874350",
@@ -1029,7 +1029,7 @@
       "lat": 42,
       "lon": 43.5,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006653"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006653&place=&nation=&prev_page=1&english=Y&subjectid=7006653"
     },
     "31154069010898": {
       "id": "pleiades:863766",
@@ -1085,7 +1085,7 @@
       "lat": 35.861733,
       "lon": 56.839977,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/6005268"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=6005268&place=&nation=&prev_page=1&english=Y&subjectid=6005268"
     },
     "31154069010971": {
       "id": "pleiades:589748",
@@ -1117,7 +1117,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154069011011": {
       "id": "pleiades:874350",
@@ -1309,7 +1309,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069011250": {
       "id": "tgn:7006651",
@@ -1317,7 +1317,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069011268": {
       "id": "tgn:7006651",
@@ -1325,7 +1325,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069011276": {
       "id": "pleiades:874350",
@@ -1661,7 +1661,7 @@
       "lat": 41.516667,
       "lon": 44.516667,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7594771"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7594771&place=&nation=&prev_page=1&english=Y&subjectid=7594771"
     },
     "31154069011706": {
       "id": "pleiades:403031321",
@@ -1677,7 +1677,7 @@
       "lat": 41,
       "lon": 44,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1109316"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1109316&place=&nation=&prev_page=1&english=Y&subjectid=1109316"
     },
     "31154069037545": {
       "id": "tgn:7002085",
@@ -1685,7 +1685,7 @@
       "lat": 36.333333,
       "lon": 118.25,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7002085"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7002085&place=&nation=&prev_page=1&english=Y&subjectid=7002085"
     },
     "31154069037552": {
       "id": "tgn:7002078",
@@ -1693,7 +1693,7 @@
       "lat": 31,
       "lon": 112.25,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7002078"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7002078&place=&nation=&prev_page=1&english=Y&subjectid=7002078"
     },
     "31154069037586": {
       "id": "pleiades:678334",
@@ -1789,7 +1789,7 @@
       "lat": 31.000008,
       "lon": 104.223773,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/8712371"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8712371&place=&nation=&prev_page=1&english=Y&subjectid=8712371"
     },
     "31154069078689": {
       "id": "tgn:7029798",
@@ -1797,7 +1797,7 @@
       "lat": 40.033542,
       "lon": 94.919228,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7029798"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
     },
     "31154069078697": {
       "id": "tgn:7029798",
@@ -1805,7 +1805,7 @@
       "lat": 40.033542,
       "lon": 94.919228,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7029798"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
     },
     "31154069078754": {
       "id": "pleiades:586301784",
@@ -1821,7 +1821,7 @@
       "lat": 39,
       "lon": 35,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000144"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000144&place=&nation=&prev_page=1&english=Y&subjectid=1000144"
     },
     "31154069078788": {
       "id": "tgn:7001526",
@@ -1829,7 +1829,7 @@
       "lat": 30.338258,
       "lon": 42.498942,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7001526"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154069078796": {
       "id": "pleiades:874350",
@@ -1845,7 +1845,7 @@
       "lat": 60,
       "lon": 47,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7002435"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7002435&place=&nation=&prev_page=1&english=Y&subjectid=7002435"
     },
     "31154069078846": {
       "id": "pleiades:248570175",
@@ -1877,7 +1877,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069078887": {
       "id": "pleiades:969121824",
@@ -1973,7 +1973,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069079026": {
       "id": "tgn:7006651",
@@ -1981,7 +1981,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069079034": {
       "id": "tgn:7006651",
@@ -1989,7 +1989,7 @@
       "lat": 40,
       "lon": 45,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/7006651"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
     "31154069079059": {
       "id": "tgn:4003756",
@@ -1997,7 +1997,7 @@
       "lat": 55.083,
       "lon": 37.85,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/4003756"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=4003756&place=&nation=&prev_page=1&english=Y&subjectid=4003756"
     },
     "31154069079067": {
       "id": "pleiades:477179882",
@@ -2013,7 +2013,7 @@
       "lat": 35,
       "lon": 105,
       "source": "getty-tgn",
-      "uri": "http://vocab.getty.edu/tgn/1000111"
+      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
     },
     "31154069079083": {
       "id": "pleiades:863739",
