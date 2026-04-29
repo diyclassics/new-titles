@@ -1,8 +1,8 @@
 import type { Acquisition } from '@nt/data/schema';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { FilterSheet } from './FilterSheet.tsx';
 import { Legend } from './Legend.tsx';
 import type { MapHandle } from './Map.tsx';
-import { FilterSheet } from './FilterSheet.tsx';
 import { MobileViewToggle } from './MobileViewToggle.tsx';
 import { Sidebar } from './Sidebar.tsx';
 import {
