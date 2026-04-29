@@ -78,13 +78,20 @@ function HandleBridge({
   useImperativeHandle(
     handleRef,
     () => ({
-      flyTo: (place) =>
-        map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 }),
+      flyTo: (place) => {
+        // Defend against stale cached pixel dimensions: if the map was hidden
+        // (mobile List tab) or the viewport changed since last paint, Leaflet's
+        // animation will target the wrong size. invalidateSize() is a no-op
+        // when the size is unchanged.
+        map.invalidateSize();
+        map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 });
+      },
       reset: () => map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true }),
       openMarker: (id) => {
         const marker = markersByIdRef.current.get(id);
         const group = clusterGroupRef.current;
         if (!marker || !group) return;
+        map.invalidateSize();
         // zoomToShowLayer expands any clusters containing the marker, then
         // calls back so we can open the popup once the marker is on-screen.
         group.zoomToShowLayer(marker, () => marker.openPopup());

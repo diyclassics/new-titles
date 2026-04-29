@@ -349,10 +349,7 @@ body {
   display: none;
 }
 .show-on-map-button {
-  /* Visibility lifecycle is set by the toggle rules above (default
-     display: none, mobile media query flips to inline-block). These
-     rules are appearance-only and apply on both viewports — they're
-     no-ops when the button is display: none. */
+  display: none; /* visibility lifecycle: mobile media query flips to inline-block */
   margin-top: 8px;
   padding: 6px 12px;
   background: white;
@@ -369,9 +366,6 @@ body {
 .show-on-map-button:focus-visible {
   outline: 2px solid #0066cc;
   outline-offset: 1px;
-}
-.show-on-map-button {
-  display: none;
 }
 
 @media (max-width: 768px) {

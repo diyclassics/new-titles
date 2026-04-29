@@ -155,7 +155,7 @@ function ExpandedDetails({
             className="show-on-map-button"
             onClick={() => onShowOnMap(record.id)}
           >
-            Show on map →
+            Show on map <span aria-hidden="true">→</span>
           </button>
         </div>
       ) : null}
