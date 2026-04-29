@@ -20,6 +20,7 @@ type Props = {
 export interface MapHandle {
   flyTo: (place: { lat: number; lon: number }) => void;
   reset: () => void;
+  openMarker: (id: string) => void;
 }
 
 const DEFAULT_CENTER: [number, number] = [36, 40];
@@ -37,6 +38,9 @@ export const MapView = forwardRef<MapHandle, Props>(function MapView(
   { records, placesById, classificationsById, onSelect },
   ref,
 ) {
+  const markersByIdRef = useRef<Map<string, L.CircleMarker>>(new Map());
+  const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
+
   return (
     <MapContainer center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} className="map">
       <TileLayer url={TILE_URL} attribution={TILE_ATTRIBUTION} />
@@ -45,8 +49,14 @@ export const MapView = forwardRef<MapHandle, Props>(function MapView(
         placesById={placesById}
         classificationsById={classificationsById}
         onSelect={onSelect}
+        markersByIdRef={markersByIdRef}
+        clusterGroupRef={clusterGroupRef}
       />
-      <HandleBridge handleRef={ref} />
+      <HandleBridge
+        handleRef={ref}
+        markersByIdRef={markersByIdRef}
+        clusterGroupRef={clusterGroupRef}
+      />
       <HomeControl />
     </MapContainer>
   );
@@ -55,7 +65,15 @@ export const MapView = forwardRef<MapHandle, Props>(function MapView(
 export default MapView;
 
 /** Wires up the imperative handle once the map is available via useMap(). */
-function HandleBridge({ handleRef }: { handleRef: React.ForwardedRef<MapHandle> }) {
+function HandleBridge({
+  handleRef,
+  markersByIdRef,
+  clusterGroupRef,
+}: {
+  handleRef: React.ForwardedRef<MapHandle>;
+  markersByIdRef: React.MutableRefObject<Map<string, L.CircleMarker>>;
+  clusterGroupRef: React.MutableRefObject<L.MarkerClusterGroup | null>;
+}) {
   const map = useMap();
   useImperativeHandle(
     handleRef,
@@ -63,8 +81,16 @@ function HandleBridge({ handleRef }: { handleRef: React.ForwardedRef<MapHandle> 
       flyTo: (place) =>
         map.flyTo([place.lat, place.lon], Math.max(map.getZoom(), 6), { duration: 0.6 }),
       reset: () => map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true }),
+      openMarker: (id) => {
+        const marker = markersByIdRef.current.get(id);
+        const group = clusterGroupRef.current;
+        if (!marker || !group) return;
+        // zoomToShowLayer expands any clusters containing the marker, then
+        // calls back so we can open the popup once the marker is on-screen.
+        group.zoomToShowLayer(marker, () => marker.openPopup());
+      },
     }),
-    [map],
+    [map, markersByIdRef, clusterGroupRef],
   );
   return null;
 }
@@ -74,9 +100,13 @@ function ClusterLayer({
   placesById,
   classificationsById,
   onSelect,
-}: Pick<Props, 'records' | 'placesById' | 'classificationsById' | 'onSelect'>) {
+  markersByIdRef,
+  clusterGroupRef,
+}: Pick<Props, 'records' | 'placesById' | 'classificationsById' | 'onSelect'> & {
+  markersByIdRef: React.MutableRefObject<Map<string, L.CircleMarker>>;
+  clusterGroupRef: React.MutableRefObject<L.MarkerClusterGroup | null>;
+}) {
   const map = useMap();
-  const clusterGroupRef = useRef<ReturnType<typeof L.markerClusterGroup> | null>(null);
 
   useEffect(() => {
     const group = L.markerClusterGroup({
@@ -116,11 +146,12 @@ function ClusterLayer({
       map.removeLayer(group);
       clusterGroupRef.current = null;
     };
-  }, [map]);
+  }, [map, clusterGroupRef]);
 
   useEffect(() => {
     const group = clusterGroupRef.current;
     if (!group) return;
+    markersByIdRef.current.clear();
     group.clearLayers();
 
     for (const r of records) {
@@ -161,8 +192,9 @@ function ClusterLayer({
       // Leaflet's own popup-opening.
       marker.on('popupopen', () => onSelect(r.id));
       group.addLayer(marker);
+      markersByIdRef.current.set(r.id, marker);
     }
-  }, [records, placesById, classificationsById, onSelect]);
+  }, [records, placesById, classificationsById, onSelect, markersByIdRef, clusterGroupRef]);
 
   return null;
 }
