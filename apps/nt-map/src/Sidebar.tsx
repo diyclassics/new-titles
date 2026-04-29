@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import type { Acquisition } from '@nt/data/schema';
 import { CATEGORY_COLOR, type Category } from './data.ts';
 import { bobcatUrl, cleanAuthor, cleanTitle } from './format.ts';
@@ -26,6 +27,11 @@ export function Sidebar({
   onSearchChange,
 }: Props) {
   const unmappedCount = records.length - firstUnmappedIndex;
+  const selectedRowRef = useRef<HTMLLIElement | null>(null);
+  useEffect(() => {
+    if (!selectedId) return;
+    selectedRowRef.current?.scrollIntoView({ block: 'nearest' });
+  }, [selectedId]);
   return (
     <aside className="sidebar">
       <div className="sidebar-search">
@@ -64,6 +70,7 @@ export function Sidebar({
             return (
               <li
                 key={r.id}
+                ref={expanded ? selectedRowRef : undefined}
                 className={`record-row ${expanded ? 'selected' : ''} ${mapped ? '' : 'unmapped'}`}
                 style={{ borderLeftColor: mapped ? color : '#ddd' }}
               >
