@@ -388,6 +388,7 @@ body {
     flex: 1 1 auto;
     max-height: none;
     width: 100%;
+    min-width: 0;
     max-width: none;
     border-right: 0;
     border-top: 0;
