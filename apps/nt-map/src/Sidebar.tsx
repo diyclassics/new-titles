@@ -10,6 +10,7 @@ type Props = {
   classificationsById: Record<string, Category>;
   selectedId: string | null;
   onSelect: (id: string) => void;
+  onShowOnMap: (id: string) => void;
   /** Index in `records` where the unmapped section starts. Equal to records.length if all are mapped. */
   firstUnmappedIndex: number;
   searchQuery: string;
@@ -22,6 +23,7 @@ export function Sidebar({
   classificationsById,
   selectedId,
   onSelect,
+  onShowOnMap,
   firstUnmappedIndex,
   searchQuery,
   onSearchChange,
@@ -89,7 +91,13 @@ export function Sidebar({
                   </div>
                 </button>
                 {expanded ? (
-                  <ExpandedDetails record={r} place={place} category={category} color={color} />
+                  <ExpandedDetails
+                    record={r}
+                    place={place}
+                    category={category}
+                    color={color}
+                    onShowOnMap={onShowOnMap}
+                  />
                 ) : null}
               </li>
             );
@@ -105,11 +113,13 @@ function ExpandedDetails({
   place,
   category,
   color,
+  onShowOnMap,
 }: {
   record: Acquisition;
   place: ResolvedPlace | undefined;
   category: Category | undefined;
   color: string;
+  onShowOnMap: (id: string) => void;
 }) {
   const authors = record.authors.map(cleanAuthor).filter(Boolean);
   const pubBits = [record.publisher, record.pub_date].filter(Boolean);
@@ -136,6 +146,17 @@ function ExpandedDetails({
           <a href={bobcatUrl(record.mms_id)} target="_blank" rel="noreferrer">
             View in Bobcat →
           </a>
+        </div>
+      ) : null}
+      {place ? (
+        <div>
+          <button
+            type="button"
+            className="show-on-map-button"
+            onClick={() => onShowOnMap(record.id)}
+          >
+            Show on map →
+          </button>
         </div>
       ) : null}
     </div>

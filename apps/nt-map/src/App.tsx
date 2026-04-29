@@ -98,6 +98,18 @@ export function App() {
     },
     [month.placesById],
   );
+  const showOnMap = useCallback(
+    (id: string) => {
+      setMobileTab('map');
+      setSelectedId(id);
+      const place = month.placesById[id];
+      if (place) {
+        mapRef.current?.flyTo(place);
+        mapRef.current?.openMarker(id);
+      }
+    },
+    [month.placesById],
+  );
   // Stable reference — the marker layer's useEffect depends on this.
   const selectFromMarker = useCallback((id: string) => {
     setSelectedId(id);
@@ -204,6 +216,7 @@ export function App() {
           classificationsById={month.classificationsById}
           selectedId={selectedId}
           onSelect={selectFromSidebar}
+          onShowOnMap={showOnMap}
           firstUnmappedIndex={firstUnmappedIndex}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
