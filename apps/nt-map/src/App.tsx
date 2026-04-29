@@ -2,6 +2,7 @@ import type { Acquisition } from '@nt/data/schema';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import type { MapHandle } from './Map.tsx';
+import { MobileTabBar } from './MobileTabBar.tsx';
 import { Sidebar } from './Sidebar.tsx';
 import {
   CATEGORIES,
@@ -218,6 +219,7 @@ export function App() {
           />
         </Suspense>
       </div>
+      <MobileTabBar tab={mobileTab} onChange={setMobileTab} />
     </div>
   );
 }
