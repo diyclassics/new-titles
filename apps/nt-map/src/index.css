@@ -343,6 +343,15 @@ body {
 
 /* ---------- Mobile / narrow-screen layout ---------- */
 
+/* Mobile view-toggle controls. Default-hidden on desktop; mobile media
+   query below shows them and swaps which child of .app-body is visible. */
+.mobile-tab-bar {
+  display: none;
+}
+.show-on-map-button {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .app-header {
     padding: 8px 12px;
@@ -366,23 +375,56 @@ body {
     height: 10px;
   }
 
-  /* Stack the body vertically: map on top, list beneath. */
+  /* The body is a single full-bleed view. Hide the inactive child. */
   .app-body {
-    flex-direction: column;
+    flex-direction: row; /* override desktop default-equivalent; harmless */
   }
-  .map {
-    order: 1;
-    flex: 1 1 55vh;
-    min-height: 55vh;
-  }
+  .app-body.show-map .sidebar { display: none; }
+  .app-body.show-list .map    { display: none; }
+
+  /* The remaining child fills the available flex space. */
+  .map,
   .sidebar {
-    order: 2;
+    flex: 1 1 auto;
+    max-height: none;
     width: 100%;
-    min-width: 0;
     max-width: none;
-    max-height: 45vh;
     border-right: 0;
+    border-top: 0;
+  }
+
+  /* Tab bar — fixed at the bottom of the .app flex column. */
+  .mobile-tab-bar {
+    display: flex;
+    flex: 0 0 auto;
     border-top: 1px solid #e5e5e5;
+    background: white;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .mobile-tab-bar button {
+    flex: 1;
+    padding: 12px 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 0.95rem;
+    color: #666;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+  }
+  .mobile-tab-bar button[aria-selected='true'] {
+    color: #0066cc;
+    border-top-color: #0066cc;
+    font-weight: 500;
+  }
+  .mobile-tab-bar button:focus-visible {
+    outline: 2px solid #0066cc;
+    outline-offset: -4px;
+  }
+
+  /* The "Show on map" button inside expanded list rows is mobile-only. */
+  .show-on-map-button {
+    display: inline-block;
   }
 }
 
@@ -390,13 +432,6 @@ body {
   /* Very narrow: collapse the sidebar by default behind a toggle. */
   .header-main h1 {
     font-size: 0.95rem;
-  }
-  .map {
-    flex: 1 1 60vh;
-    min-height: 60vh;
-  }
-  .sidebar {
-    max-height: 40vh;
   }
   .legend-item .legend-text {
     /* Truncate long names to keep chips readable. */
