@@ -20,6 +20,8 @@ const MapView = lazy(() => import('./Map.tsx'));
 
 type Filter = Set<Category>;
 
+type MobileTab = 'map' | 'list';
+
 const EMPTY_MONTH: MonthData = {
   key: '2026-03',
   label: '',
@@ -45,6 +47,7 @@ export function App() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
   const [searchQuery, setSearchQuery] = useState('');
+  const [mobileTab, setMobileTab] = useState<MobileTab>('map');
   const mapRef = useRef<MapHandle>(null);
 
   // Load the selected month's data (cached in loadMonth after first fetch).
@@ -193,7 +196,7 @@ export function App() {
         allActive={filter.size === CATEGORIES.length}
       />
 
-      <div className="app-body">
+      <div className={`app-body ${mobileTab === 'map' ? 'show-map' : 'show-list'}`}>
         <Sidebar
           records={sidebarRecords}
           placesById={month.placesById}
