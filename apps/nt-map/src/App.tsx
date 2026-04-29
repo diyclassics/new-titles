@@ -2,6 +2,7 @@ import type { Acquisition } from '@nt/data/schema';
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Legend } from './Legend.tsx';
 import type { MapHandle } from './Map.tsx';
+import { FilterSheet } from './FilterSheet.tsx';
 import { MobileViewToggle } from './MobileViewToggle.tsx';
 import { Sidebar } from './Sidebar.tsx';
 import {
@@ -49,6 +50,7 @@ export function App() {
   const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileTab, setMobileTab] = useState<MobileTab>('map');
+  const [filterSheetOpen, setFilterSheetOpen] = useState(false);
   const mapRef = useRef<MapHandle>(null);
 
   // Load the selected month's data (cached in loadMonth after first fetch).
@@ -199,6 +201,15 @@ export function App() {
             setSearchQuery('');
           }}
         />
+        <button
+          type="button"
+          className="filters-button"
+          onClick={() => setFilterSheetOpen(true)}
+          aria-label="Open filters"
+        >
+          Filters
+          {filter.size < CATEGORIES.length ? <span> · {filter.size}</span> : null}
+        </button>
       </header>
 
       <Legend
@@ -233,6 +244,15 @@ export function App() {
         </Suspense>
       </div>
       <MobileViewToggle tab={mobileTab} onChange={setMobileTab} />
+      <FilterSheet
+        open={filterSheetOpen}
+        onClose={() => setFilterSheetOpen(false)}
+        counts={categoryCounts(month.records, month.classificationsById)}
+        filter={filter}
+        onToggle={toggleCategory}
+        onReset={resetFilter}
+        allActive={filter.size === CATEGORIES.length}
+      />
     </div>
   );
 }
