@@ -395,8 +395,12 @@ body {
   .app-body {
     flex-direction: row; /* override desktop default-equivalent; harmless */
   }
-  .app-body.show-map .sidebar { display: none; }
-  .app-body.show-list .map    { display: none; }
+  .app-body.show-map .sidebar {
+    display: none;
+  }
+  .app-body.show-list .map {
+    display: none;
+  }
 
   /* The remaining child fills the available flex space. */
   .map,
@@ -429,7 +433,7 @@ body {
     cursor: pointer;
     border-top: 2px solid transparent;
   }
-  .mobile-tab-bar button[aria-selected='true'] {
+  .mobile-tab-bar button[aria-selected="true"] {
     color: #0066cc;
     border-top-color: #0066cc;
     font-weight: 500;

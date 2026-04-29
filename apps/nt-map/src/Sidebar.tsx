@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
 import type { Acquisition } from '@nt/data/schema';
+import { useEffect, useRef } from 'react';
 import { CATEGORY_COLOR, type Category } from './data.ts';
 import { bobcatUrl, cleanAuthor, cleanTitle } from './format.ts';
 import type { ResolvedPlace } from './types.ts';

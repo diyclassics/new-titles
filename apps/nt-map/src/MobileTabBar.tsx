@@ -21,7 +21,8 @@ export function MobileTabBar({ tab, onChange }: Props) {
   function onKey(e: React.KeyboardEvent<HTMLButtonElement>, current: MobileTab) {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     const idx = TABS.findIndex((t) => t.key === current);
-    const nextIdx = e.key === 'ArrowRight' ? (idx + 1) % TABS.length : (idx - 1 + TABS.length) % TABS.length;
+    const nextIdx =
+      e.key === 'ArrowRight' ? (idx + 1) % TABS.length : (idx - 1 + TABS.length) % TABS.length;
     const nextTab = TABS[nextIdx];
     if (!nextTab) return;
     const next = nextTab.key;
