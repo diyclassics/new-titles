@@ -21,6 +21,9 @@ type Props = {
    *  hides the map via display:none; when it returns we have to invalidateSize
    *  on the next frame so Leaflet re-measures and re-fetches tiles. */
   visible: boolean;
+  /** Honors the OS-level prefers-reduced-motion preference. When true, all
+   *  pan/zoom transitions and Leaflet's internal animations are disabled. */
+  reducedMotion: boolean;
   onSelect: (id: string) => void;
 };
 
@@ -48,14 +51,27 @@ const TILE_ATTRIBUTION =
   'Tiles &copy; <a href="https://awmc.unc.edu/awmc/" target="_blank" rel="noreferrer">AWMC</a>, via <a href="https://cawm.lib.uiowa.edu/" target="_blank" rel="noreferrer">CAWM / Iowa</a>';
 
 export const MapView = forwardRef<MapHandle, Props>(function MapView(
-  { records, placesById, classificationsById, selectedId, visible, onSelect },
+  { records, placesById, classificationsById, selectedId, visible, reducedMotion, onSelect },
   ref,
 ) {
   const markersByIdRef = useRef<Map<string, L.CircleMarker>>(new Map());
   const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
 
   return (
-    <MapContainer center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} maxZoom={MAX_ZOOM} className="map">
+    <MapContainer
+      center={DEFAULT_CENTER}
+      zoom={DEFAULT_ZOOM}
+      maxZoom={MAX_ZOOM}
+      // Disable Leaflet's built-in animations under prefers-reduced-motion.
+      // These are init-time options; the user changing the OS preference
+      // mid-session would require a refresh — acceptable since the setting
+      // is rarely toggled.
+      zoomAnimation={!reducedMotion}
+      fadeAnimation={!reducedMotion}
+      markerZoomAnimation={!reducedMotion}
+      className="map"
+      aria-label="Acquisitions map"
+    >
       <TileLayer
         url={TILE_URL}
         attribution={TILE_ATTRIBUTION}
@@ -74,13 +90,14 @@ export const MapView = forwardRef<MapHandle, Props>(function MapView(
         placesById={placesById}
         classificationsById={classificationsById}
         selectedId={selectedId}
+        reducedMotion={reducedMotion}
         onSelect={onSelect}
         markersByIdRef={markersByIdRef}
         clusterGroupRef={clusterGroupRef}
       />
       <VisibilitySync visible={visible} />
-      <HandleBridge handleRef={ref} />
-      <HomeControl />
+      <HandleBridge handleRef={ref} reducedMotion={reducedMotion} />
+      <HomeControl reducedMotion={reducedMotion} />
     </MapContainer>
   );
 });
@@ -132,17 +149,23 @@ function VisibilitySync({ visible }: { visible: boolean }) {
 }
 
 /** Wires up the imperative handle once the map is available via useMap(). */
-function HandleBridge({ handleRef }: { handleRef: React.ForwardedRef<MapHandle> }) {
+function HandleBridge({
+  handleRef,
+  reducedMotion,
+}: {
+  handleRef: React.ForwardedRef<MapHandle>;
+  reducedMotion: boolean;
+}) {
   const map = useMap();
   useImperativeHandle(
     handleRef,
     () => ({
       reset: () => {
         map.closePopup();
-        map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+        map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: !reducedMotion });
       },
     }),
-    [map],
+    [map, reducedMotion],
   );
   return null;
 }
@@ -152,10 +175,14 @@ function ClusterLayer({
   placesById,
   classificationsById,
   selectedId,
+  reducedMotion,
   onSelect,
   markersByIdRef,
   clusterGroupRef,
-}: Pick<Props, 'records' | 'placesById' | 'classificationsById' | 'selectedId' | 'onSelect'> & {
+}: Pick<
+  Props,
+  'records' | 'placesById' | 'classificationsById' | 'selectedId' | 'reducedMotion' | 'onSelect'
+> & {
   markersByIdRef: React.MutableRefObject<Map<string, L.CircleMarker>>;
   clusterGroupRef: React.MutableRefObject<L.MarkerClusterGroup | null>;
 }) {
@@ -346,7 +373,7 @@ function ClusterLayer({
       positions.push(m.getLatLng());
     }
     if (positions.length === 0) {
-      map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+      map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: !reducedMotion });
       return;
     }
     const visible = map.getBounds();
@@ -354,16 +381,23 @@ function ClusterLayer({
 
     map.fitBounds(L.latLngBounds(positions), {
       padding: [40, 40],
-      animate: true,
+      animate: !reducedMotion,
       maxZoom: MAX_ZOOM,
     });
-  }, [markersVersion, map, markersByIdRef]);
+  }, [markersVersion, reducedMotion, map, markersByIdRef]);
 
   return null;
 }
 
-function HomeControl() {
+function HomeControl({ reducedMotion }: { reducedMotion: boolean }) {
   const map = useMap();
+  // Latest reduced-motion value via ref so the L.DomEvent click handler
+  // (created once when the control mounts) reads it fresh on each click.
+  const reducedMotionRef = useRef(reducedMotion);
+  useEffect(() => {
+    reducedMotionRef.current = reducedMotion;
+  }, [reducedMotion]);
+
   useEffect(() => {
     const HomeBtn = L.Control.extend({
       options: { position: 'topleft' as const },
@@ -377,7 +411,7 @@ function HomeControl() {
         link.innerHTML = '⌂';
         L.DomEvent.on(link, 'click', (e) => {
           L.DomEvent.stop(e);
-          map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+          map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: !reducedMotionRef.current });
         });
         return container;
       },

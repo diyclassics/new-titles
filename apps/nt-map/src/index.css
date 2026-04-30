@@ -141,13 +141,9 @@ body {
   font-family: inherit;
   color: #555;
 }
-.legend-reset:hover:not(:disabled) {
+.legend-reset:hover {
   border-color: #0066cc;
   color: #0066cc;
-}
-.legend-reset:disabled {
-  opacity: 0.4;
-  cursor: default;
 }
 
 .app-body {
@@ -200,24 +196,48 @@ body {
 }
 .sidebar-search-clear {
   position: absolute;
-  right: 16px;
+  right: 6px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  /* 44×44 invisible hit area; the ::before below paints a smaller visible
+     circle on hover/focus, so the visual stays compact while touch users
+     get a comfortable target. */
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 0;
   background: transparent;
   color: #888;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
-  border-radius: 50%;
   font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sidebar-search-clear:hover {
+.sidebar-search-clear::before {
+  content: "";
+  position: absolute;
+  inset: 9px; /* 26×26 visible pill inside the 44×44 hit area */
+  border-radius: 50%;
+  transition: background 0.15s;
+  pointer-events: none;
+}
+.sidebar-search-clear:hover::before,
+.sidebar-search-clear:focus-visible::before {
   background: #e0e0e0;
+}
+.sidebar-search-clear:hover,
+.sidebar-search-clear:focus-visible {
   color: #333;
+}
+.sidebar-search-clear:focus-visible {
+  outline: none;
+}
+.sidebar-search-clear:focus-visible::before {
+  outline: 2px solid #0066cc;
+  outline-offset: 0;
 }
 .sidebar-empty {
   padding: 20px 14px;
@@ -414,7 +434,12 @@ body {
   border: 0;
   font-size: 1.6rem;
   line-height: 1;
-  padding: 4px 10px;
+  /* 44×44 hit target. */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #666;
   font-family: inherit;
@@ -433,7 +458,10 @@ body {
 }
 .filter-sheet-chips .legend-item {
   font-size: 0.88rem;
-  padding: 6px 12px;
+  /* 44px min-height keeps each filter chip a comfortable touch target on
+     phones; padding stays generous so the swatch + name + count don't crowd. */
+  padding: 10px 14px;
+  min-height: 44px;
 }
 .filter-sheet-footer {
   display: flex;
@@ -557,6 +585,24 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+/* prefers-reduced-motion: drop CSS transitions/transforms for users who
+   opted out of motion. Leaflet's JS animations are also disabled via the
+   useReducedMotion hook + map options; this covers the CSS-side effects. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .mobile-view-toggle:active {
+    /* Keep the pill centered without the press-scale flourish. */
+    transform: translateX(-50%);
   }
 }
 
