@@ -565,9 +565,27 @@ body {
   font-size: 0.88rem;
   line-height: 1.4;
 }
-.popup strong {
+/* Each metadata row stays on a single line; long values get truncated with
+   ellipsis. This keeps popups landscape-oriented (wider than tall) at any
+   viewport, and means height grows linearly with the number of populated
+   fields rather than spilling into multi-line wraps. */
+.popup > * {
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.popup strong {
   margin-bottom: 0.2rem;
+  /* The title is the one row allowed to wrap — but only to two lines, after
+     which it's clamped with ellipsis. white-space:normal overrides the
+     nowrap above; line-clamp does the rest. */
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .popup .muted {
   color: #666;

@@ -250,6 +250,17 @@ function ClusterLayer({
           ${category ? `<div class="muted" style="color:${color}"><strong>${escapeHtml(category)}</strong></div>` : ''}
           ${bobcat}
         </div>`,
+        {
+          // Popups are landscape rectangles by design — wide enough that
+          // each metadata field stays on a single line (with CSS ellipsis
+          // when content overflows). The minWidth keeps Leaflet from
+          // squishing popups when a marker is near the viewport edge;
+          // autoPanPadding keeps the popup clear of the floating header
+          // on top and the view-toggle pill on the bottom.
+          minWidth: 240,
+          maxWidth: 320,
+          autoPanPadding: L.point(20, 80),
+        },
       );
       // Use popupopen (not click) so syncing the sidebar doesn't race with
       // Leaflet's own popup-opening.
