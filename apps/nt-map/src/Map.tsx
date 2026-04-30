@@ -137,7 +137,10 @@ function HandleBridge({ handleRef }: { handleRef: React.ForwardedRef<MapHandle> 
   useImperativeHandle(
     handleRef,
     () => ({
-      reset: () => map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true }),
+      reset: () => {
+        map.closePopup();
+        map.setView(DEFAULT_CENTER, DEFAULT_ZOOM, { animate: true });
+      },
     }),
     [map],
   );

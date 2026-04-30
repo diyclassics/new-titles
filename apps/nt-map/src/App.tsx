@@ -81,8 +81,12 @@ export function App() {
   }, [monthKey, loading]);
 
   const resetView = useCallback(() => {
+    // H1 click resets the map view *and* clears the URL selection so the
+    // URL state matches what the user sees: no marker selected, map at the
+    // default world view. Search and filters are preserved.
+    setUrl({ id: null });
     mapRef.current?.reset();
-  }, []);
+  }, [setUrl]);
 
   const selectFromSidebar = useCallback(
     (id: string) => {
@@ -156,10 +160,11 @@ export function App() {
 
   const resetFilter = useCallback(() => {
     // "Reset" means reset the whole user-controlled state — filters back to
-    // all categories AND the map view back to the default. Without the view
-    // reset, users would have to take a second step (the map's home control)
-    // to actually return to the starting position.
-    setUrl({ cats: new Set(CATEGORIES) });
+    // all categories, selection cleared, AND the map view back to the
+    // default. Without the view reset, users would have to take a second
+    // step (the map's home control) to actually return to the starting
+    // position.
+    setUrl({ cats: new Set(CATEGORIES), id: null });
     mapRef.current?.reset();
   }, [setUrl]);
 
