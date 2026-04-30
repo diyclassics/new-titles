@@ -79,7 +79,13 @@ export function Sidebar({
                 {showDivider ? (
                   <div className="record-divider">{unmappedCount} without resolved location</div>
                 ) : null}
-                <button type="button" className="record-row-button" onClick={() => onSelect(r.id)}>
+                <button
+                  type="button"
+                  className="record-row-button"
+                  onClick={() => onSelect(r.id)}
+                  aria-current={expanded ? 'true' : undefined}
+                  aria-expanded={expanded}
+                >
                   <div className="record-title">{cleanTitle(r.title)}</div>
                   <div className="record-meta">
                     <span className="callno">{r.call_number}</span>

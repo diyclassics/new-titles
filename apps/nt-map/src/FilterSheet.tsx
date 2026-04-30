@@ -32,6 +32,7 @@ export function FilterSheet({
   return (
     <dialog
       ref={dialogRef}
+      id="filter-sheet"
       className="filter-sheet"
       aria-labelledby="filter-sheet-title"
       onClose={onClose}
@@ -47,7 +48,8 @@ export function FilterSheet({
           ×
         </button>
       </header>
-      <div className="filter-sheet-chips">
+      {/* biome-ignore lint/a11y/useSemanticElements: fieldset would require resetting its default styles and adding a visually-hidden legend; div+role=group is functionally equivalent for AT. */}
+      <div className="filter-sheet-chips" role="group" aria-label="Region filters">
         {CATEGORIES.map((cat) => {
           const active = filter.has(cat);
           const color = CATEGORY_COLOR[cat];
@@ -57,6 +59,7 @@ export function FilterSheet({
               type="button"
               className={`legend-item ${active ? '' : 'muted'}`}
               onClick={() => onToggle(cat)}
+              aria-pressed={active}
             >
               <span
                 className="swatch"

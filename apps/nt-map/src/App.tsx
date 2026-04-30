@@ -15,6 +15,7 @@ import {
   loadMonth,
 } from './data.ts';
 import { useUrlState } from './url-state.ts';
+import { useReducedMotion } from './use-reduced-motion.ts';
 
 // Lazy-load MapView so the Leaflet + clustering bundle doesn't block first
 // paint. Header and sidebar render immediately; the map chunk downloads in
@@ -42,6 +43,8 @@ const cic: (id: number) => void =
 export function App() {
   const [url, setUrl] = useUrlState();
   const { view, month: monthKey, id: selectedId, q: searchQuery, cats: filter } = url;
+
+  const reducedMotion = useReducedMotion();
 
   const [month, setMonth] = useState<MonthData>(EMPTY_MONTH);
   const [loading, setLoading] = useState(true);
@@ -236,6 +239,9 @@ export function App() {
           className="filters-button"
           onClick={() => setFilterSheetOpen(true)}
           aria-label="Open filters"
+          aria-haspopup="dialog"
+          aria-expanded={filterSheetOpen}
+          aria-controls="filter-sheet"
         >
           Filters
           {filter.size < CATEGORIES.length ? <span> · {filter.size}</span> : null}
@@ -271,6 +277,7 @@ export function App() {
             classificationsById={month.classificationsById}
             selectedId={selectedId}
             visible={view === 'map'}
+            reducedMotion={reducedMotion}
             onSelect={selectFromMarker}
           />
         </Suspense>

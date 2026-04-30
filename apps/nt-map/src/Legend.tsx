@@ -10,7 +10,8 @@ type Props = {
 
 export function Legend({ counts, filter, onToggle, onReset, allActive }: Props) {
   return (
-    <div className="legend">
+    // biome-ignore lint/a11y/useSemanticElements: fieldset would require resetting its default styles and adding a visually-hidden legend; div+role=group is functionally equivalent for AT.
+    <div className="legend" role="group" aria-label="Region filters">
       {CATEGORIES.map((cat) => {
         const active = filter.has(cat);
         const color = CATEGORY_COLOR[cat];
@@ -20,6 +21,7 @@ export function Legend({ counts, filter, onToggle, onReset, allActive }: Props) 
             type="button"
             className={`legend-item ${active ? '' : 'muted'}`}
             onClick={() => onToggle(cat)}
+            aria-pressed={active}
             title={
               allActive
                 ? `Click to show only "${cat}"`
