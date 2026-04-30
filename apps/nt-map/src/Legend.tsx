@@ -2,7 +2,7 @@ import { CATEGORIES, CATEGORY_COLOR, type Category } from './data.ts';
 
 type Props = {
   counts: Record<Category, number>;
-  filter: Set<Category>;
+  filter: ReadonlySet<Category>;
   onToggle: (cat: Category) => void;
   onReset: () => void;
   allActive: boolean;

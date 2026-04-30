@@ -14,15 +14,12 @@ import {
   type MonthKey,
   loadMonth,
 } from './data.ts';
+import { useUrlState } from './url-state.ts';
 
 // Lazy-load MapView so the Leaflet + clustering bundle doesn't block first
 // paint. Header and sidebar render immediately; the map chunk downloads in
 // parallel and fills in once ready.
 const MapView = lazy(() => import('./Map.tsx'));
-
-type Filter = Set<Category>;
-
-type MobileTab = 'map' | 'list';
 
 const EMPTY_MONTH: MonthData = {
   key: '2026-03',
@@ -43,13 +40,11 @@ const cic: (id: number) => void =
     : (id) => window.clearTimeout(id);
 
 export function App() {
-  const [monthKey, setMonthKey] = useState<MonthKey>('2026-03');
+  const [url, setUrl] = useUrlState();
+  const { view, month: monthKey, id: selectedId, q: searchQuery, cats: filter } = url;
+
   const [month, setMonth] = useState<MonthData>(EMPTY_MONTH);
   const [loading, setLoading] = useState(true);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [filter, setFilter] = useState<Filter>(() => new Set(CATEGORIES));
-  const [searchQuery, setSearchQuery] = useState('');
-  const [mobileTab, setMobileTab] = useState<MobileTab>('map');
   const [filterSheetOpen, setFilterSheetOpen] = useState(false);
   const mapRef = useRef<MapHandle>(null);
 
@@ -91,31 +86,82 @@ export function App() {
 
   const selectFromSidebar = useCallback(
     (id: string) => {
-      setSelectedId((prev) => {
-        if (prev === id) return null; // click-again collapses
-        const place = month.placesById[id];
-        if (place) mapRef.current?.flyTo(place);
-        return id;
-      });
+      // Row click expands inline details (toggle on second click). Switching
+      // to the map view is the explicit job of the "Show on map →" button so
+      // the two interactions stay distinct — see showOnMap below.
+      setUrl((prev) => (prev.id === id ? { id: null } : { id }));
     },
-    [month.placesById],
+    [setUrl],
   );
+
   const showOnMap = useCallback(
     (id: string) => {
-      setMobileTab('map');
-      setSelectedId(id);
-      const place = month.placesById[id];
-      if (place) {
-        mapRef.current?.flyTo(place);
-        mapRef.current?.openMarker(id);
-      }
+      setUrl({ id, view: 'map' });
     },
-    [month.placesById],
+    [setUrl],
   );
-  // Stable reference — the marker layer's useEffect depends on this.
-  const selectFromMarker = useCallback((id: string) => {
-    setSelectedId(id);
-  }, []);
+
+  // Stable reference — the marker layer's useEffect depends on this. Marker
+  // clicks fire popupopen, which writes the id to the URL. The map-driver
+  // effect above will then call openMarker(id), which is a no-op since the
+  // popup is already open.
+  const selectFromMarker = useCallback(
+    (id: string) => {
+      setUrl({ id });
+    },
+    [setUrl],
+  );
+
+  const setView = useCallback(
+    (next: 'map' | 'list') => {
+      setUrl({ view: next });
+    },
+    [setUrl],
+  );
+
+  const setSearchQuery = useCallback(
+    (q: string) => {
+      // Replace history entry on each keystroke so back-button doesn't pop
+      // through every character typed.
+      setUrl({ q }, { replace: true });
+    },
+    [setUrl],
+  );
+
+  const setMonthKey = useCallback(
+    (k: MonthKey) => {
+      // Switching months invalidates the current selection and search context.
+      setUrl({ month: k, id: null, q: '' });
+    },
+    [setUrl],
+  );
+
+  const toggleCategory = useCallback(
+    (cat: Category) => {
+      setUrl((prev) => {
+        const cats = new Set(prev.cats);
+        if (cats.size === CATEGORIES.length) {
+          // First click after "all selected" enters single-select mode.
+          return { cats: new Set([cat]) };
+        }
+        if (cats.has(cat)) cats.delete(cat);
+        else cats.add(cat);
+        // Empty selection is invalid — leave the previous filter alone.
+        if (cats.size === 0) return {};
+        return { cats };
+      });
+    },
+    [setUrl],
+  );
+
+  const resetFilter = useCallback(() => {
+    // "Reset" means reset the whole user-controlled state — filters back to
+    // all categories AND the map view back to the default. Without the view
+    // reset, users would have to take a second step (the map's home control)
+    // to actually return to the starting position.
+    setUrl({ cats: new Set(CATEGORIES) });
+    mapRef.current?.reset();
+  }, [setUrl]);
 
   const visibleByCategory = useMemo(() => {
     return month.records.filter((r) => {
@@ -151,20 +197,6 @@ export function App() {
     };
   }, [sidebarBase, searchQuery]);
 
-  function toggleCategory(cat: Category) {
-    setFilter((prev) => {
-      if (prev.size === CATEGORIES.length) return new Set([cat]);
-      const next = new Set(prev);
-      if (next.has(cat)) next.delete(cat);
-      else next.add(cat);
-      if (next.size === 0) return prev;
-      return next;
-    });
-  }
-  function resetFilter() {
-    setFilter(new Set(CATEGORIES));
-  }
-
   const resolvedTotal = month.records.filter((r) => month.placesById[r.id]).length;
   const unmappedCount = sidebarBase.unmapped.length;
 
@@ -193,14 +225,7 @@ export function App() {
             )}
           </p>
         </div>
-        <MonthNav
-          monthKey={monthKey}
-          onChange={(k) => {
-            setMonthKey(k);
-            setSelectedId(null);
-            setSearchQuery('');
-          }}
-        />
+        <MonthNav monthKey={monthKey} onChange={setMonthKey} />
         <button
           type="button"
           className="filters-button"
@@ -220,7 +245,7 @@ export function App() {
         allActive={filter.size === CATEGORIES.length}
       />
 
-      <div className={`app-body ${mobileTab === 'map' ? 'show-map' : 'show-list'}`}>
+      <div className={`app-body ${view === 'map' ? 'show-map' : 'show-list'}`}>
         <Sidebar
           records={sidebarRecords}
           placesById={month.placesById}
@@ -239,11 +264,13 @@ export function App() {
             records={mappable}
             placesById={month.placesById}
             classificationsById={month.classificationsById}
+            selectedId={selectedId}
+            visible={view === 'map'}
             onSelect={selectFromMarker}
           />
         </Suspense>
       </div>
-      <MobileViewToggle tab={mobileTab} onChange={setMobileTab} />
+      <MobileViewToggle tab={view} onChange={setView} />
       <FilterSheet
         open={filterSheetOpen}
         onClose={() => setFilterSheetOpen(false)}

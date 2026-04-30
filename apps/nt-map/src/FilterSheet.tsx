@@ -5,7 +5,7 @@ type Props = {
   open: boolean;
   onClose: () => void;
   counts: Record<Category, number>;
-  filter: Set<Category>;
+  filter: ReadonlySet<Category>;
   onToggle: (cat: Category) => void;
   onReset: () => void;
   allActive: boolean;
