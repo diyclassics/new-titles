@@ -141,13 +141,9 @@ body {
   font-family: inherit;
   color: #555;
 }
-.legend-reset:hover:not(:disabled) {
+.legend-reset:hover {
   border-color: #0066cc;
   color: #0066cc;
-}
-.legend-reset:disabled {
-  opacity: 0.4;
-  cursor: default;
 }
 
 .app-body {

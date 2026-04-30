@@ -5,6 +5,9 @@ type Props = {
   filter: ReadonlySet<Category>;
   onToggle: (cat: Category) => void;
   onReset: () => void;
+  /** Whether every category is currently selected. Used only to phrase the
+   *  toggle hover hints — Reset itself is always available because it now
+   *  also resets the map view and selection, not just the filter. */
   allActive: boolean;
 };
 
@@ -43,8 +46,7 @@ export function Legend({ counts, filter, onToggle, onReset, allActive }: Props) 
         type="button"
         className="legend-reset"
         onClick={onReset}
-        disabled={allActive}
-        title="Show all categories"
+        title="Reset filters, selection, and map view"
       >
         Reset
       </button>

@@ -8,18 +8,9 @@ type Props = {
   filter: ReadonlySet<Category>;
   onToggle: (cat: Category) => void;
   onReset: () => void;
-  allActive: boolean;
 };
 
-export function FilterSheet({
-  open,
-  onClose,
-  counts,
-  filter,
-  onToggle,
-  onReset,
-  allActive,
-}: Props) {
+export function FilterSheet({ open, onClose, counts, filter, onToggle, onReset }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -72,7 +63,12 @@ export function FilterSheet({
         })}
       </div>
       <footer className="filter-sheet-footer">
-        <button type="button" className="legend-reset" onClick={onReset} disabled={allActive}>
+        <button
+          type="button"
+          className="legend-reset"
+          onClick={onReset}
+          title="Reset filters, selection, and map view"
+        >
           Reset
         </button>
       </footer>

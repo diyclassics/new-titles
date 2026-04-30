@@ -290,7 +290,6 @@ export function App() {
         filter={filter}
         onToggle={toggleCategory}
         onReset={resetFilter}
-        allActive={filter.size === CATEGORIES.length}
       />
     </div>
   );
