@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "description": "URI-keyed manual overrides for places where the upstream gazetteer (TGN, Pleiades, Wikidata) returned no coordinates. Each entry produces a ResolvedPlace with source='manual'. Coordinates are reviewable best-effort centroids — edit freely. Add a 'note' field to record rationale.",
+  "entries": {
+    "http://vocab.getty.edu/tgn/8697463": {
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "note": "Concept heading. Centroid near Anyang/Zhengzhou (Shang/Zhou heartland)."
+    },
+    "http://vocab.getty.edu/tgn/8697462": {
+      "name": "Imperial China",
+      "lat": 35.0,
+      "lon": 110.0,
+      "note": "Concept heading covering successive imperial dynasties; rough geographic centroid."
+    },
+    "http://vocab.getty.edu/tgn/6002562": {
+      "name": "Hittite Empire",
+      "lat": 39.95,
+      "lon": 34.6,
+      "note": "Centered on Hattusa (capital), central Anatolia."
+    },
+    "http://vocab.getty.edu/tgn/7024407": {
+      "name": "Byzantine Empire",
+      "lat": 41.01,
+      "lon": 28.97,
+      "note": "Centered on Constantinople."
+    },
+    "http://vocab.getty.edu/tgn/7025826": {
+      "name": "Ciscaucasia",
+      "lat": 44.0,
+      "lon": 43.0,
+      "note": "Region north of the Caucasus."
+    },
+    "http://vocab.getty.edu/tgn/7029727": {
+      "name": "Three Gorges Project",
+      "lat": 30.83,
+      "lon": 111.0,
+      "note": "Sandouping dam site, Hubei."
+    },
+    "http://vocab.getty.edu/tgn/7030272": {
+      "name": "Kizil Caves",
+      "lat": 41.78,
+      "lon": 82.5,
+      "note": "Buddhist cave site near Kucha, Xinjiang."
+    },
+    "http://vocab.getty.edu/tgn/7031416": {
+      "name": "Silk Road",
+      "lat": 40.0,
+      "lon": 70.0,
+      "note": "Route, not a point. Centroid in Central Asia (Ferghana region)."
+    },
+    "http://vocab.getty.edu/tgn/7593196": {
+      "name": "Eastern Mediterranean",
+      "lat": 35.0,
+      "lon": 30.0,
+      "note": "Region centroid."
+    },
+    "http://vocab.getty.edu/tgn/7594735": {
+      "name": "Greece",
+      "lat": 39.0,
+      "lon": 22.0,
+      "note": "Country centroid. Getty has no point coord on this TGN entry."
+    },
+    "http://vocab.getty.edu/tgn/3000006": {
+      "name": "Eurasia",
+      "lat": 50.0,
+      "lon": 60.0,
+      "note": "Continental centroid; very broad. Records tagged with this alone may be better dropped from the map."
+    },
+    "https://pleiades.stoa.org/places/60676": {
+      "name": "Scythae/Sagae/Sacae",
+      "lat": 50.0,
+      "lon": 65.0,
+      "note": "Steppe peoples, broad area. Centroid near Aral region."
+    },
+    "https://pleiades.stoa.org/places/246986521": {
+      "name": "Bīt-Ammān (kingdom)",
+      "lat": 31.95,
+      "lon": 35.93,
+      "note": "Centered on Amman (ancient Rabbat-Ammon)."
+    }
+  }
+}

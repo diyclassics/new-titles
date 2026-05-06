@@ -47,10 +47,15 @@ def parse_semicolons(value) -> list[str]:
 
 
 def parse_place_refs(value) -> list[str]:
-    """Extract Pleiades/Getty TGN URIs from the 651$$0 column."""
+    """Extract Pleiades / Getty TGN / Wikidata URIs from the 651$$0 column."""
     refs = []
     for item in parse_semicolons(value):
-        if "pleiades.stoa.org/places/" in item or "vocab.getty.edu/tgn/" in item:
+        if (
+            "pleiades.stoa.org/places/" in item
+            or "vocab.getty.edu/tgn/" in item
+            or "wikidata.org/entity/" in item
+            or "wikidata.org/wiki/" in item
+        ):
             refs.append(item.rstrip("/"))
     return refs
 

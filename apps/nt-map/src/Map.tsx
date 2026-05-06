@@ -7,7 +7,7 @@ import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { CATEGORY_COLOR, type Category } from './data.ts';
 import { bobcatUrl, cleanAuthor, cleanTitle } from './format.ts';
-import type { ResolvedPlace } from './types.ts';
+import { type ResolvedPlace, sourceLabelFor } from './types.ts';
 
 type Props = {
   records: readonly Acquisition[];
@@ -263,7 +263,8 @@ function ClusterLayer({
         ? `<a href="${bobcatUrl(r.mms_id)}" target="_blank" rel="noreferrer">View in Bobcat →</a>`
         : '';
       const placeLabel = `<a href="${escapeHtml(place.uri)}" target="_blank" rel="noreferrer">${escapeHtml(place.name)}</a>`;
-      const sourceTag = `<span class="source-tag">${place.source === 'pleiades' ? 'Pleiades' : 'TGN'}</span>`;
+      const sourceLabel = sourceLabelFor(place.source);
+      const sourceTag = `<span class="source-tag">${sourceLabel}</span>`;
       const title = cleanTitle(r.title);
       const authorsLine = r.authors.map(cleanAuthor).filter(Boolean).join(', ');
       const pubLine = [r.publisher, r.pub_date].filter(Boolean).join(', ');

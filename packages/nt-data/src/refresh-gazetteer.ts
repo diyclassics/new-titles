@@ -14,6 +14,7 @@ import { extractPleiadesId } from './gazetteer/pleiades.ts';
 import { openStores, persistStores, resolveUri } from './gazetteer/resolve.ts';
 import { has } from './gazetteer/store.ts';
 import { extractTgnId } from './gazetteer/tgn.ts';
+import { extractWikidataId } from './gazetteer/wikidata.ts';
 import { AcquisitionsFileSchema } from './schema.ts';
 
 const args = process.argv.slice(2);
@@ -23,7 +24,12 @@ if (args.length === 0) {
 }
 
 const root = join(import.meta.dirname, '..', 'data', 'gazetteers');
-const stores = openStores(join(root, 'pleiades.json'), join(root, 'tgn.json'));
+const stores = openStores(
+  join(root, 'pleiades.json'),
+  join(root, 'tgn.json'),
+  join(root, 'wikidata.json'),
+  join(root, 'manual-overrides.json'),
+);
 
 // Collect unique URIs across all inputs.
 const uris = new Set<string>();
@@ -36,14 +42,16 @@ for (const path of args) {
   }
 }
 
-// Filter to URIs not yet in either store.
+// Filter to URIs not yet in any store.
 const toFetch: string[] = [];
 for (const uri of uris) {
   const pleiadesId = extractPleiadesId(uri);
   if (pleiadesId && has(stores.pleiades, pleiadesId)) continue;
   const tgnId = extractTgnId(uri);
   if (tgnId && has(stores.tgn, tgnId)) continue;
-  if (pleiadesId || tgnId) toFetch.push(uri);
+  const wikidataId = extractWikidataId(uri);
+  if (wikidataId && has(stores.wikidata, wikidataId)) continue;
+  if (pleiadesId || tgnId || wikidataId) toFetch.push(uri);
 }
 
 console.error(`${uris.size} unique place_refs seen, ${toFetch.length} need fetching`);

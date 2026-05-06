@@ -14,10 +14,12 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { getManualOverride, loadManualOverrides } from './gazetteer/manual.ts';
 import { extractPleiadesId } from './gazetteer/pleiades.ts';
 import { get, has, loadStore } from './gazetteer/store.ts';
 import { extractTgnId } from './gazetteer/tgn.ts';
 import type { ResolvedPlace } from './gazetteer/types.ts';
+import { extractWikidataId } from './gazetteer/wikidata.ts';
 import { AcquisitionsFileSchema } from './schema.ts';
 
 const args = process.argv.slice(2);
@@ -34,23 +36,30 @@ if (!/^\d{4}-\d{2}$/.test(monthKey)) {
 const root = join(import.meta.dirname, '..', 'data', 'gazetteers');
 const pleiades = loadStore(join(root, 'pleiades.json'), 'pleiades');
 const tgn = loadStore(join(root, 'tgn.json'), 'getty-tgn');
+const wikidata = loadStore(join(root, 'wikidata.json'), 'wikidata');
+const manual = loadManualOverrides(join(root, 'manual-overrides.json'));
 
 function resolveFirst(refs: string[] | undefined): ResolvedPlace | null {
   if (!refs) return null;
   for (const uri of refs) {
     const pid = extractPleiadesId(uri);
     if (pid && has(pleiades, pid)) {
-      const place = get(pleiades, pid);
+      const place = get(pleiades, pid) ?? getManualOverride(manual, uri);
       if (place) return place;
     }
     const tid = extractTgnId(uri);
     if (tid && has(tgn, tid)) {
-      const place = get(tgn, tid);
+      const place = get(tgn, tid) ?? getManualOverride(manual, uri);
       if (place) return place;
     }
+    const wid = extractWikidataId(uri);
+    if (wid && has(wikidata, wid)) {
+      const place = get(wikidata, wid) ?? getManualOverride(manual, uri);
+      if (place) return place;
+    }
+    const direct = getManualOverride(manual, uri);
+    if (direct) return direct;
   }
-  // Second pass — accept any that resolved via either source, even if not the first ref.
-  // (First pass already covered that. This is a no-op; kept for future ranking logic.)
   return null;
 }
 
@@ -87,6 +96,6 @@ const outPath = join(import.meta.dirname, '..', 'data', `places-${monthKey}.json
 writeFileSync(outPath, `${JSON.stringify(out, null, 2)}\n`);
 console.error(
   `${monthKey}: ${resolved} resolved / ${parsed.records.length} records ` +
-    `(${dropped} had refs but weren't in the gazetteer — run refresh-gazetteer)`,
+    `(${dropped} have place_refs but no resolved coordinate)`,
 );
 console.error(`→ ${outPath}`);

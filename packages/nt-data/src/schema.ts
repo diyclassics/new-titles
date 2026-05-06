@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const PlaceSourceSchema = z.enum(['pleiades', 'getty-tgn', 'manual']);
+export const PlaceSourceSchema = z.enum(['pleiades', 'getty-tgn', 'wikidata', 'manual']);
 export type PlaceSource = z.infer<typeof PlaceSourceSchema>;
 
 export const PlaceSchema = z.object({

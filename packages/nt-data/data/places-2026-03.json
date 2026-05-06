@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "month": "2026-03",
-  "generated_at": "2026-05-06T15:19:15.254Z",
+  "generated_at": "2026-05-06T17:03:21.077Z",
   "total_records": 357,
   "records_with_refs": 311,
-  "records_resolved": 264,
-  "records_with_refs_unresolved": 47,
+  "records_resolved": 311,
+  "records_with_refs_unresolved": 0,
   "places": {
     "31154068978202": {
       "id": "tgn:1065380",
@@ -14,6 +14,142 @@
       "lon": 67.827,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1065380&place=&nation=&prev_page=1&english=Y&subjectid=1065380"
+    },
+    "31154068978210": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978228": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978236": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978244": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978251": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978269": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978277": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978285": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978293": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978301": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978319": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978327": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978335": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978343": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978350": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978368": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154068978376": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
     },
     "31154068978384": {
       "id": "tgn:7001526",
@@ -46,6 +182,14 @@
       "lon": 115.845751,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8199076&place=&nation=&prev_page=1&english=Y&subjectid=8199076"
+    },
+    "31154068978426": {
+      "id": "manual:http-vocab-getty-edu-tgn-7029727",
+      "name": "Three Gorges Project",
+      "lat": 30.83,
+      "lon": 111,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7029727"
     },
     "31154068978442": {
       "id": "pleiades:559227570",
@@ -151,6 +295,14 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1001261&place=&nation=&prev_page=1&english=Y&subjectid=1001261"
     },
+    "31154069008793": {
+      "id": "manual:http-vocab-getty-edu-tgn-7031416",
+      "name": "Silk Road",
+      "lat": 40,
+      "lon": 70,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7031416"
+    },
     "31154069008801": {
       "id": "tgn:7001787",
       "name": "Chongqing",
@@ -183,6 +335,14 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8212548&place=&nation=&prev_page=1&english=Y&subjectid=8212548"
     },
+    "31154069008934": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
     "31154069008942": {
       "id": "tgn:8627225",
       "name": "Luoyang",
@@ -199,6 +359,38 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001745&place=&nation=&prev_page=1&english=Y&subjectid=7001745"
     },
+    "31154069008967": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154069008975": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154069008983": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154069008991": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
     "31154069009007": {
       "id": "tgn:7029798",
       "name": "Mogao Caves",
@@ -206,6 +398,14 @@
       "lon": 94.919228,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
+    },
+    "31154069009049": {
+      "id": "manual:http-vocab-getty-edu-tgn-7031416",
+      "name": "Silk Road",
+      "lat": 40,
+      "lon": 70,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7031416"
     },
     "31154069009148": {
       "id": "tgn:8630755",
@@ -222,6 +422,54 @@
       "lon": 121.35,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=8677045&place=&nation=&prev_page=1&english=Y&subjectid=8677045"
+    },
+    "31154069009163": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069009171": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069009189": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069009197": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069009205": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069009213": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
     },
     "31154069009411": {
       "id": "tgn:7001480",
@@ -375,6 +623,46 @@
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/874350"
     },
+    "31154069009643": {
+      "id": "manual:http-vocab-getty-edu-tgn-7030272",
+      "name": "Kizil Caves",
+      "lat": 41.78,
+      "lon": 82.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7030272"
+    },
+    "31154069009650": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154069009692": {
+      "id": "manual:http-vocab-getty-edu-tgn-7025826",
+      "name": "Ciscaucasia",
+      "lat": 44,
+      "lon": 43,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7025826"
+    },
+    "31154069009700": {
+      "id": "manual:http-vocab-getty-edu-tgn-7025826",
+      "name": "Ciscaucasia",
+      "lat": 44,
+      "lon": 43,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7025826"
+    },
+    "31154069009718": {
+      "id": "manual:http-vocab-getty-edu-tgn-7025826",
+      "name": "Ciscaucasia",
+      "lat": 44,
+      "lon": 43,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7025826"
+    },
     "31154069009726": {
       "id": "pleiades:324723",
       "name": "Henchir-el-Guellal",
@@ -390,6 +678,22 @@
       "lon": 43.27050157283143,
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/29492"
+    },
+    "31154069009742": {
+      "id": "manual:http-vocab-getty-edu-tgn-7025826",
+      "name": "Ciscaucasia",
+      "lat": 44,
+      "lon": 43,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7025826"
+    },
+    "31154069009759": {
+      "id": "manual:http-vocab-getty-edu-tgn-7025826",
+      "name": "Ciscaucasia",
+      "lat": 44,
+      "lon": 43,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7025826"
     },
     "31154069009791": {
       "id": "tgn:7001745",
@@ -414,6 +718,14 @@
       "lon": 105,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
+    },
+    "31154069009825": {
+      "id": "manual:http-vocab-getty-edu-tgn-3000006",
+      "name": "Eurasia",
+      "lat": 50,
+      "lon": 60,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/3000006"
     },
     "31154069009833": {
       "id": "pleiades:43240983",
@@ -478,6 +790,14 @@
       "lon": 45.49540677142205,
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/912816"
+    },
+    "31154069009924": {
+      "id": "manual:http-vocab-getty-edu-tgn-7593196",
+      "name": "Eastern Mediterranean",
+      "lat": 35,
+      "lon": 30,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7593196"
     },
     "31154069009932": {
       "id": "tgn:1000003",
@@ -831,6 +1151,14 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7006651&place=&nation=&prev_page=1&english=Y&subjectid=7006651"
     },
+    "31154069010468": {
+      "id": "manual:http-vocab-getty-edu-tgn-7024407",
+      "name": "Byzantine Empire",
+      "lat": 41.01,
+      "lon": 28.97,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7024407"
+    },
     "31154069010476": {
       "id": "pleiades:874350",
       "name": "Armenia (region)",
@@ -942,6 +1270,14 @@
       "lon": 35.7764238,
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/668295"
+    },
+    "31154069010757": {
+      "id": "manual:http-vocab-getty-edu-tgn-7593196",
+      "name": "Eastern Mediterranean",
+      "lat": 35,
+      "lon": 30,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7593196"
     },
     "31154069010765": {
       "id": "tgn:4003756",
@@ -1086,6 +1422,14 @@
       "lon": 56.839977,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=6005268&place=&nation=&prev_page=1&english=Y&subjectid=6005268"
+    },
+    "31154069010963": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
     },
     "31154069010971": {
       "id": "pleiades:589748",
@@ -1695,6 +2039,22 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7002078&place=&nation=&prev_page=1&english=Y&subjectid=7002078"
     },
+    "31154069037560": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
+    "31154069037578": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697463",
+      "name": "Ancient China",
+      "lat": 34.5,
+      "lon": 113.5,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697463"
+    },
     "31154069037586": {
       "id": "pleiades:678334",
       "name": "Phoenice (region)",
@@ -1807,6 +2167,14 @@
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7029798&place=&nation=&prev_page=1&english=Y&subjectid=7029798"
     },
+    "31154069078747": {
+      "id": "manual:http-vocab-getty-edu-tgn-7031416",
+      "name": "Silk Road",
+      "lat": 40,
+      "lon": 70,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7031416"
+    },
     "31154069078754": {
       "id": "pleiades:586301784",
       "name": "Palace G at Ebla",
@@ -1822,6 +2190,14 @@
       "lon": 35,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000144&place=&nation=&prev_page=1&english=Y&subjectid=1000144"
+    },
+    "31154069078770": {
+      "id": "manual:http-vocab-getty-edu-tgn-3000006",
+      "name": "Eurasia",
+      "lat": 50,
+      "lon": 60,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/3000006"
     },
     "31154069078788": {
       "id": "tgn:7001526",
@@ -2008,12 +2384,12 @@
       "uri": "https://pleiades.stoa.org/places/477179882"
     },
     "31154069079075": {
-      "id": "tgn:1000111",
-      "name": "China",
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
       "lat": 35,
-      "lon": 105,
-      "source": "getty-tgn",
-      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
     },
     "31154069079083": {
       "id": "pleiades:863739",

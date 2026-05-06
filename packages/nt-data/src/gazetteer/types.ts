@@ -1,4 +1,4 @@
-export type PlaceSource = 'pleiades' | 'getty-tgn';
+export type PlaceSource = 'pleiades' | 'getty-tgn' | 'wikidata' | 'manual';
 
 export interface ResolvedPlace {
   id: string; // "pleiades:766" or "tgn:7001319"

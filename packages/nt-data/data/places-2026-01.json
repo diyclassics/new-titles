@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "month": "2026-01",
-  "generated_at": "2026-05-06T15:19:14.295Z",
+  "generated_at": "2026-05-06T17:03:20.181Z",
   "total_records": 83,
   "records_with_refs": 78,
-  "records_resolved": 70,
-  "records_with_refs_unresolved": 8,
+  "records_resolved": 78,
+  "records_with_refs_unresolved": 0,
   "places": {
     "31154068978087": {
       "id": "pleiades:981503",
@@ -54,6 +54,22 @@
       "lon": 121.141389,
       "source": "getty-tgn",
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1122679&place=&nation=&prev_page=1&english=Y&subjectid=1122679"
+    },
+    "31154069007472": {
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
+      "lat": 35,
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
+    },
+    "31154069007480": {
+      "id": "manual:http-vocab-getty-edu-tgn-3000006",
+      "name": "Eurasia",
+      "lat": 50,
+      "lon": 60,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/3000006"
     },
     "31154069007498": {
       "id": "pleiades:777218560",
@@ -255,6 +271,14 @@
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/991396"
     },
+    "31154069007761": {
+      "id": "manual:http-vocab-getty-edu-tgn-7593196",
+      "name": "Eastern Mediterranean",
+      "lat": 35,
+      "lon": 30,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7593196"
+    },
     "31154069007779": {
       "id": "pleiades:687934",
       "name": "Iudaea (region)",
@@ -320,12 +344,12 @@
       "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7001526&place=&nation=&prev_page=1&english=Y&subjectid=7001526"
     },
     "31154069007852": {
-      "id": "tgn:7030347",
-      "name": "Roman Empire",
-      "lat": 41.8925,
-      "lon": 12.48499,
-      "source": "getty-tgn",
-      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=7030347&place=&nation=&prev_page=1&english=Y&subjectid=7030347"
+      "id": "manual:http-vocab-getty-edu-tgn-7594735",
+      "name": "Greece",
+      "lat": 39,
+      "lon": 22,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7594735"
     },
     "31154069007860": {
       "id": "pleiades:472032",
@@ -376,12 +400,12 @@
       "uri": "https://pleiades.stoa.org/places/875303419"
     },
     "31154069007928": {
-      "id": "tgn:1000121",
-      "name": "Jordan",
-      "lat": 31,
-      "lon": 36,
-      "source": "getty-tgn",
-      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000121&place=&nation=&prev_page=1&english=Y&subjectid=1000121"
+      "id": "manual:https-pleiades-stoa-org-places-246986521",
+      "name": "Bīt-Ammān (kingdom)",
+      "lat": 31.95,
+      "lon": 35.93,
+      "source": "manual",
+      "uri": "https://pleiades.stoa.org/places/246986521"
     },
     "31154069007936": {
       "id": "pleiades:726944834",
@@ -406,6 +430,30 @@
       "lon": 24.91724075272824,
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/560221"
+    },
+    "31154069007969": {
+      "id": "manual:http-vocab-getty-edu-tgn-7593196",
+      "name": "Eastern Mediterranean",
+      "lat": 35,
+      "lon": 30,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7593196"
+    },
+    "31154069007977": {
+      "id": "manual:http-vocab-getty-edu-tgn-7594735",
+      "name": "Greece",
+      "lat": 39,
+      "lon": 22,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7594735"
+    },
+    "31154069007985": {
+      "id": "manual:http-vocab-getty-edu-tgn-7594735",
+      "name": "Greece",
+      "lat": 39,
+      "lon": 22,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7594735"
     },
     "31154069007993": {
       "id": "pleiades:1043",
@@ -447,6 +495,14 @@
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/1306"
     },
+    "31154069008041": {
+      "id": "manual:http-vocab-getty-edu-tgn-7594735",
+      "name": "Greece",
+      "lat": 39,
+      "lon": 22,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/7594735"
+    },
     "31154069037495": {
       "id": "pleiades:1306",
       "name": "Syria",
@@ -464,12 +520,12 @@
       "uri": "https://pleiades.stoa.org/places/1043"
     },
     "31154069078440": {
-      "id": "tgn:1000111",
-      "name": "China",
+      "id": "manual:http-vocab-getty-edu-tgn-8697462",
+      "name": "Imperial China",
       "lat": 35,
-      "lon": 105,
-      "source": "getty-tgn",
-      "uri": "https://www.getty.edu/vow/TGNFullDisplay?find=1000111&place=&nation=&prev_page=1&english=Y&subjectid=1000111"
+      "lon": 110,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/8697462"
     },
     "31154069078457": {
       "id": "pleiades:912950",
@@ -518,6 +574,14 @@
       "lon": 23.69402266702624,
       "source": "pleiades",
       "uri": "https://pleiades.stoa.org/places/992770797"
+    },
+    "31154069078515": {
+      "id": "manual:http-vocab-getty-edu-tgn-3000006",
+      "name": "Eurasia",
+      "lat": 50,
+      "lon": 60,
+      "source": "manual",
+      "uri": "http://vocab.getty.edu/tgn/3000006"
     },
     "31154069078523": {
       "id": "pleiades:981503",
