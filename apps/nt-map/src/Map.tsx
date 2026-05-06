@@ -267,12 +267,13 @@ function ClusterLayer({
       const title = cleanTitle(r.title);
       const authorsLine = r.authors.map(cleanAuthor).filter(Boolean).join(', ');
       const pubLine = [r.publisher, r.pub_date].filter(Boolean).join(', ');
+      const callLine = [r.shelving_location, r.call_number].filter(Boolean).join(' · ');
       marker.bindPopup(
         `<div class="popup">
           <strong>${escapeHtml(title)}</strong>
           ${authorsLine ? `<div>${escapeHtml(authorsLine)}</div>` : ''}
           ${pubLine ? `<div class="muted">${escapeHtml(pubLine)}</div>` : ''}
-          ${r.call_number ? `<div class="callno">${escapeHtml(r.call_number)}</div>` : ''}
+          ${callLine ? `<div class="callno">${escapeHtml(callLine)}</div>` : ''}
           <div class="muted">📍 ${placeLabel} ${sourceTag}</div>
           ${category ? `<div class="muted" style="color:${color}"><strong>${escapeHtml(category)}</strong></div>` : ''}
           ${bobcat}

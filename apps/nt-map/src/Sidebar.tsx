@@ -88,7 +88,9 @@ export function Sidebar({
                 >
                   <div className="record-title">{cleanTitle(r.title)}</div>
                   <div className="record-meta">
-                    <span className="callno">{r.call_number}</span>
+                    <span className="callno">
+                      {[r.shelving_location, r.call_number].filter(Boolean).join(' · ')}
+                    </span>
                     {place ? (
                       <span className="place"> · {place.name}</span>
                     ) : (

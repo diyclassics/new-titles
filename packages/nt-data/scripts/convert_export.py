@@ -62,6 +62,20 @@ def clean_call_number(value) -> str | None:
     return re.sub(r"\s+Non-circulating$", "", s) or None
 
 
+def normalize_shelving_location(value) -> str | None:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+    s = str(value).strip()
+    if not s:
+        return None
+    m = re.match(r"^Reference\s+(\d+)\s+Collection$", s)
+    if m:
+        return f"Ref {m.group(1)}"
+    if s.endswith(" Collection"):
+        return s[: -len(" Collection")]
+    return s
+
+
 def to_iso_date(value) -> str | None:
     if value is None:
         return None
@@ -108,6 +122,9 @@ def row_to_record(row: pd.Series) -> dict:
         record["mms_id"] = mms_id
     if call_number:
         record["call_number"] = call_number
+    shelving_location = normalize_shelving_location(row.get("Location Name"))
+    if shelving_location:
+        record["shelving_location"] = shelving_location
 
     publisher = str_or_none(row.get("Publisher"))
     if publisher:

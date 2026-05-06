@@ -24,6 +24,7 @@ export const AcquisitionSchema = z.object({
   pub_date: z.string().optional(),
   pub_place: z.string().optional(),
   call_number: z.string().optional(),
+  shelving_location: z.string().optional(),
   acquired_at: IsoDate,
   subject_headings: z.array(z.string()).default([]),
   place_refs: z.array(z.string()).default([]),
