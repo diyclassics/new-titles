@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "month": "2026-02",
-  "generated_at": "2026-04-24T21:51:37.291Z",
+  "generated_at": "2026-05-06T15:19:14.775Z",
   "total_records": 105,
   "records_with_refs": 83,
   "records_resolved": 74,
@@ -129,7 +129,7 @@
     },
     "31154069008165": {
       "id": "tgn:1001584",
-      "name": "TGN 1001584",
+      "name": "Uşak",
       "lat": 38.5,
       "lon": 29.416667,
       "source": "getty-tgn",
@@ -177,7 +177,7 @@
     },
     "31154069008306": {
       "id": "tgn:8208120",
-      "name": "TGN 8208120",
+      "name": "Changsha",
       "lat": 28.145823,
       "lon": 113.229669,
       "source": "getty-tgn",
@@ -185,7 +185,7 @@
     },
     "31154069008314": {
       "id": "tgn:8208120",
-      "name": "TGN 8208120",
+      "name": "Changsha",
       "lat": 28.145823,
       "lon": 113.229669,
       "source": "getty-tgn",
@@ -193,7 +193,7 @@
     },
     "31154069008322": {
       "id": "tgn:8208120",
-      "name": "TGN 8208120",
+      "name": "Changsha",
       "lat": 28.145823,
       "lon": 113.229669,
       "source": "getty-tgn",
@@ -201,7 +201,7 @@
     },
     "31154069008330": {
       "id": "tgn:8208120",
-      "name": "TGN 8208120",
+      "name": "Changsha",
       "lat": 28.145823,
       "lon": 113.229669,
       "source": "getty-tgn",
@@ -209,7 +209,7 @@
     },
     "31154069008405": {
       "id": "tgn:7002078",
-      "name": "TGN 7002078",
+      "name": "Hubei",
       "lat": 31,
       "lon": 112.25,
       "source": "getty-tgn",
@@ -217,7 +217,7 @@
     },
     "31154069008413": {
       "id": "tgn:7002078",
-      "name": "TGN 7002078",
+      "name": "Hubei",
       "lat": 31,
       "lon": 112.25,
       "source": "getty-tgn",
@@ -225,7 +225,7 @@
     },
     "31154069008421": {
       "id": "tgn:7002078",
-      "name": "TGN 7002078",
+      "name": "Hubei",
       "lat": 31,
       "lon": 112.25,
       "source": "getty-tgn",
@@ -257,7 +257,7 @@
     },
     "31154069008520": {
       "id": "tgn:8602708",
-      "name": "TGN 8602708",
+      "name": "Liye",
       "lat": 26.654444,
       "lon": 110.909444,
       "source": "getty-tgn",
@@ -265,7 +265,7 @@
     },
     "31154069008538": {
       "id": "tgn:8602708",
-      "name": "TGN 8602708",
+      "name": "Liye",
       "lat": 26.654444,
       "lon": 110.909444,
       "source": "getty-tgn",
@@ -297,7 +297,7 @@
     },
     "31154069008652": {
       "id": "tgn:8200752",
-      "name": "TGN 8200752",
+      "name": "Fuyang Shi",
       "lat": 32.937181,
       "lon": 115.707779,
       "source": "getty-tgn",
@@ -305,7 +305,7 @@
     },
     "31154069008660": {
       "id": "tgn:8686894",
-      "name": "TGN 8686894",
+      "name": "Suining",
       "lat": 33.938816,
       "lon": 117.858766,
       "source": "getty-tgn",

@@ -12,29 +12,38 @@ export function extractTgnId(uri: string): string | null {
 interface SparqlBinding {
   lat?: { value: string };
   long?: { value: string };
-  label?: { value: string };
+  gvpLabel?: { value: string };
+  prefEn?: { value: string };
+  prefAny?: { value: string };
 }
 
 interface SparqlResponse {
   results?: { bindings?: SparqlBinding[] };
 }
 
-/** Query Getty's SPARQL endpoint for a TGN place's coordinates + English preferred label. */
+/**
+ * Query Getty's SPARQL endpoint for a TGN place's coordinates + label.
+ *
+ * Label preference: GVP-canonical (`gvp:prefLabelGVP/gvp:term`) > English-tagged
+ * `skos:prefLabel` > any `skos:prefLabel`. Many non-Western places carry the
+ * GVP form (e.g. "Baoji") under a non-English language tag like
+ * `zh-latn-pinyin-x-notone`, so a strict `@en` filter would miss them.
+ */
 export async function fetchTgnPlace(id: string): Promise<ResolvedPlace | null> {
   await rateLimit(TGN_HOST);
   const query = `
     PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-    SELECT ?lat ?long ?label WHERE {
+    PREFIX gvp: <http://vocab.getty.edu/ontology#>
+    SELECT ?lat ?long ?gvpLabel ?prefEn ?prefAny WHERE {
       <http://vocab.getty.edu/tgn/${id}-place> wgs84:lat ?lat ; wgs84:long ?long .
-      OPTIONAL {
-        <http://vocab.getty.edu/tgn/${id}> skos:prefLabel ?label .
-        FILTER(LANG(?label) = "en")
-      }
+      OPTIONAL { <http://vocab.getty.edu/tgn/${id}> gvp:prefLabelGVP/gvp:term ?gvpLabel . }
+      OPTIONAL { <http://vocab.getty.edu/tgn/${id}> skos:prefLabel ?prefEn . FILTER(LANG(?prefEn) = "en") }
+      OPTIONAL { <http://vocab.getty.edu/tgn/${id}> skos:prefLabel ?prefAny . }
     }
     LIMIT 1
   `.trim();
-  const url = `http://vocab.getty.edu/sparql.json?query=${encodeURIComponent(query)}`;
+  const url = `https://vocab.getty.edu/sparql.json?query=${encodeURIComponent(query)}`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`TGN ${id}: HTTP ${response.status}`);
   const data = (await response.json()) as SparqlResponse;
@@ -43,14 +52,14 @@ export async function fetchTgnPlace(id: string): Promise<ResolvedPlace | null> {
   const lat = Number.parseFloat(binding.lat.value);
   const lon = Number.parseFloat(binding.long.value);
   if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  const label =
+    binding.gvpLabel?.value ?? binding.prefEn?.value ?? binding.prefAny?.value ?? `TGN ${id}`;
   return {
     id: `tgn:${id}`,
-    name: binding.label?.value ?? `TGN ${id}`,
+    name: label,
     lat,
     lon,
     source: 'getty-tgn',
-    // Getty's Vocabulary Online (VoW) full-display page — reliable public
-    // landing page for a TGN subject, unlike the RDF endpoint.
     uri: tgnVowUrl(id),
   };
 }

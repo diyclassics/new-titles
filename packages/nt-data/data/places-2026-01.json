@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "month": "2026-01",
-  "generated_at": "2026-04-24T21:51:36.120Z",
+  "generated_at": "2026-05-06T15:19:14.295Z",
   "total_records": 83,
   "records_with_refs": 78,
   "records_resolved": 70,
@@ -89,7 +89,7 @@
     },
     "31154069007548": {
       "id": "tgn:1001613",
-      "name": "TGN 1001613",
+      "name": "Zanjān",
       "lat": 36.5,
       "lon": 48.333333,
       "source": "getty-tgn",

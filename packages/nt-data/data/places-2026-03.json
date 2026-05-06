@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "month": "2026-03",
-  "generated_at": "2026-04-24T21:51:38.492Z",
+  "generated_at": "2026-05-06T15:19:15.254Z",
   "total_records": 357,
   "records_with_refs": 311,
   "records_resolved": 264,
@@ -25,7 +25,7 @@
     },
     "31154068978392": {
       "id": "tgn:8199076",
-      "name": "TGN 8199076",
+      "name": "Fangshan",
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
@@ -33,7 +33,7 @@
     },
     "31154068978400": {
       "id": "tgn:8199076",
-      "name": "TGN 8199076",
+      "name": "Fangshan",
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
@@ -41,7 +41,7 @@
     },
     "31154068978418": {
       "id": "tgn:8199076",
-      "name": "TGN 8199076",
+      "name": "Fangshan",
       "lat": 39.724451,
       "lon": 115.845751,
       "source": "getty-tgn",
@@ -137,7 +137,7 @@
     },
     "31154069008736": {
       "id": "tgn:8618788",
-      "name": "TGN 8618788",
+      "name": "Sanmenxia",
       "lat": 34.774722,
       "lon": 111.181389,
       "source": "getty-tgn",
@@ -145,7 +145,7 @@
     },
     "31154069008785": {
       "id": "tgn:1001261",
-      "name": "TGN 1001261",
+      "name": "Gansu",
       "lat": 37.75,
       "lon": 102.75,
       "source": "getty-tgn",
@@ -153,7 +153,7 @@
     },
     "31154069008801": {
       "id": "tgn:7001787",
-      "name": "TGN 7001787",
+      "name": "Chongqing",
       "lat": 29.562778,
       "lon": 106.552778,
       "source": "getty-tgn",
@@ -161,7 +161,7 @@
     },
     "31154069008819": {
       "id": "tgn:7001787",
-      "name": "TGN 7001787",
+      "name": "Chongqing",
       "lat": 29.562778,
       "lon": 106.552778,
       "source": "getty-tgn",
@@ -169,7 +169,7 @@
     },
     "31154069008850": {
       "id": "tgn:8209961",
-      "name": "TGN 8209961",
+      "name": "Baoji",
       "lat": 34.369445,
       "lon": 107.136345,
       "source": "getty-tgn",
@@ -177,7 +177,7 @@
     },
     "31154069008868": {
       "id": "tgn:8212548",
-      "name": "TGN 8212548",
+      "name": "Anyang",
       "lat": 36.136389,
       "lon": 114.336667,
       "source": "getty-tgn",
@@ -185,7 +185,7 @@
     },
     "31154069008942": {
       "id": "tgn:8627225",
-      "name": "TGN 8627225",
+      "name": "Luoyang",
       "lat": 34.358056,
       "lon": 112.0625,
       "source": "getty-tgn",
@@ -193,7 +193,7 @@
     },
     "31154069008959": {
       "id": "tgn:7001745",
-      "name": "TGN 7001745",
+      "name": "Xinjiang Uygur Zizhiqu",
       "lat": 41.5,
       "lon": 85.5,
       "source": "getty-tgn",
@@ -209,7 +209,7 @@
     },
     "31154069009148": {
       "id": "tgn:8630755",
-      "name": "TGN 8630755",
+      "name": "Nancheng",
       "lat": 27.509895,
       "lon": 116.695984,
       "source": "getty-tgn",
@@ -217,7 +217,7 @@
     },
     "31154069009155": {
       "id": "tgn:8677045",
-      "name": "TGN 8677045",
+      "name": "Yinjiang Zhen",
       "lat": 29.7723,
       "lon": 121.35,
       "source": "getty-tgn",
@@ -225,7 +225,7 @@
     },
     "31154069009411": {
       "id": "tgn:7001480",
-      "name": "TGN 7001480",
+      "name": "Zhengzhou",
       "lat": 34.757778,
       "lon": 113.648611,
       "source": "getty-tgn",
@@ -393,7 +393,7 @@
     },
     "31154069009791": {
       "id": "tgn:7001745",
-      "name": "TGN 7001745",
+      "name": "Xinjiang Uygur Zizhiqu",
       "lat": 41.5,
       "lon": 85.5,
       "source": "getty-tgn",
@@ -713,7 +713,7 @@
     },
     "31154069010294": {
       "id": "tgn:1060430",
-      "name": "TGN 1060430",
+      "name": "T’rialet’i",
       "lat": 41.542,
       "lon": 44.108,
       "source": "getty-tgn",
@@ -1081,7 +1081,7 @@
     },
     "31154069010955": {
       "id": "tgn:6005268",
-      "name": "TGN 6005268",
+      "name": "Sasanian Empire",
       "lat": 35.861733,
       "lon": 56.839977,
       "source": "getty-tgn",
@@ -1657,7 +1657,7 @@
     },
     "31154069011698": {
       "id": "tgn:7594771",
-      "name": "TGN 7594771",
+      "name": "Kvemo Kartli",
       "lat": 41.516667,
       "lon": 44.516667,
       "source": "getty-tgn",
@@ -1681,7 +1681,7 @@
     },
     "31154069037545": {
       "id": "tgn:7002085",
-      "name": "TGN 7002085",
+      "name": "Shandong",
       "lat": 36.333333,
       "lon": 118.25,
       "source": "getty-tgn",
@@ -1689,7 +1689,7 @@
     },
     "31154069037552": {
       "id": "tgn:7002078",
-      "name": "TGN 7002078",
+      "name": "Hubei",
       "lat": 31,
       "lon": 112.25,
       "source": "getty-tgn",
@@ -1785,7 +1785,7 @@
     },
     "31154069078671": {
       "id": "tgn:8712371",
-      "name": "TGN 8712371",
+      "name": "Guanghan Sanxingdui",
       "lat": 31.000008,
       "lon": 104.223773,
       "source": "getty-tgn",
