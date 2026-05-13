@@ -210,6 +210,9 @@ export function App() {
 
   return (
     <div className="app">
+      <a className="skip-link" href="#record-list">
+        Skip to record list
+      </a>
       <header className="app-header">
         <div className="header-main">
           <h1>

@@ -17,6 +17,33 @@ body {
   height: 100vh;
 }
 
+/* Skip-link: first focusable element, hidden off-screen until keyboard-focused.
+   Jumps past the header/legend/filters to the sidebar list. The transition is
+   covered by the prefers-reduced-motion override below. */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 8px;
+  background: #0066cc;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  z-index: 9999;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid white;
+  outline-offset: -4px;
+}
+/* Sidebar receives keyboard focus when the skip-link is activated; suppress the
+   default focus ring on this programmatic landing (the sidebar isn't a control). */
+.sidebar:focus {
+  outline: none;
+}
+
 .app-header {
   padding: 0.6rem 1rem;
   border-bottom: 1px solid #e5e5e5;
@@ -319,7 +346,7 @@ body {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: #999;
+  color: #666;
   border-top: 1px dashed #ccc;
   background: #f5f5f5;
 }
@@ -376,7 +403,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888;
+  color: #666;
   font-size: 0.9rem;
   background: #f5f5f5;
 }

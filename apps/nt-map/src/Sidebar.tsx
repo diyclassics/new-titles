@@ -35,7 +35,7 @@ export function Sidebar({
     selectedRowRef.current?.scrollIntoView({ block: 'nearest' });
   }, [selectedId]);
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" id="record-list" tabIndex={-1}>
       <div className="sidebar-search">
         <input
           type="search"
