@@ -222,7 +222,8 @@ export function App() {
               ISAW Library New Titles
             </button>
           </h1>
-          <p className="subtle">
+          {/* biome-ignore lint/a11y/useSemanticElements: <output> is for form-result computations; this is an inline status subtitle. role="status" gives implicit aria-live="polite" + aria-atomic="true". */}
+          <p className="subtle" role="status">
             {loading ? (
               <span>Loading {MONTH_LABEL[monthKey]}…</span>
             ) : (
